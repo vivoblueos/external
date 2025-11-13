@@ -709,6 +709,11 @@ mod tests {
                 use_name: "baz".to_string(),
                 version: Version::new(0, 1, 0),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/chromium/src/tools/crates/gnrt/sample_package/bar/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
         assert_eq!(
@@ -718,6 +723,11 @@ mod tests {
                 use_name: "time".to_string(),
                 version: Version::new(0, 3, 14),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.3.14/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
 
@@ -754,6 +764,11 @@ mod tests {
                 use_name: "autocfg".to_string(),
                 version: Version::new(1, 1, 0),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/autocfg-1.1.0/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
 
@@ -818,6 +833,11 @@ mod tests {
                 use_name: "serde_derive".to_string(),
                 version: Version::new(1, 0, 139),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_derive-1.0.139/src/lib.rs"),
+                    lib_type: LibType::ProcMacro,
+                })],
             }
         );
 
@@ -843,6 +863,11 @@ mod tests {
                 use_name: "proc_macro2".to_string(),
                 version: Version::new(1, 0, 40),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.40/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
         assert_eq!(
@@ -852,6 +877,11 @@ mod tests {
                 use_name: "quote".to_string(),
                 version: Version::new(1, 0, 20),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
         assert_eq!(
@@ -861,6 +891,11 @@ mod tests {
                 use_name: "syn".to_string(),
                 version: Version::new(1, 0, 98),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/syn-1.0.98/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
 
@@ -893,6 +928,11 @@ mod tests {
                 use_name: "proc_macro2".to_string(),
                 version: Version::new(1, 0, 40),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.40/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
         assert_eq!(
@@ -902,6 +942,11 @@ mod tests {
                 use_name: "quote".to_string(),
                 version: Version::new(1, 0, 20),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
         assert_eq!(
@@ -911,6 +956,11 @@ mod tests {
                 use_name: "unicode_ident".to_string(),
                 version: Version::new(1, 0, 1),
                 platform: None,
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.1/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
 
@@ -936,6 +986,11 @@ mod tests {
                 use_name: "winapi_util".to_string(),
                 version: Version::new(0, 1, 5),
                 platform: Some(Platform::from_str("cfg(windows)").unwrap()),
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/winapi-util-0.1.5/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
 
@@ -1014,6 +1069,11 @@ mod tests {
                 use_name: "winapi".to_string(),
                 version: Version::new(0, 3, 9),
                 platform: Some(Platform::from_str("cfg(windows)").unwrap()),
+                #[cfg(feature = "blueos")]
+                lib_target: vec![Some(LibTarget {
+                    root: PathBuf::from("/usr/local/google/home/collinbaker/.cargo/registry/src/github.com-1ecc6299db9ec823/winapi-0.3.9/src/lib.rs"),
+                    lib_type: LibType::Rlib,
+                })],
             }
         );
     }
