@@ -15,35 +15,30 @@
 import("//build/templates/build_template.gni")
 import("//build/templates/rust.gni")
 import("//build/toolchain/blueos.gni")
-import("//kernel/common_crate_rustflags.gni")
 
 build_rust("ftp") {
   epoch = "3"
   crate_type = "rlib"
   sources = [ "src/lib.rs" ]
-  inputs = [ "//kernel/kernel/src/boards/$board/link.x" ]
   edition = "2015"
   deps = [
     "//external/vendor/log-0.4.28:log",
     "//kernel/rsrt:rsrt_std",
     "//librs:librs",
   ]
-
   features = [
     "debug_print",
     "log",
   ]
-
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates
   ]
-  rustflags += common_crate_rustflags
+  configs += [ "//build/boards/${board}:kernel_config" ]
 }
 
 build_rust("example_connecting") {
   crate_name = "example_connecting"
   crate_type = "bin"
-
   sources = [ "examples/connecting.rs" ]
   deps = [
     ":ftp",
@@ -51,14 +46,9 @@ build_rust("example_connecting") {
     "//kernel/rsrt:rsrt_std",
     "//librs:librs",
   ]
-
   features = [
     "debug_print",
     "log",
   ]
-
-  inputs = [ "//kernel/kernel/src/boards/$board/link.x" ]
-  rustflags = []
-  rustflags += common_image_rustflags
-  rustflags += common_crate_rustflags
+  configs += [ "//build/boards/${board}:kernel_config" ]
 }
