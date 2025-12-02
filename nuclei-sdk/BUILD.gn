@@ -40,10 +40,6 @@ static_library("nuclei-sdk") {
     configs += [
       "//build/boards/${board}:kernel_config",
     ]
-    # cflags = [
-    #     "-isystem",
-    #     "$sysroot_path/include"
-    # ]
 }
 
 bindgen("nuclei_header") {
