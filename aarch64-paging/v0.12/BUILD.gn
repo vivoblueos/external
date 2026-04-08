@@ -1,0 +1,14 @@
+import("//build/templates/build_template.gni")
+
+build_rust("aarch64_paging") {
+  crate_type = "rlib"
+  sources = [ "src/lib.rs" ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/bitflags-2.10.0:bitflags",
+    "//external/vendor/thiserror-2.0.17:thiserror",
+    "//external/vendor/log-0.4.28:log",
+  ]
+  features = [ "alloc" ]
+  rustflags = [ "--cap-lints=allow" ]
+}
