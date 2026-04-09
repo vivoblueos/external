@@ -829,3 +829,7 @@ dependencies = [
  "quote",
  "syn 2.0.108",
 ]
+
+[[patch.unused]]
+name = "aarch64-paging"
+version = "0.12.1"

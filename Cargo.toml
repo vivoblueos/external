@@ -87,6 +87,7 @@ default-features = false
 
 [patch.crates-io]
 thiserror = { path = "./thiserror-2.0.17" } 
+aarch64-paging = { path = "./aarch64-paging-0.12.1" }
 
 [dependencies.goblin]
 version = "0.9.3"
