@@ -157,3 +157,9 @@ license_files = ["../../LICENSE-MIT"]
 
 [crate.cortex-m-semihosting]
 license_files = ["LICENSE-MIT"]
+
+[crate.esp-radio-rtos-driver]
+license_files = ["LICENSE-MIT"]
+
+[crate.esp-metadata-generated]
+license_files = ["LICENSE-MIT"]
