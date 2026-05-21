@@ -17,25 +17,17 @@
 
 import("//build/templates/cargo_crate.gni")
 
-cargo_crate("portable_atomic") {
-  epoch = "1"
+cargo_crate("esp_wifi_sys_esp32c3") {
+  epoch = "0.2"
   crate_type = "rlib"
-  sources = [ "//external/vendor/portable-atomic-1.13.1/src/lib.rs" ]
-  inputs = [
-    "//external/vendor/portable-atomic-1.13.1/src/imp/atomic128/README.md",
-    "//external/vendor/portable-atomic-1.13.1/src/imp/atomic64/README.md",
-    "//external/vendor/portable-atomic-1.13.1/src/imp/detect/README.md",
-    "//external/vendor/portable-atomic-1.13.1/src/imp/interrupt/README.md",
-  ]
-  edition = "2018"
-  features = [
-    "fallback",
-  ]
+  sources = [ "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
 
-  cargo_pkg_name = "portable-atomic"
-  cargo_pkg_version = "1.13.1"
-  build_root = "//external/vendor/portable-atomic-1.13.1/build.rs"
-  build_sources = [ "//external/vendor/portable-atomic-1.13.1/build.rs" ]
+  cargo_pkg_name = "esp-wifi-sys-esp32c3"
+  cargo_pkg_version = "0.2.0"
+  build_root = "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/build.rs"
+  build_sources = [ "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/build.rs" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

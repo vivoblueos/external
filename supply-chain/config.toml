@@ -125,6 +125,9 @@ criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 [policy."esp-radio-rtos-driver:0.3.0"]
 criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 
+[policy."esp-wifi-sys-esp32c3:0.2.0"]
+criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
+
 [policy."fastrand:2.3.0"]
 criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 

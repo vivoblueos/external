@@ -28,6 +28,9 @@ defmt-rtt = "1.0.0"
 defmt-test = "0.4.0"
 bme280 = "0.5.1"
 
+[dependencies.esp-wifi-sys-esp32c3]
+version = "0.2.0"
+
 [dependencies.esp-radio-rtos-driver]
 version = "0.3.0"
 
