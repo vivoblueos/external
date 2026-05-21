@@ -163,3 +163,6 @@ license_files = ["LICENSE-MIT"]
 
 [crate.esp-wifi-sys-esp32c3]
 license_files = ["LICENSE-MIT"]
+
+[crate.esp-metadata-generated]
+license_files = ["LICENSE-MIT"]
