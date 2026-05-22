@@ -28,9 +28,7 @@ cargo_crate("portable_atomic") {
     "//external/vendor/portable-atomic-1.13.1/src/imp/interrupt/README.md",
   ]
   edition = "2018"
-  features = [
-    "fallback",
-  ]
+  features = [ "fallback" ]
 
   cargo_pkg_name = "portable-atomic"
   cargo_pkg_version = "1.13.1"

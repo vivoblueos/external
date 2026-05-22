@@ -23,19 +23,10 @@ cargo_crate("esp_metadata_generated") {
   sources = [ "//external/vendor/esp-metadata-generated-0.4.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+  features = [ "build-script", "esp32c3" ]
 
   cargo_pkg_name = "esp-metadata-generated"
   cargo_pkg_version = "0.4.0"
-
-  features = [
-    "build-script",
-  ]
-
-  if (board == "seeed_xiao_esp32c3") {
-    features += [
-      "esp32c3",
-    ]
-  }
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates
