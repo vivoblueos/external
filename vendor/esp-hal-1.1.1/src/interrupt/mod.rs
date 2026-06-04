@@ -266,13 +266,14 @@ impl Iterator for InterruptStatusIterator {
 // Peripheral interrupt API.
 
 fn vector_entry(interrupt: Interrupt) -> &'static pac::Vector {
-    cfg_if::cfg_if! {
-        if #[cfg(xtensa)] {
-            &pac::__INTERRUPTS[interrupt as usize]
-        } else {
-            &pac::__EXTERNAL_INTERRUPTS[interrupt as usize]
-        }
-    }
+    todo!("unsupported")
+    // cfg_if::cfg_if! {
+    //     if #[cfg(xtensa)] {
+    //         &pac::__INTERRUPTS[interrupt as usize]
+    //     } else {
+    //         &pac::__EXTERNAL_INTERRUPTS[interrupt as usize]
+    //     }
+    // }
 }
 
 /// Returns the currently bound interrupt handler.
