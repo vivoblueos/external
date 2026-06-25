@@ -52,7 +52,10 @@ cargo_crate("esp_radio") {
     "//external/vendor/instability-0.3.12:instability",
     "//external/vendor/num-derive-0.4.2:num_derive",
   ]
-  features = [ "esp32c3", "wifi" ]
+  features = [
+    "esp32c3",
+    "wifi",
+  ]
   aliased_deps = {
     procmacros = "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros(//build/toolchain:host)"
   }

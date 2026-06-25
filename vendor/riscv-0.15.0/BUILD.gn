@@ -25,9 +25,7 @@ cargo_crate("riscv") {
     "//external/vendor/embedded-hal-1.0.0:embedded_hal",
     "//external/vendor/riscv-pac-0.2.0:riscv_pac",
   ]
-  proc_macro_deps = [
-    "//external/vendor/paste-1.0.15:paste",
-  ]
+  proc_macro_deps = [ "//external/vendor/paste-1.0.15:paste" ]
 
   cargo_pkg_name = "riscv"
   cargo_pkg_version = "0.15.0"

@@ -65,9 +65,7 @@ cargo_crate("esp_hal") {
   build_sources = [ "//external/vendor/esp-hal-1.1.1/build.rs" ]
   build_script_outputs = [ "esp_hal_config_table.md" ]
 
-  rustenv = [
-    "ESP_HAL_CONFIG_MIN_CHIP_REVISION=0",
-  ]
+  rustenv = [ "ESP_HAL_CONFIG_MIN_CHIP_REVISION=0" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates
