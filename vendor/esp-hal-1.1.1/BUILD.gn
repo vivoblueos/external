@@ -37,10 +37,8 @@ cargo_crate("esp_hal") {
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
     "//external/vendor/esp-rom-sys-0.1.4:esp_rom_sys",
     "//external/vendor/esp-sync-0.2.1:esp_sync",
-    "//external/vendor/esp32c3-0.32.2:esp32c3",
     "//external/vendor/fugit-0.3.9:fugit",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
-    "//external/vendor/riscv-0.15.0:riscv",
     "//external/vendor/strum-0.27.2:strum",
   ]
   build_deps = [
@@ -54,7 +52,6 @@ cargo_crate("esp_hal") {
     "//external/vendor/instability-0.3.12:instability",
     "//external/vendor/paste-1.0.15:paste",
   ]
-  features = [ "esp32c3" ]
   aliased_deps = {
     procmacros = "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros(//build/toolchain:host)"
   }
@@ -63,9 +60,6 @@ cargo_crate("esp_hal") {
   cargo_pkg_version = "1.1.1"
   build_root = "//external/vendor/esp-hal-1.1.1/build.rs"
   build_sources = [ "//external/vendor/esp-hal-1.1.1/build.rs" ]
-  build_script_outputs = [ "esp_hal_config_table.md" ]
-
-  rustenv = [ "ESP_HAL_CONFIG_MIN_CHIP_REVISION=0" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

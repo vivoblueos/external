@@ -27,7 +27,6 @@ cargo_crate("document_features") {
     "//external/vendor/document-features-0.2.12/README.md",
   ]
   edition = "2018"
-  features = [ "default" ]
   deps = [ "//external/vendor/litrs-1.0.0:litrs" ]
 
   cargo_pkg_name = "document-features"

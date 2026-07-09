@@ -21,7 +21,7 @@ cargo_crate("esp_sync") {
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-sync-0.2.1/src/lib.rs" ]
-  inputs = [ "//external/vendor/esp-sync-0.2.1/Cargo.toml" ]
+  inputs = []
   edition = "2021"
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
@@ -35,7 +35,6 @@ cargo_crate("esp_sync") {
   ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
-  features = [ "esp32c3" ]
   aliased_deps = {
     embassy_sync_06 = "//external/vendor/embassy-sync-0.6.2:embassy_sync"
     embassy_sync_07 = "//external/vendor/embassy-sync-0.7.2:embassy_sync"

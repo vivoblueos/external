@@ -25,13 +25,7 @@ cargo_crate("esp_radio_rtos_driver") {
   edition = "2021"
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/esp-sync-0.2.1:esp_sync",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
-  ]
-
-  features = [
-    "esp32c3",
-    "ipc-implementations",
   ]
 
   cargo_pkg_name = "esp-radio-rtos-driver"

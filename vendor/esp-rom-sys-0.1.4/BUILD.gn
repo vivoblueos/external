@@ -21,18 +21,14 @@ cargo_crate("esp_rom_sys") {
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-rom-sys-0.1.4/src/lib.rs" ]
-  inputs = [ "//external/vendor/esp-rom-sys-0.1.4/Cargo.toml" ]
+  inputs = []
   edition = "2021"
-  deps = [
-    "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/esp32c3-0.32.2:esp32c3",
-  ]
+  deps = [ "//external/vendor/cfg-if-1.0.4:cfg_if" ]
   build_deps = [
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
-  features = [ "esp32c3" ]
 
   cargo_pkg_name = "esp-rom-sys"
   cargo_pkg_version = "0.1.4"

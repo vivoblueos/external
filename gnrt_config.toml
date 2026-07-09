@@ -194,6 +194,9 @@ license_files = ["LICENSE-MIT"]
 [crate.embassy-futures]
 license_files = ["LICENSE-MIT"]
 
+[crate.embedded-graphics-core]
+license_files = ["README.md"]
+
 [crate.esp-alloc]
 license_files = ["LICENSE-MIT"]
 
