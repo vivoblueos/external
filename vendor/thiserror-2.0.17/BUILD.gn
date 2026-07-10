@@ -25,7 +25,6 @@ cargo_crate("thiserror") {
   inputs = []
   edition = "2021"
   proc_macro_deps = [ "//external/vendor/thiserror-impl-2.0.17:thiserror_impl" ]
-  features = [ "std" ]
 
   cargo_pkg_name = "thiserror"
   cargo_manifest_dir = "//external/vendor/thiserror-2.0.17"
