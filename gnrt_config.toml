@@ -151,6 +151,8 @@ exclude_features_in_gn = [ "unsafe-assume-single-core" ]
 
 [crate.num-traits]
 exclude_features_in_gn = [ "std" ]
+exclude_deps_in_gn = [ "autocfg" ]
+remove_build_rs = true
 
 [crate.euclid]
 exclude_features_in_gn = [ "std" ]
@@ -250,6 +252,10 @@ license_files = ["LICENSE-MIT", "LICENSE-Apache-2.0"]
 
 [crate.xtensa-lx]
 license_files = ["LICENSE-MIT"]
+
+[crate.memoffset]
+exclude_deps_in_gn = [ "autocfg" ]
+remove_build_rs = true
 
 [crate.const-field-offset]
 license_files = ["README.md"]
