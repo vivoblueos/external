@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("nb") {
+  crate_name = "nb"
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/nb-0.1.3/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("nb") {
   deps = [ "//external/vendor/nb-1.1.0:nb" ]
 
   cargo_pkg_name = "nb"
+  cargo_manifest_dir = "//external/vendor/nb-0.1.3"
   cargo_pkg_version = "0.1.3"
 
   rustflags = [

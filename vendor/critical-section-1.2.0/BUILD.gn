@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("critical_section") {
+  crate_name = "critical_section"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/critical-section-1.2.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("critical_section") {
   edition = "2018"
 
   cargo_pkg_name = "critical-section"
+  cargo_manifest_dir = "//external/vendor/critical-section-1.2.0"
   cargo_pkg_version = "1.2.0"
 
   rustflags = [

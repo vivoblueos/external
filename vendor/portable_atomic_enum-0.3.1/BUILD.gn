@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("portable_atomic_enum") {
+  crate_name = "portable_atomic_enum"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/portable_atomic_enum-0.3.1/src/lib.rs" ]
@@ -28,6 +29,7 @@ cargo_crate("portable_atomic_enum") {
   features = [ "portable-atomic" ]
 
   cargo_pkg_name = "portable_atomic_enum"
+  cargo_manifest_dir = "//external/vendor/portable_atomic_enum-0.3.1"
   cargo_pkg_version = "0.3.1"
 
   rustflags = [

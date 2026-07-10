@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("same_file") {
+  crate_name = "same_file"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/same-file-1.0.6/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("same_file") {
   deps = [ "//external/vendor/winapi-util-0.1.11:winapi_util" ]
 
   cargo_pkg_name = "same-file"
+  cargo_manifest_dir = "//external/vendor/same-file-1.0.6"
   cargo_pkg_version = "1.0.6"
 
   rustflags = [

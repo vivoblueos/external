@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("embedded_hal_async") {
+  crate_name = "embedded_hal_async"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/embedded-hal-async-1.0.0/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("embedded_hal_async") {
   deps = [ "//external/vendor/embedded-hal-1.0.0:embedded_hal" ]
 
   cargo_pkg_name = "embedded-hal-async"
+  cargo_manifest_dir = "//external/vendor/embedded-hal-async-1.0.0"
   cargo_pkg_version = "1.0.0"
   build_root = "//external/vendor/embedded-hal-async-1.0.0/build.rs"
   build_sources = [ "//external/vendor/embedded-hal-async-1.0.0/build.rs" ]

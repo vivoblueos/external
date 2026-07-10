@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("phf_generator") {
+  crate_name = "phf_generator"
   epoch = "0.12"
   crate_type = "rlib"
   sources = [ "//external/vendor/phf_generator-0.12.1/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("phf_generator") {
   ]
 
   cargo_pkg_name = "phf_generator"
+  cargo_manifest_dir = "//external/vendor/phf_generator-0.12.1"
   cargo_pkg_version = "0.12.1"
 
   rustflags = [

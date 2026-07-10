@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("docsplay_macros") {
+  crate_name = "docsplay_macros"
   epoch = "0.1"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/docsplay-macros-0.1.2/src/lib.rs" ]
@@ -25,11 +26,12 @@ cargo_crate("docsplay_macros") {
   edition = "2021"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "docsplay-macros"
+  cargo_manifest_dir = "//external/vendor/docsplay-macros-0.1.2"
   cargo_pkg_version = "0.1.2"
 
   rustflags = [

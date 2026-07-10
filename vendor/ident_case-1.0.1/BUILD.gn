@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("ident_case") {
+  crate_name = "ident_case"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/ident_case-1.0.1/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("ident_case") {
   edition = "2015"
 
   cargo_pkg_name = "ident_case"
+  cargo_manifest_dir = "//external/vendor/ident_case-1.0.1"
   cargo_pkg_version = "1.0.1"
 
   rustflags = [

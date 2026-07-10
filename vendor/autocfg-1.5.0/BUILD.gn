@@ -17,7 +17,8 @@
 
 import("//build/templates/cargo_crate.gni")
 
-cargo_crate("autocfg") {
+cargo_crate("buildrs_support") {
+  crate_name = "autocfg"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/autocfg-1.5.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("autocfg") {
   edition = "2015"
 
   cargo_pkg_name = "autocfg"
+  cargo_manifest_dir = "//external/vendor/autocfg-1.5.0"
   cargo_pkg_version = "1.5.0"
 
   rustflags = [

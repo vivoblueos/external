@@ -1,0 +1,11 @@
+Name: rgb
+URL: https://crates.io/crates/rgb
+Version: 0.8.53
+Revision: f453adedbbd1a672c654239b0eb0576de606d7d2
+License: MIT
+License File: //external/vendor/rgb-0.8.53/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: `struct RGB/RGBA/etc.` for sharing pixels between crates + convenience methods for color manipulation.
+Allows no-copy high-level interoperability. Also adds common convenience methods and implements standard Rust traits to make `RGB`/`RGBA` pixels and slices first-class Rust objects.

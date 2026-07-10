@@ -1,0 +1,11 @@
+Name: codemap-diagnostic
+URL: https://crates.io/crates/codemap-diagnostic
+Version: 0.1.2
+Revision: 47a557451cc1e6ef8c796cdd68bf3f93c0f0901a
+License: Apache-2.0
+License File: //external/vendor/codemap-diagnostic-0.1.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: [DEPRECATED] Library for displaying compiler error messages, extracted from rustc.
+

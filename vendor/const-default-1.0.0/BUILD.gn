@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("const_default") {
+  crate_name = "const_default"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/const-default-1.0.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("const_default") {
   edition = "2018"
 
   cargo_pkg_name = "const-default"
+  cargo_manifest_dir = "//external/vendor/const-default-1.0.0"
   cargo_pkg_version = "1.0.0"
 
   rustflags = [

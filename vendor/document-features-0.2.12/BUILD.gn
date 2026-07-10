@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("document_features") {
+  crate_name = "document_features"
   epoch = "0.2"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/document-features-0.2.12/lib.rs" ]
@@ -31,6 +32,7 @@ cargo_crate("document_features") {
   deps = [ "//external/vendor/litrs-1.0.0:litrs" ]
 
   cargo_pkg_name = "document-features"
+  cargo_manifest_dir = "//external/vendor/document-features-0.2.12"
   cargo_pkg_version = "0.2.12"
 
   rustflags = [

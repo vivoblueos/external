@@ -1,0 +1,10 @@
+Name: text-size
+URL: https://crates.io/crates/text-size
+Version: 1.1.1
+Revision: 5f22fbe12550a2c70caff9a8c5347d6722370469
+License: Apache-2.0
+License File: //external/vendor/text-size-1.1.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Newtypes for text offsets

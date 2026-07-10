@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("windows_link") {
+  crate_name = "windows_link"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/windows-link-0.2.1/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("windows_link") {
   edition = "2021"
 
   cargo_pkg_name = "windows-link"
+  cargo_manifest_dir = "//external/vendor/windows-link-0.2.1"
   cargo_pkg_version = "0.2.1"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("defmt_parser") {
+  crate_name = "defmt_parser"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/defmt-parser-1.0.0/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("defmt_parser") {
   deps = [ "//external/vendor/thiserror-2.0.17:thiserror" ]
 
   cargo_pkg_name = "defmt-parser"
+  cargo_manifest_dir = "//external/vendor/defmt-parser-1.0.0"
   cargo_pkg_version = "1.0.0"
 
   rustflags = [

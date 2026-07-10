@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("delegate") {
+  crate_name = "delegate"
   epoch = "0.13"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/delegate-0.13.4/src/lib.rs" ]
@@ -25,11 +26,12 @@ cargo_crate("delegate") {
   edition = "2018"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "delegate"
+  cargo_manifest_dir = "//external/vendor/delegate-0.13.4"
   cargo_pkg_version = "0.13.4"
 
   rustflags = [

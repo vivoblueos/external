@@ -1,0 +1,48 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("i_slint_core_macros") {
+  crate_name = "i_slint_core_macros"
+  epoch = "1"
+  crate_type = "proc-macro"
+  sources = [ "//external/vendor/i-slint-core-macros-1.12.1/lib.rs" ]
+  inputs = [
+    "//external/vendor/i-slint-core-macros-1.12.1/.cargo_vcs_info.json",
+    "//external/vendor/i-slint-core-macros-1.12.1/LICENSES/LicenseRef-Slint-Royalty-free-2.0.md",
+    "//external/vendor/i-slint-core-macros-1.12.1/LICENSES/LicenseRef-Slint-Software-3.0.md",
+    "//external/vendor/i-slint-core-macros-1.12.1/README.md",
+    "//external/vendor/i-slint-core-macros-1.12.1/link-data.json",
+  ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/quote-1.0.46:quote",
+    "//external/vendor/serde_json-1.0.150:serde_json",
+    "//external/vendor/syn-2.0.108:syn",
+  ]
+
+  cargo_pkg_name = "i-slint-core-macros"
+  cargo_manifest_dir = "//external/vendor/i-slint-core-macros-1.12.1"
+  cargo_pkg_version = "1.12.1"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+    "--extern",
+    "proc_macro",
+  ]
+}

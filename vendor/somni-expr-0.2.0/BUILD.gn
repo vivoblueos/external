@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("somni_expr") {
+  crate_name = "somni_expr"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/somni-expr-0.2.0/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("somni_expr") {
   deps = [ "//external/vendor/somni-parser-0.2.2:somni_parser" ]
 
   cargo_pkg_name = "somni-expr"
+  cargo_manifest_dir = "//external/vendor/somni-expr-0.2.0"
   cargo_pkg_version = "0.2.0"
 
   rustflags = [

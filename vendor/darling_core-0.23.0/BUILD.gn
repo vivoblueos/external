@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("darling_core") {
+  crate_name = "darling_core"
   epoch = "0.23"
   crate_type = "rlib"
   sources = [ "//external/vendor/darling_core-0.23.0/src/lib.rs" ]
@@ -26,7 +27,7 @@ cargo_crate("darling_core") {
   deps = [
     "//external/vendor/ident_case-1.0.1:ident_case",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/strsim-0.11.1:strsim",
     "//external/vendor/syn-2.0.108:syn",
   ]
@@ -36,6 +37,7 @@ cargo_crate("darling_core") {
   ]
 
   cargo_pkg_name = "darling_core"
+  cargo_manifest_dir = "//external/vendor/darling_core-0.23.0"
   cargo_pkg_version = "0.23.0"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("zerocopy") {
+  crate_name = "zerocopy"
   epoch = "0.8"
   crate_type = "rlib"
   sources = [ "//external/vendor/zerocopy-0.8.27/src/lib.rs" ]
@@ -32,6 +33,7 @@ cargo_crate("zerocopy") {
   ]
 
   cargo_pkg_name = "zerocopy"
+  cargo_manifest_dir = "//external/vendor/zerocopy-0.8.27"
   cargo_pkg_version = "0.8.27"
   build_root = "//external/vendor/zerocopy-0.8.27/build.rs"
   build_sources = [ "//external/vendor/zerocopy-0.8.27/build.rs" ]

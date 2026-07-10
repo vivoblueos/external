@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("heapless") {
+  crate_name = "heapless"
   epoch = "0.9"
   crate_type = "rlib"
   sources = [ "//external/vendor/heapless-0.9.3/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("heapless") {
   ]
 
   cargo_pkg_name = "heapless"
+  cargo_manifest_dir = "//external/vendor/heapless-0.9.3"
   cargo_pkg_version = "0.9.3"
   build_root = "//external/vendor/heapless-0.9.3/build.rs"
   build_sources = [ "//external/vendor/heapless-0.9.3/build.rs" ]

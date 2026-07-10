@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("flat_device_tree") {
+  crate_name = "flat_device_tree"
   epoch = "3"
   crate_type = "rlib"
   sources = [ "//external/vendor/flat_device_tree-3.1.1/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("flat_device_tree") {
   edition = "2021"
 
   cargo_pkg_name = "flat_device_tree"
+  cargo_manifest_dir = "//external/vendor/flat_device_tree-3.1.1"
   cargo_pkg_version = "3.1.1"
 
   rustflags = [

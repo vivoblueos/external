@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("bme280") {
+  crate_name = "bme280"
   epoch = "0.5"
   crate_type = "rlib"
   sources = [ "//external/vendor/bme280-0.5.1/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("bme280") {
   features = [ "sync" ]
 
   cargo_pkg_name = "bme280"
+  cargo_manifest_dir = "//external/vendor/bme280-0.5.1"
   cargo_pkg_version = "0.5.1"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("itoa") {
+  crate_name = "itoa"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/itoa-1.0.18/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("itoa") {
   edition = "2021"
 
   cargo_pkg_name = "itoa"
+  cargo_manifest_dir = "//external/vendor/itoa-1.0.18"
   cargo_pkg_version = "1.0.18"
 
   rustflags = [

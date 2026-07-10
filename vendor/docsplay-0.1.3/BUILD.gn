@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("docsplay") {
+  crate_name = "docsplay"
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/docsplay-0.1.3/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("docsplay") {
       [ "//external/vendor/docsplay-macros-0.1.2:docsplay_macros" ]
 
   cargo_pkg_name = "docsplay"
+  cargo_manifest_dir = "//external/vendor/docsplay-0.1.3"
   cargo_pkg_version = "0.1.3"
 
   rustflags = [

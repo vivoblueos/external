@@ -1,0 +1,11 @@
+Name: auto_enums
+URL: https://crates.io/crates/auto_enums
+Version: 0.8.9
+Revision: b87b600da37dc86be4ab797903057888e58ffa63
+License: Apache-2.0
+License File: //external/vendor/auto_enums-0.8.9/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A library for to allow multiple return types by automatically generated enum.
+

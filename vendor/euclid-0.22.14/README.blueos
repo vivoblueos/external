@@ -1,0 +1,10 @@
+Name: euclid
+URL: https://crates.io/crates/euclid
+Version: 0.22.14
+Revision: 60f2bd96deec0c0683eeddd737e0dc070a25e9af
+License: Apache-2.0
+License File: //external/vendor/euclid-0.22.14/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Geometry primitives

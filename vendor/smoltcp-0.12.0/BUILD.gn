@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("smoltcp") {
+  crate_name = "smoltcp"
   epoch = "0.12"
   crate_type = "rlib"
   sources = [ "//external/vendor/smoltcp-0.12.0/src/lib.rs" ]
@@ -58,6 +59,7 @@ cargo_crate("smoltcp") {
   ]
 
   cargo_pkg_name = "smoltcp"
+  cargo_manifest_dir = "//external/vendor/smoltcp-0.12.0"
   cargo_pkg_version = "0.12.0"
   build_root = "//external/vendor/smoltcp-0.12.0/build.rs"
   build_sources = [ "//external/vendor/smoltcp-0.12.0/build.rs" ]

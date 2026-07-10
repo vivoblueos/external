@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("defmt_rtt") {
+  crate_name = "defmt_rtt"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/defmt-rtt-1.1.0/src/lib.rs" ]
@@ -25,10 +26,11 @@ cargo_crate("defmt_rtt") {
   edition = "2021"
   deps = [
     "//external/vendor/critical-section-1.2.0:critical_section",
-    "//external/vendor/defmt-1.0.1:defmt",
+    "//external/vendor/defmt-1.1.1:defmt",
   ]
 
   cargo_pkg_name = "defmt-rtt"
+  cargo_manifest_dir = "//external/vendor/defmt-rtt-1.1.0"
   cargo_pkg_version = "1.1.0"
   build_root = "//external/vendor/defmt-rtt-1.1.0/build.rs"
   build_sources = [ "//external/vendor/defmt-rtt-1.1.0/build.rs" ]

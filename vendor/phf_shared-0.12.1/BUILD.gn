@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("phf_shared") {
+  crate_name = "phf_shared"
   epoch = "0.12"
   crate_type = "rlib"
   sources = [ "//external/vendor/phf_shared-0.12.1/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("phf_shared") {
   deps = [ "//external/vendor/siphasher-1.0.1:siphasher" ]
 
   cargo_pkg_name = "phf_shared"
+  cargo_manifest_dir = "//external/vendor/phf_shared-0.12.1"
   cargo_pkg_version = "0.12.1"
 
   rustflags = [

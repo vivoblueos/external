@@ -18,17 +18,33 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_metadata_generated") {
+  crate_name = "esp_metadata_generated"
   epoch = "0.4"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-metadata-generated-0.4.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  features = [
-    "build-script",
-    "esp32c3",
-  ]
+  features = [ "build-script" ]
 
   cargo_pkg_name = "esp-metadata-generated"
+  cargo_manifest_dir = "//external/vendor/esp-metadata-generated-0.4.0"
+  cargo_pkg_version = "0.4.0"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}
+cargo_crate("buildrs_support") {
+  crate_name = "esp_metadata_generated"
+  epoch = "0.4"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/esp-metadata-generated-0.4.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  features = [ "build-script" ]
+
+  cargo_pkg_name = "esp-metadata-generated"
+  cargo_manifest_dir = "//external/vendor/esp-metadata-generated-0.4.0"
   cargo_pkg_version = "0.4.0"
 
   rustflags = [

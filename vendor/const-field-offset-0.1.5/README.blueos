@@ -1,0 +1,10 @@
+Name: const-field-offset
+URL: https://crates.io/crates/const-field-offset
+Version: 0.1.5
+Revision: 7df9b3cbb70b46233bf4d49966d65f94f09fa6bd
+License: Apache-2.0
+License File: //external/vendor/const-field-offset-0.1.5/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Wrapper around field-offset crate and const-field-offset-macro

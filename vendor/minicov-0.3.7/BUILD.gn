@@ -18,18 +18,20 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("minicov") {
+  crate_name = "minicov"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/minicov-0.3.7/src/lib.rs" ]
   inputs = []
   edition = "2018"
   build_deps = [
-    "//external/vendor/cc-1.2.44:cc",
-    "//external/vendor/walkdir-2.5.0:walkdir",
+    "//external/vendor/cc-1.2.44:buildrs_support",
+    "//external/vendor/walkdir-2.5.0:buildrs_support",
   ]
   features = [ "alloc" ]
 
   cargo_pkg_name = "minicov"
+  cargo_manifest_dir = "//external/vendor/minicov-0.3.7"
   cargo_pkg_version = "0.3.7"
   build_root = "//external/vendor/minicov-0.3.7/build.rs"
   build_sources = [ "//external/vendor/minicov-0.3.7/build.rs" ]

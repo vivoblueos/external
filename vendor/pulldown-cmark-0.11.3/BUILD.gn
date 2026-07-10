@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("pulldown_cmark") {
+  crate_name = "pulldown_cmark"
   epoch = "0.11"
   crate_type = "rlib"
   sources = [ "//external/vendor/pulldown-cmark-0.11.3/src/lib.rs" ]
@@ -30,6 +31,7 @@ cargo_crate("pulldown_cmark") {
   ]
 
   cargo_pkg_name = "pulldown-cmark"
+  cargo_manifest_dir = "//external/vendor/pulldown-cmark-0.11.3"
   cargo_pkg_version = "0.11.3"
   build_root = "//external/vendor/pulldown-cmark-0.11.3/build.rs"
   build_sources = [ "//external/vendor/pulldown-cmark-0.11.3/build.rs" ]

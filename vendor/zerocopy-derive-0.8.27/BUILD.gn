@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("zerocopy_derive") {
+  crate_name = "zerocopy_derive"
   epoch = "0.8"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/zerocopy-derive-0.8.27/src/lib.rs" ]
@@ -25,11 +26,12 @@ cargo_crate("zerocopy_derive") {
   edition = "2021"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "zerocopy-derive"
+  cargo_manifest_dir = "//external/vendor/zerocopy-derive-0.8.27"
   cargo_pkg_version = "0.8.27"
 
   rustflags = [

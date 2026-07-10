@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("darling") {
+  crate_name = "darling"
   epoch = "0.21"
   crate_type = "rlib"
   sources = [ "//external/vendor/darling-0.21.3/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("darling") {
   proc_macro_deps = [ "//external/vendor/darling_macro-0.21.3:darling_macro" ]
 
   cargo_pkg_name = "darling"
+  cargo_manifest_dir = "//external/vendor/darling-0.21.3"
   cargo_pkg_version = "0.21.3"
 
   rustflags = [

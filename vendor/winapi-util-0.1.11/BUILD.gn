@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("winapi_util") {
+  crate_name = "winapi_util"
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/winapi-util-0.1.11/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("winapi_util") {
   deps = [ "//external/vendor/windows-sys-0.61.2:windows_sys" ]
 
   cargo_pkg_name = "winapi-util"
+  cargo_manifest_dir = "//external/vendor/winapi-util-0.1.11"
   cargo_pkg_version = "0.1.11"
 
   rustflags = [

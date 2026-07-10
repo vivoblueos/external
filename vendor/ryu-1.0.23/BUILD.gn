@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("ryu") {
+  crate_name = "ryu"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/ryu-1.0.23/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("ryu") {
   edition = "2021"
 
   cargo_pkg_name = "ryu"
+  cargo_manifest_dir = "//external/vendor/ryu-1.0.23"
   cargo_pkg_version = "1.0.23"
 
   rustflags = [

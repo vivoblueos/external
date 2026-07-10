@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_radio_rtos_driver") {
+  crate_name = "esp_radio_rtos_driver"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-radio-rtos-driver-0.3.0/src/lib.rs" ]
@@ -35,6 +36,7 @@ cargo_crate("esp_radio_rtos_driver") {
   ]
 
   cargo_pkg_name = "esp-radio-rtos-driver"
+  cargo_manifest_dir = "//external/vendor/esp-radio-rtos-driver-0.3.0"
   cargo_pkg_version = "0.3.0"
 
   rustflags = [

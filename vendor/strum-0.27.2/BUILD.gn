@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("strum") {
+  crate_name = "strum"
   epoch = "0.27"
   crate_type = "rlib"
   sources = [ "//external/vendor/strum-0.27.2/src/lib.rs" ]
@@ -30,6 +31,7 @@ cargo_crate("strum") {
   ]
 
   cargo_pkg_name = "strum"
+  cargo_manifest_dir = "//external/vendor/strum-0.27.2"
   cargo_pkg_version = "0.27.2"
 
   rustflags = [

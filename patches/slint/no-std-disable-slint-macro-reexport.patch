@@ -1,0 +1,13 @@
+diff --git a/lib.rs b/lib.rs
+index 1f48e2f..6dbb1f1 100644
+--- a/lib.rs
++++ b/lib.rs
+@@ -212,7 +212,8 @@ compile_error!(
+     forward compatibility with future version of this crate"
+ );
+
++#[cfg(feature = "std")]
+ pub use slint_macros::slint;
+
+ pub use i_slint_core::api::*;
+ #[doc(hidden)]

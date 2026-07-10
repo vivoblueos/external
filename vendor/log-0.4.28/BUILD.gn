@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("log") {
+  crate_name = "log"
   epoch = "0.4"
   crate_type = "rlib"
   sources = [ "//external/vendor/log-0.4.28/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("log") {
   edition = "2021"
 
   cargo_pkg_name = "log"
+  cargo_manifest_dir = "//external/vendor/log-0.4.28"
   cargo_pkg_version = "0.4.28"
 
   rustflags = [

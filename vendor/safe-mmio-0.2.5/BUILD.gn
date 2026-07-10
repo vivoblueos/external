@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("safe_mmio") {
+  crate_name = "safe_mmio"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/safe-mmio-0.2.5/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("safe_mmio") {
   deps = [ "//external/vendor/zerocopy-0.8.27:zerocopy" ]
 
   cargo_pkg_name = "safe-mmio"
+  cargo_manifest_dir = "//external/vendor/safe-mmio-0.2.5"
   cargo_pkg_version = "0.2.5"
 
   rustflags = [

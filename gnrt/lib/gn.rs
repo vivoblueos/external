@@ -75,6 +75,7 @@ pub struct RuleDetail {
     pub cargo_pkg_authors: Option<String>,
     pub cargo_pkg_name: String,
     pub cargo_pkg_description: Option<String>,
+    pub cargo_manifest_dir: Option<String>,
     pub deps: Vec<DepGroup>,
     #[cfg(feature = "blueos")]
     pub proc_macro_deps: Vec<DepGroup>,
@@ -185,12 +186,18 @@ pub fn build_rule_from_dep(
         _ => dep.is_toplevel_dep,
     };
 
+    let cargo_manifest_dir = format!(
+        "//external/vendor/{}-{}.{}.{}",
+        dep.package_name, dep.version.major, dep.version.minor, dep.version.patch
+    );
+
     let mut detail_template = RuleDetail {
         edition: dep.edition.clone(),
         cargo_pkg_version: dep.version.to_string(),
         cargo_pkg_authors,
         cargo_pkg_name: dep.package_name.to_string(),
         cargo_pkg_description: dep.description.as_ref().map(|s| s.trim_end().to_string()),
+        cargo_manifest_dir: Some(cargo_manifest_dir),
 
         extra_kv,
         ..Default::default()
@@ -209,7 +216,11 @@ pub fn build_rule_from_dep(
     #[cfg(feature = "blueos")]
     let mut proc_macro_deps: Vec<&DepOfDep> = vec![];
     #[cfg(feature = "blueos")]
-    for depofdep in dep.dependencies.iter() {
+    for depofdep in dep
+        .dependencies
+        .iter()
+        .filter(|d| !exclude_deps.iter().any(|e| e.as_str() == &*d.package_name))
+    {
         for libtarget in depofdep.lib_target.iter() {
             if let Some(target) = libtarget {
                 match target.lib_type {
@@ -334,7 +345,10 @@ pub fn build_rule_from_dep(
 
     detail_template.build_deps = group_deps(&build_deps, |d| PackageId {
         name: d.package_name.clone(),
-        use_name: d.use_name.clone(),
+        use_name: match name_lib_style {
+            NameLibStyle::LibLiteral => "buildrs_support".to_string(),
+            NameLibStyle::PackageName => d.use_name.clone(),
+        },
         epoch: match name_lib_style {
             // TODO(danakj): Separate this choice to another parameter option.
             #[cfg(not(feature = "blueos"))]
@@ -365,12 +379,17 @@ pub fn build_rule_from_dep(
         .map(|p| format!("//{}", paths.to_gn_abs_path(p).unwrap()))
         .collect();
 
+    let excluded_features = extra_config.get_combined_set(&*dep.package_name, |cfg| {
+        &cfg.exclude_features_in_gn
+    });
+
     let requested_features_for_normal = {
         let mut features = dep
             .dependency_kinds
             .get(&deps::DependencyKind::Normal)
             .map(|per_kind_info| per_kind_info.features.clone())
             .unwrap_or_default();
+        features.retain(|feature| !excluded_features.contains(feature.as_str()));
         features.sort_unstable();
         features.dedup();
         features
@@ -382,6 +401,7 @@ pub fn build_rule_from_dep(
             .get(&deps::DependencyKind::Build)
             .map(|per_kind_info| per_kind_info.features.clone())
             .unwrap_or_default();
+        features.retain(|feature| !excluded_features.contains(feature.as_str()));
         features.sort_unstable();
         features.dedup();
         features
@@ -506,18 +526,13 @@ pub fn build_rule_from_dep(
             }
 
             let lib_rule_name: String = match &dep_kind {
-                deps::DependencyKind::Normal => match name_lib_style {
-                    NameLibStyle::PackageName => normalized_crate_name.to_string(),
-                    NameLibStyle::LibLiteral => "lib".to_string(),
-                },
+                deps::DependencyKind::Normal => normalized_crate_name.to_string(),
                 deps::DependencyKind::Build => "buildrs_support".to_string(),
                 _ => unreachable!(),
             };
             let (crate_name, epoch) = match name_lib_style {
                 NameLibStyle::PackageName => (None, None),
-                NameLibStyle::LibLiteral => {
-                    (Some(normalized_crate_name.to_string()), Some(crate_epoch))
-                }
+                NameLibStyle::LibLiteral => (Some(normalized_crate_name.to_string()), Some(crate_epoch)),
             };
             let crate_type = lib_target.lib_type.to_string();
 

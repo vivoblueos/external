@@ -1,0 +1,10 @@
+Name: spin_on
+URL: https://crates.io/crates/spin_on
+Version: 0.1.1
+Revision: 1605b63506316d89722c650e3fac6fdb643c3ef9
+License: Apache-2.0
+License File: //external/vendor/spin_on-0.1.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A simple, inefficient Future executor

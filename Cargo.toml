@@ -140,3 +140,8 @@ default-features = false
 features = [
     "unwinder"
 ]
+
+[dependencies.slint]
+version = "=1.12.1"
+default-features = false
+features = ["compat-1-2", "libm", "unsafe-single-threaded"]

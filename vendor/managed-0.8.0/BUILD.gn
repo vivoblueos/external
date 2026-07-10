@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("managed") {
+  crate_name = "managed"
   epoch = "0.8"
   crate_type = "rlib"
   sources = [ "//external/vendor/managed-0.8.0/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("managed") {
   ]
 
   cargo_pkg_name = "managed"
+  cargo_manifest_dir = "//external/vendor/managed-0.8.0"
   cargo_pkg_version = "0.8.0"
 
   rustflags = [

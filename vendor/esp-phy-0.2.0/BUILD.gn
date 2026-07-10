@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_phy") {
+  crate_name = "esp_phy"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-phy-0.2.0/src/lib.rs" ]
@@ -33,14 +34,15 @@ cargo_crate("esp_phy") {
     "//external/vendor/esp32c3-0.32.2:esp32c3",
   ]
   build_deps = [
-    "//external/vendor/esp-config-0.7.0:esp_config",
-    "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
+    "//external/vendor/esp-config-0.7.0:buildrs_support",
+    "//external/vendor/esp-metadata-generated-0.4.0:buildrs_support",
   ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
   features = [ "esp32c3" ]
 
   cargo_pkg_name = "esp-phy"
+  cargo_manifest_dir = "//external/vendor/esp-phy-0.2.0"
   cargo_pkg_version = "0.2.0"
   build_root = "//external/vendor/esp-phy-0.2.0/build.rs"
   build_sources = [ "//external/vendor/esp-phy-0.2.0/build.rs" ]

@@ -1,0 +1,10 @@
+Name: field-offset
+URL: https://crates.io/crates/field-offset
+Version: 0.3.6
+Revision: 95b242e2bd69b7dec41cdd82b780232fcbba15ca
+License: Apache-2.0
+License File: //external/vendor/field-offset-0.3.6/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Safe pointer-to-member implementation

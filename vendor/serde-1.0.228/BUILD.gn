@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("serde") {
+  crate_name = "serde"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/serde-1.0.228/src/lib.rs" ]
@@ -26,12 +27,14 @@ cargo_crate("serde") {
   deps = [ "//external/vendor/serde_core-1.0.228:serde_core" ]
   proc_macro_deps = [ "//external/vendor/serde_derive-1.0.228:serde_derive" ]
   features = [
+    "alloc",
     "derive",
     "serde_derive",
     "std",
   ]
 
   cargo_pkg_name = "serde"
+  cargo_manifest_dir = "//external/vendor/serde-1.0.228"
   cargo_pkg_version = "1.0.228"
   build_root = "//external/vendor/serde-1.0.228/build.rs"
   build_sources = [ "//external/vendor/serde-1.0.228/build.rs" ]

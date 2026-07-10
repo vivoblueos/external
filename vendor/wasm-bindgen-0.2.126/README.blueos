@@ -1,0 +1,11 @@
+Name: wasm-bindgen
+URL: https://crates.io/crates/wasm-bindgen
+Version: 0.2.126
+Revision: 21ac804a96c0c5c5d6459084686a9a17a8a3c865
+License: Apache-2.0
+License File: //external/vendor/wasm-bindgen-0.2.126/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Easy support for interacting between JS and Rust.
+

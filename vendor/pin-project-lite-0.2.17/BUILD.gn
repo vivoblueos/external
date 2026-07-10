@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("pin_project_lite") {
+  crate_name = "pin_project_lite"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/pin-project-lite-0.2.17/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("pin_project_lite") {
   edition = "2018"
 
   cargo_pkg_name = "pin-project-lite"
+  cargo_manifest_dir = "//external/vendor/pin-project-lite-0.2.17"
   cargo_pkg_version = "0.2.17"
 
   rustflags = [

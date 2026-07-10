@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("cortex_m_semihosting") {
+  crate_name = "cortex_m_semihosting"
   epoch = "0.5"
   crate_type = "rlib"
   sources = [ "//external/vendor/cortex-m-semihosting-0.5.0/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("cortex_m_semihosting") {
   deps = [ "//external/vendor/cortex-m-0.7.7:cortex_m" ]
 
   cargo_pkg_name = "cortex-m-semihosting"
+  cargo_manifest_dir = "//external/vendor/cortex-m-semihosting-0.5.0"
   cargo_pkg_version = "0.5.0"
   build_root = "//external/vendor/cortex-m-semihosting-0.5.0/build.rs"
   build_sources = [ "//external/vendor/cortex-m-semihosting-0.5.0/build.rs" ]

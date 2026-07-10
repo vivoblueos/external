@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("defmt_test") {
+  crate_name = "defmt_test"
   epoch = "0.4"
   crate_type = "rlib"
   sources = [ "//external/vendor/defmt-test-0.4.0/src/lib.rs" ]
@@ -26,12 +27,13 @@ cargo_crate("defmt_test") {
   deps = [
     "//external/vendor/cortex-m-rt-0.7.5:cortex_m_rt",
     "//external/vendor/cortex-m-semihosting-0.5.0:cortex_m_semihosting",
-    "//external/vendor/defmt-1.0.1:defmt",
+    "//external/vendor/defmt-1.1.1:defmt",
   ]
   proc_macro_deps =
       [ "//external/vendor/defmt-test-macros-0.3.2:defmt_test_macros" ]
 
   cargo_pkg_name = "defmt-test"
+  cargo_manifest_dir = "//external/vendor/defmt-test-0.4.0"
   cargo_pkg_version = "0.4.0"
 
   rustflags = [

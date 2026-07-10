@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("cortex_m") {
+  crate_name = "cortex_m"
   epoch = "0.7"
   crate_type = "rlib"
   sources = [ "//external/vendor/cortex-m-0.7.7/src/lib.rs" ]
@@ -31,6 +32,7 @@ cargo_crate("cortex_m") {
   ]
 
   cargo_pkg_name = "cortex-m"
+  cargo_manifest_dir = "//external/vendor/cortex-m-0.7.7"
   cargo_pkg_version = "0.7.7"
   build_root = "//external/vendor/cortex-m-0.7.7/build.rs"
   build_sources = [ "//external/vendor/cortex-m-0.7.7/build.rs" ]

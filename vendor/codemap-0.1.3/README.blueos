@@ -1,0 +1,13 @@
+Name: codemap
+URL: https://crates.io/crates/codemap
+Version: 0.1.3
+Revision: 3ca8c9027035d404bf98b914e1ef0bd832a058bc
+License: Apache-2.0
+License File: //external/vendor/codemap-0.1.3/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A data structure for efficiently storing source code position and span information
+(e.g. in a compiler AST), and mapping it back to file/line/column locations for error
+reporting and suggestions.
+

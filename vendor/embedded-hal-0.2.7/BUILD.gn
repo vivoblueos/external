@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("embedded_hal") {
+  crate_name = "embedded_hal"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/embedded-hal-0.2.7/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("embedded_hal") {
   ]
 
   cargo_pkg_name = "embedded-hal"
+  cargo_manifest_dir = "//external/vendor/embedded-hal-0.2.7"
   cargo_pkg_version = "0.2.7"
 
   rustflags = [

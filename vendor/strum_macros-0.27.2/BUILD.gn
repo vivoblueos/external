@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("strum_macros") {
+  crate_name = "strum_macros"
   epoch = "0.27"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/strum_macros-0.27.2/src/lib.rs" ]
@@ -26,11 +27,12 @@ cargo_crate("strum_macros") {
   deps = [
     "//external/vendor/heck-0.5.0:heck",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "strum_macros"
+  cargo_manifest_dir = "//external/vendor/strum_macros-0.27.2"
   cargo_pkg_version = "0.27.2"
 
   rustflags = [

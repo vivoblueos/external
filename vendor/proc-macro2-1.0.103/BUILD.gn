@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("proc_macro2") {
+  crate_name = "proc_macro2"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/proc-macro2-1.0.103/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("proc_macro2") {
   features = [ "proc-macro" ]
 
   cargo_pkg_name = "proc-macro2"
+  cargo_manifest_dir = "//external/vendor/proc-macro2-1.0.103"
   cargo_pkg_version = "1.0.103"
   build_root = "//external/vendor/proc-macro2-1.0.103/build.rs"
   build_sources = [ "//external/vendor/proc-macro2-1.0.103/build.rs" ]

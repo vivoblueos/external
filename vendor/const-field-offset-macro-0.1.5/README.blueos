@@ -1,0 +1,10 @@
+Name: const-field-offset-macro
+URL: https://crates.io/crates/const-field-offset-macro
+Version: 0.1.5
+Revision: 7df9b3cbb70b46233bf4d49966d65f94f09fa6bd
+License: Apache-2.0
+License File: //external/vendor/const-field-offset-macro-0.1.5/Cargo.toml
+Shipped: yes
+Security Critical: yes
+
+Description: Procedural macro to generate constant field offset from repr(c) struct

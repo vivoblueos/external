@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("fnv") {
+  crate_name = "fnv"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/fnv-1.0.7/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("fnv") {
   features = [ "std" ]
 
   cargo_pkg_name = "fnv"
+  cargo_manifest_dir = "//external/vendor/fnv-1.0.7"
   cargo_pkg_version = "1.0.7"
 
   rustflags = [

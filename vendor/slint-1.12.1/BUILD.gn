@@ -1,0 +1,59 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("slint") {
+  crate_name = "slint"
+  epoch = "1"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/slint-1.12.1/lib.rs" ]
+  inputs = [
+    "//external/vendor/slint-1.12.1/.cargo_vcs_info.json",
+    "//external/vendor/slint-1.12.1/LICENSES/LicenseRef-Slint-Royalty-free-2.0.md",
+    "//external/vendor/slint-1.12.1/LICENSES/LicenseRef-Slint-Software-3.0.md",
+    "//external/vendor/slint-1.12.1/README.md",
+    "//external/vendor/slint-1.12.1/mcu.md",
+    "//external/vendor/slint-1.12.1/type-mappings.md",
+  ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/const-field-offset-0.1.5:const_field_offset",
+    "//external/vendor/i-slint-backend-selector-1.12.1:i_slint_backend_selector",
+    "//external/vendor/i-slint-core-1.12.1:i_slint_core",
+    "//external/vendor/num-traits-0.2.19:num_traits",
+    "//external/vendor/once_cell-1.21.4:once_cell",
+    "//external/vendor/pin-weak-1.1.0:pin_weak",
+    "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
+    "//external/vendor/vtable-0.3.0:vtable",
+  ]
+  proc_macro_deps =
+      [ "//external/vendor/i-slint-core-macros-1.12.1:i_slint_core_macros" ]
+  features = [
+    "compat-1-2",
+    "libm",
+    "unsafe-single-threaded",
+  ]
+
+  cargo_pkg_name = "slint"
+  cargo_manifest_dir = "//external/vendor/slint-1.12.1"
+  cargo_pkg_version = "1.12.1"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

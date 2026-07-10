@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("bitflags") {
+  crate_name = "bitflags"
   epoch = "2"
   crate_type = "rlib"
   sources = [ "//external/vendor/bitflags-2.10.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("bitflags") {
   edition = "2021"
 
   cargo_pkg_name = "bitflags"
+  cargo_manifest_dir = "//external/vendor/bitflags-2.10.0"
   cargo_pkg_version = "2.10.0"
 
   rustflags = [

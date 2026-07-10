@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("embassy_futures") {
+  crate_name = "embassy_futures"
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/embassy-futures-0.1.2/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("embassy_futures") {
   edition = "2021"
 
   cargo_pkg_name = "embassy-futures"
+  cargo_manifest_dir = "//external/vendor/embassy-futures-0.1.2"
   cargo_pkg_version = "0.1.2"
 
   rustflags = [

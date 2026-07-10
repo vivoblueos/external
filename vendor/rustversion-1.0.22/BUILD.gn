@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("rustversion") {
+  crate_name = "rustversion"
   epoch = "1"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/rustversion-1.0.22/src/lib.rs" ]
@@ -25,6 +26,28 @@ cargo_crate("rustversion") {
   edition = "2018"
 
   cargo_pkg_name = "rustversion"
+  cargo_manifest_dir = "//external/vendor/rustversion-1.0.22"
+  cargo_pkg_version = "1.0.22"
+  build_root = "//external/vendor/rustversion-1.0.22/build/build.rs"
+  build_sources = [ "//external/vendor/rustversion-1.0.22/build/build.rs" ]
+  build_script_outputs = [ "version.expr" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+    "--extern",
+    "proc_macro",
+  ]
+}
+cargo_crate("buildrs_support") {
+  crate_name = "rustversion"
+  epoch = "1"
+  crate_type = "proc-macro"
+  sources = [ "//external/vendor/rustversion-1.0.22/src/lib.rs" ]
+  inputs = []
+  edition = "2018"
+
+  cargo_pkg_name = "rustversion"
+  cargo_manifest_dir = "//external/vendor/rustversion-1.0.22"
   cargo_pkg_version = "1.0.22"
   build_root = "//external/vendor/rustversion-1.0.22/build/build.rs"
   build_sources = [ "//external/vendor/rustversion-1.0.22/build/build.rs" ]

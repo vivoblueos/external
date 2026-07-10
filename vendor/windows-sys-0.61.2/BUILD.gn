@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("windows_sys") {
+  crate_name = "windows_sys"
   epoch = "0.61"
   crate_type = "rlib"
   sources = [ "//external/vendor/windows-sys-0.61.2/src/lib.rs" ]
@@ -35,6 +36,7 @@ cargo_crate("windows_sys") {
   ]
 
   cargo_pkg_name = "windows-sys"
+  cargo_manifest_dir = "//external/vendor/windows-sys-0.61.2"
   cargo_pkg_version = "0.61.2"
 
   rustflags = [

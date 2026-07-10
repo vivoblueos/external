@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("lock_api") {
+  crate_name = "lock_api"
   epoch = "0.4"
   crate_type = "rlib"
   sources = [ "//external/vendor/lock_api-0.4.14/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("lock_api") {
   features = [ "atomic_usize" ]
 
   cargo_pkg_name = "lock_api"
+  cargo_manifest_dir = "//external/vendor/lock_api-0.4.14"
   cargo_pkg_version = "0.4.14"
 
   rustflags = [

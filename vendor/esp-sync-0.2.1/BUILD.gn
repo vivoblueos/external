@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_sync") {
+  crate_name = "esp_sync"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-sync-0.2.1/src/lib.rs" ]
@@ -30,9 +31,8 @@ cargo_crate("esp_sync") {
     "//external/vendor/embassy-sync-0.8.0:embassy_sync",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
-  build_deps = [
-    "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
-  ]
+  build_deps =
+      [ "//external/vendor/esp-metadata-generated-0.4.0:buildrs_support" ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
   features = [ "esp32c3" ]
@@ -43,6 +43,7 @@ cargo_crate("esp_sync") {
   }
 
   cargo_pkg_name = "esp-sync"
+  cargo_manifest_dir = "//external/vendor/esp-sync-0.2.1"
   cargo_pkg_version = "0.2.1"
   build_root = "//external/vendor/esp-sync-0.2.1/build.rs"
   build_sources = [ "//external/vendor/esp-sync-0.2.1/build.rs" ]

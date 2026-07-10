@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("winnow") {
+  crate_name = "winnow"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/winnow-1.0.3/src/lib.rs" ]
@@ -33,6 +34,7 @@ cargo_crate("winnow") {
   ]
 
   cargo_pkg_name = "winnow"
+  cargo_manifest_dir = "//external/vendor/winnow-1.0.3"
   cargo_pkg_version = "1.0.3"
 
   rustflags = [

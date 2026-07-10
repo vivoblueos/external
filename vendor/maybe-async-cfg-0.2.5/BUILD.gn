@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("maybe_async_cfg") {
+  crate_name = "maybe_async_cfg"
   epoch = "0.2"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/maybe-async-cfg-0.2.5/src/lib.rs" ]
@@ -27,7 +28,7 @@ cargo_crate("maybe_async_cfg") {
     "//external/vendor/manyhow-0.11.4:manyhow",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/pulldown-cmark-0.11.3:pulldown_cmark",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-1.0.109:syn",
   ]
   features = [
@@ -36,6 +37,7 @@ cargo_crate("maybe_async_cfg") {
   ]
 
   cargo_pkg_name = "maybe-async-cfg"
+  cargo_manifest_dir = "//external/vendor/maybe-async-cfg-0.2.5"
   cargo_pkg_version = "0.2.5"
 
   rustflags = [

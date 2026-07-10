@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("rlsf") {
+  crate_name = "rlsf"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/rlsf-0.2.2/src/lib.rs" ]
@@ -38,6 +39,7 @@ cargo_crate("rlsf") {
   }
 
   cargo_pkg_name = "rlsf"
+  cargo_manifest_dir = "//external/vendor/rlsf-0.2.2"
   cargo_pkg_version = "0.2.2"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("indexmap") {
+  crate_name = "indexmap"
   epoch = "2"
   crate_type = "rlib"
   sources = [ "//external/vendor/indexmap-2.14.0/src/lib.rs" ]
@@ -30,6 +31,7 @@ cargo_crate("indexmap") {
   features = [ "std" ]
 
   cargo_pkg_name = "indexmap"
+  cargo_manifest_dir = "//external/vendor/indexmap-2.14.0"
   cargo_pkg_version = "2.14.0"
 
   rustflags = [

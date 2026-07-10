@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("virtio_drivers") {
+  crate_name = "virtio_drivers"
   epoch = "0.11"
   crate_type = "rlib"
   sources = [ "//external/vendor/virtio-drivers-0.11.0/src/lib.rs" ]
@@ -38,6 +39,7 @@ cargo_crate("virtio_drivers") {
   ]
 
   cargo_pkg_name = "virtio-drivers"
+  cargo_manifest_dir = "//external/vendor/virtio-drivers-0.11.0"
   cargo_pkg_version = "0.11.0"
 
   rustflags = [

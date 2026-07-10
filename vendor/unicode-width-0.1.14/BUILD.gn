@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("unicode_width") {
+  crate_name = "unicode_width"
   epoch = "0.1"
   crate_type = "rlib"
   sources = [ "//external/vendor/unicode-width-0.1.14/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("unicode_width") {
   features = [ "cjk" ]
 
   cargo_pkg_name = "unicode-width"
+  cargo_manifest_dir = "//external/vendor/unicode-width-0.1.14"
   cargo_pkg_version = "0.1.14"
 
   rustflags = [

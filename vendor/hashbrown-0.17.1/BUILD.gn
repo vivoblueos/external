@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("hashbrown") {
+  crate_name = "hashbrown"
   epoch = "0.17"
   crate_type = "rlib"
   sources = [ "//external/vendor/hashbrown-0.17.1/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("hashbrown") {
   edition = "2021"
 
   cargo_pkg_name = "hashbrown"
+  cargo_manifest_dir = "//external/vendor/hashbrown-0.17.1"
   cargo_pkg_version = "0.17.1"
 
   rustflags = [

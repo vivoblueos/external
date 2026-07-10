@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("fugit") {
+  crate_name = "fugit"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/fugit-0.3.9/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("fugit") {
   deps = [ "//external/vendor/gcd-2.3.0:gcd" ]
 
   cargo_pkg_name = "fugit"
+  cargo_manifest_dir = "//external/vendor/fugit-0.3.9"
   cargo_pkg_version = "0.3.9"
 
   rustflags = [

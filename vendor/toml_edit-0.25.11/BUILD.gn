@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("toml_edit") {
+  crate_name = "toml_edit"
   epoch = "0.25"
   crate_type = "rlib"
   sources = [ "//external/vendor/toml_edit-0.25.11+spec-1.1.0/src/lib.rs" ]
@@ -32,6 +33,7 @@ cargo_crate("toml_edit") {
   features = [ "parse" ]
 
   cargo_pkg_name = "toml_edit"
+  cargo_manifest_dir = "//external/vendor/toml_edit-0.25.11"
   cargo_pkg_version = "0.25.11+spec-1.1.0"
 
   rustflags = [

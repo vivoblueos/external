@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("gd32e5") {
+  crate_name = "gd32e5"
   epoch = "0.9"
   crate_type = "rlib"
   sources = [ "//external/vendor/gd32e5-0.9.1/src/lib.rs" ]
@@ -30,6 +31,7 @@ cargo_crate("gd32e5") {
   features = [ "gd32e507" ]
 
   cargo_pkg_name = "gd32e5"
+  cargo_manifest_dir = "//external/vendor/gd32e5-0.9.1"
   cargo_pkg_version = "0.9.1"
   build_root = "//external/vendor/gd32e5-0.9.1/build.rs"
   build_sources = [ "//external/vendor/gd32e5-0.9.1/build.rs" ]

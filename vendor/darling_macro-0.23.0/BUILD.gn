@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("darling_macro") {
+  crate_name = "darling_macro"
   epoch = "0.23"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/darling_macro-0.23.0/src/lib.rs" ]
@@ -25,11 +26,12 @@ cargo_crate("darling_macro") {
   edition = "2021"
   deps = [
     "//external/vendor/darling_core-0.23.0:darling_core",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "darling_macro"
+  cargo_manifest_dir = "//external/vendor/darling_macro-0.23.0"
   cargo_pkg_version = "0.23.0"
 
   rustflags = [

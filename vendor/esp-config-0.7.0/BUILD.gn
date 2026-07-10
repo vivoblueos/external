@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_config") {
+  crate_name = "esp_config"
   epoch = "0.7"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-config-0.7.0/src/lib.rs" ]
@@ -26,7 +27,7 @@ cargo_crate("esp_config") {
   deps = [
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
     "//external/vendor/serde-1.0.228:serde",
-    "//external/vendor/serde_yaml-0.9.34+deprecated:serde_yaml",
+    "//external/vendor/serde_yaml-0.9.34:serde_yaml",
     "//external/vendor/somni-expr-0.2.0:somni_expr",
   ]
   proc_macro_deps =
@@ -34,6 +35,32 @@ cargo_crate("esp_config") {
   features = [ "build" ]
 
   cargo_pkg_name = "esp-config"
+  cargo_manifest_dir = "//external/vendor/esp-config-0.7.0"
+  cargo_pkg_version = "0.7.0"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}
+cargo_crate("buildrs_support") {
+  crate_name = "esp_config"
+  epoch = "0.7"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/esp-config-0.7.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
+    "//external/vendor/serde-1.0.228:serde",
+    "//external/vendor/serde_yaml-0.9.34:serde_yaml",
+    "//external/vendor/somni-expr-0.2.0:somni_expr",
+  ]
+  proc_macro_deps =
+      [ "//external/vendor/document-features-0.2.12:document_features" ]
+  features = [ "build" ]
+
+  cargo_pkg_name = "esp-config"
+  cargo_manifest_dir = "//external/vendor/esp-config-0.7.0"
   cargo_pkg_version = "0.7.0"
 
   rustflags = [

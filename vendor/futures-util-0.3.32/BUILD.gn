@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("futures_util") {
+  crate_name = "futures_util"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/futures-util-0.3.32/src/lib.rs" ]
@@ -30,6 +31,7 @@ cargo_crate("futures_util") {
   ]
 
   cargo_pkg_name = "futures-util"
+  cargo_manifest_dir = "//external/vendor/futures-util-0.3.32"
   cargo_pkg_version = "0.3.32"
 
   rustflags = [

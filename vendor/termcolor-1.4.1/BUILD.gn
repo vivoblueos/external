@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("termcolor") {
+  crate_name = "termcolor"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/termcolor-1.4.1/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("termcolor") {
   deps = [ "//external/vendor/winapi-util-0.1.11:winapi_util" ]
 
   cargo_pkg_name = "termcolor"
+  cargo_manifest_dir = "//external/vendor/termcolor-1.4.1"
   cargo_pkg_version = "1.4.1"
 
   rustflags = [

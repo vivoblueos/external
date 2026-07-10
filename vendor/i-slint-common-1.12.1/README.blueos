@@ -1,0 +1,10 @@
+Name: i-slint-common
+URL: https://crates.io/crates/i-slint-common
+Version: 1.12.1
+Revision: 323f01c1cd6d0e050a4009a0a0cecf7b95f6dc55
+License: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0
+License File: //external/vendor/i-slint-common-1.12.1/LICENSES/GPL-3.0-only.txt
+Shipped: yes
+Security Critical: yes
+
+Description: Helper crate for sharing code & data structures between i-slint-core and slint-compiler

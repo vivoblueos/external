@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("unicode_ident") {
+  crate_name = "unicode_ident"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/unicode-ident-1.0.22/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("unicode_ident") {
   edition = "2018"
 
   cargo_pkg_name = "unicode-ident"
+  cargo_manifest_dir = "//external/vendor/unicode-ident-1.0.22"
   cargo_pkg_version = "1.0.22"
 
   rustflags = [

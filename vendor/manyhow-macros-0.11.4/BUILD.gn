@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("manyhow_macros") {
+  crate_name = "manyhow_macros"
   epoch = "0.11"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/manyhow-macros-0.11.4/src/lib.rs" ]
@@ -26,10 +27,11 @@ cargo_crate("manyhow_macros") {
   deps = [
     "//external/vendor/proc-macro-utils-0.10.0:proc_macro_utils",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
   ]
 
   cargo_pkg_name = "manyhow-macros"
+  cargo_manifest_dir = "//external/vendor/manyhow-macros-0.11.4"
   cargo_pkg_version = "0.11.4"
 
   rustflags = [

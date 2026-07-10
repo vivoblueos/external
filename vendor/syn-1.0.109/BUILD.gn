@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("syn") {
+  crate_name = "syn"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/syn-1.0.109/src/lib.rs" ]
@@ -25,7 +26,7 @@ cargo_crate("syn") {
   edition = "2018"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/unicode-ident-1.0.22:unicode_ident",
   ]
   features = [
@@ -41,6 +42,7 @@ cargo_crate("syn") {
   ]
 
   cargo_pkg_name = "syn"
+  cargo_manifest_dir = "//external/vendor/syn-1.0.109"
   cargo_pkg_version = "1.0.109"
   build_root = "//external/vendor/syn-1.0.109/build.rs"
   build_sources = [ "//external/vendor/syn-1.0.109/build.rs" ]

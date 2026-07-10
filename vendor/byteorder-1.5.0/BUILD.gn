@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("byteorder") {
+  crate_name = "byteorder"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/byteorder-1.5.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("byteorder") {
   edition = "2021"
 
   cargo_pkg_name = "byteorder"
+  cargo_manifest_dir = "//external/vendor/byteorder-1.5.0"
   cargo_pkg_version = "1.5.0"
 
   rustflags = [

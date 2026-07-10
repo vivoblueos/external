@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("goblin") {
+  crate_name = "goblin"
   epoch = "0.9"
   crate_type = "rlib"
   sources = [ "//external/vendor/goblin-0.9.3/src/lib.rs" ]
@@ -38,6 +39,7 @@ cargo_crate("goblin") {
   ]
 
   cargo_pkg_name = "goblin"
+  cargo_manifest_dir = "//external/vendor/goblin-0.9.3"
   cargo_pkg_version = "0.9.3"
 
   rustflags = [

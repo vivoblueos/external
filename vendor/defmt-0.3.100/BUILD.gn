@@ -18,21 +18,23 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("defmt") {
+  crate_name = "defmt"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/defmt-0.3.100/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [ "//external/vendor/defmt-1.0.1:defmt" ]
+  deps = [ "//external/vendor/defmt-1.1.1:defmt" ]
   features = [
     "alloc",
     "ip_in_core",
   ]
   aliased_deps = {
-    defmt10 = "//external/vendor/defmt-1.0.1:defmt"
+    defmt10 = "//external/vendor/defmt-1.1.1:defmt"
   }
 
   cargo_pkg_name = "defmt"
+  cargo_manifest_dir = "//external/vendor/defmt-0.3.100"
   cargo_pkg_version = "0.3.100"
 
   rustflags = [

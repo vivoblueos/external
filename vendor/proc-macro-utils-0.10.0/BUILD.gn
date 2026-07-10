@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("proc_macro_utils") {
+  crate_name = "proc_macro_utils"
   epoch = "0.10"
   crate_type = "rlib"
   sources = [ "//external/vendor/proc-macro-utils-0.10.0/src/lib.rs" ]
@@ -25,7 +26,7 @@ cargo_crate("proc_macro_utils") {
   edition = "2021"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/smallvec-1.15.1:smallvec",
   ]
   features = [
@@ -37,6 +38,7 @@ cargo_crate("proc_macro_utils") {
   ]
 
   cargo_pkg_name = "proc-macro-utils"
+  cargo_manifest_dir = "//external/vendor/proc-macro-utils-0.10.0"
   cargo_pkg_version = "0.10.0"
 
   rustflags = [

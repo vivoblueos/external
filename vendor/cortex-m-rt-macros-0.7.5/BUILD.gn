@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("cortex_m_rt_macros") {
+  crate_name = "cortex_m_rt_macros"
   epoch = "0.7"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/cortex-m-rt-macros-0.7.5/src/lib.rs" ]
@@ -25,11 +26,12 @@ cargo_crate("cortex_m_rt_macros") {
   edition = "2021"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 
   cargo_pkg_name = "cortex-m-rt-macros"
+  cargo_manifest_dir = "//external/vendor/cortex-m-rt-macros-0.7.5"
   cargo_pkg_version = "0.7.5"
 
   rustflags = [

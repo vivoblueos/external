@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("base64") {
+  crate_name = "base64"
   epoch = "0.13"
   crate_type = "rlib"
   sources = [ "//external/vendor/base64-0.13.1/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("base64") {
   features = [ "std" ]
 
   cargo_pkg_name = "base64"
+  cargo_manifest_dir = "//external/vendor/base64-0.13.1"
   cargo_pkg_version = "0.13.1"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("arm_gic") {
+  crate_name = "arm_gic"
   epoch = "0.4"
   crate_type = "rlib"
   sources = [ "//external/vendor/arm-gic-0.4.0/src/lib.rs" ]
@@ -31,6 +32,7 @@ cargo_crate("arm_gic") {
   ]
 
   cargo_pkg_name = "arm-gic"
+  cargo_manifest_dir = "//external/vendor/arm-gic-0.4.0"
   cargo_pkg_version = "0.4.0"
 
   rustflags = [

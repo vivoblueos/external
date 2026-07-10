@@ -1,0 +1,10 @@
+Name: countme
+URL: https://crates.io/crates/countme
+Version: 3.0.1
+Revision: 9e037c4293fb8ef6c1c632094349734955f06d89
+License: Apache-2.0
+License File: //external/vendor/countme-3.0.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Counts the number of live instances of types

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("spin") {
+  crate_name = "spin"
   epoch = "0.9"
   crate_type = "rlib"
   sources = [ "//external/vendor/spin-0.9.8/src/lib.rs" ]
@@ -39,6 +40,7 @@ cargo_crate("spin") {
   }
 
   cargo_pkg_name = "spin"
+  cargo_manifest_dir = "//external/vendor/spin-0.9.8"
   cargo_pkg_version = "0.9.8"
 
   rustflags = [

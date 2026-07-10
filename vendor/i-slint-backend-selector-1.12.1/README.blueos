@@ -1,0 +1,10 @@
+Name: i-slint-backend-selector
+URL: https://crates.io/crates/i-slint-backend-selector
+Version: 1.12.1
+Revision: 323f01c1cd6d0e050a4009a0a0cecf7b95f6dc55
+License: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0
+License File: //external/vendor/i-slint-backend-selector-1.12.1/LICENSES/GPL-3.0-only.txt
+Shipped: yes
+Security Critical: yes
+
+Description: Helper crate to pick the default rendering backend for Slint

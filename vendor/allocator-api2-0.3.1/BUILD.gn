@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("allocator_api2") {
+  crate_name = "allocator_api2"
   epoch = "0.3"
   crate_type = "rlib"
   sources = [ "//external/vendor/allocator-api2-0.3.1/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("allocator_api2") {
   features = [ "alloc" ]
 
   cargo_pkg_name = "allocator-api2"
+  cargo_manifest_dir = "//external/vendor/allocator-api2-0.3.1"
   cargo_pkg_version = "0.3.1"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_wifi_sys_esp32c3") {
+  crate_name = "esp_wifi_sys_esp32c3"
   epoch = "0.2"
   crate_type = "rlib"
   sources = [ "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("esp_wifi_sys_esp32c3") {
   edition = "2021"
 
   cargo_pkg_name = "esp-wifi-sys-esp32c3"
+  cargo_manifest_dir = "//external/vendor/esp-wifi-sys-esp32c3-0.2.0"
   cargo_pkg_version = "0.2.0"
   build_root = "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/build.rs"
   build_sources = [ "//external/vendor/esp-wifi-sys-esp32c3-0.2.0/build.rs" ]

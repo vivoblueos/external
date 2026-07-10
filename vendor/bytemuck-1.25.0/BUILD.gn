@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("bytemuck") {
+  crate_name = "bytemuck"
   epoch = "1"
   crate_type = "rlib"
   sources = [ "//external/vendor/bytemuck-1.25.0/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("bytemuck") {
   edition = "2018"
 
   cargo_pkg_name = "bytemuck"
+  cargo_manifest_dir = "//external/vendor/bytemuck-1.25.0"
   cargo_pkg_version = "1.25.0"
 
   rustflags = [

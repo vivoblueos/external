@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("gimli") {
+  crate_name = "gimli"
   epoch = "0.31"
   crate_type = "rlib"
   sources = [ "//external/vendor/gimli-0.31.1/src/lib.rs" ]
@@ -26,6 +27,7 @@ cargo_crate("gimli") {
   features = [ "read-core" ]
 
   cargo_pkg_name = "gimli"
+  cargo_manifest_dir = "//external/vendor/gimli-0.31.1"
   cargo_pkg_version = "0.31.1"
 
   rustflags = [

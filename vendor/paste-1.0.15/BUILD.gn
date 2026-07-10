@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("paste") {
+  crate_name = "paste"
   epoch = "1"
   crate_type = "proc-macro"
   sources = [ "//external/vendor/paste-1.0.15/src/lib.rs" ]
@@ -25,6 +26,7 @@ cargo_crate("paste") {
   edition = "2018"
 
   cargo_pkg_name = "paste"
+  cargo_manifest_dir = "//external/vendor/paste-1.0.15"
   cargo_pkg_version = "1.0.15"
   build_root = "//external/vendor/paste-1.0.15/build.rs"
   build_sources = [ "//external/vendor/paste-1.0.15/build.rs" ]

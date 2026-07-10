@@ -17,7 +17,8 @@
 
 import("//build/templates/cargo_crate.gni")
 
-cargo_crate("walkdir") {
+cargo_crate("buildrs_support") {
+  crate_name = "walkdir"
   epoch = "2"
   crate_type = "rlib"
   sources = [ "//external/vendor/walkdir-2.5.0/src/lib.rs" ]
@@ -27,6 +28,7 @@ cargo_crate("walkdir") {
   deps = [ "//external/vendor/winapi-util-0.1.11:winapi_util" ]
 
   cargo_pkg_name = "walkdir"
+  cargo_manifest_dir = "//external/vendor/walkdir-2.5.0"
   cargo_pkg_version = "2.5.0"
 
   rustflags = [

@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("embassy_sync") {
+  crate_name = "embassy_sync"
   epoch = "0.7"
   crate_type = "rlib"
   sources = [ "//external/vendor/embassy-sync-0.7.2/src/lib.rs" ]
@@ -33,6 +34,7 @@ cargo_crate("embassy_sync") {
   ]
 
   cargo_pkg_name = "embassy-sync"
+  cargo_manifest_dir = "//external/vendor/embassy-sync-0.7.2"
   cargo_pkg_version = "0.7.2"
   build_root = "//external/vendor/embassy-sync-0.7.2/build.rs"
   build_sources = [ "//external/vendor/embassy-sync-0.7.2/build.rs" ]

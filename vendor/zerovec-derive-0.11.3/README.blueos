@@ -1,0 +1,10 @@
+Name: zerovec-derive
+URL: https://crates.io/crates/zerovec-derive
+Version: 0.11.3
+Revision: c9fac4e625ccb2c6a7aa35079fff9709db4385ac
+License: Unicode-3.0
+License File: //external/vendor/zerovec-derive-0.11.3/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Custom derive for the zerovec crate

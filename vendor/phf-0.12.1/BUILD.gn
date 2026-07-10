@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("phf") {
+  crate_name = "phf"
   epoch = "0.12"
   crate_type = "rlib"
   sources = [ "//external/vendor/phf-0.12.1/src/lib.rs" ]
@@ -31,6 +32,7 @@ cargo_crate("phf") {
   ]
 
   cargo_pkg_name = "phf"
+  cargo_manifest_dir = "//external/vendor/phf-0.12.1"
   cargo_pkg_version = "0.12.1"
 
   rustflags = [

@@ -1,0 +1,10 @@
+Name: libm
+URL: https://crates.io/crates/libm
+Version: 0.2.16
+Revision: dfd2203a4d6110820ad7bb65cafe1bf331a03a3d
+License: MIT
+License File: //external/vendor/libm-0.2.16/LICENSE.txt
+Shipped: yes
+Security Critical: yes
+
+Description: libm in pure Rust

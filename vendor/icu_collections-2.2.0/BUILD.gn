@@ -1,0 +1,43 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("icu_collections") {
+  crate_name = "icu_collections"
+  epoch = "2"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/icu_collections-2.2.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/potential_utf-0.1.5:potential_utf",
+    "//external/vendor/utf8_iter-1.0.4:utf8_iter",
+    "//external/vendor/yoke-0.8.3:yoke",
+    "//external/vendor/zerofrom-0.1.8:zerofrom",
+    "//external/vendor/zerovec-0.11.6:zerovec",
+  ]
+  proc_macro_deps = [ "//external/vendor/displaydoc-0.2.6:displaydoc" ]
+
+  cargo_pkg_name = "icu_collections"
+  cargo_manifest_dir = "//external/vendor/icu_collections-2.2.0"
+  cargo_pkg_version = "2.2.0"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

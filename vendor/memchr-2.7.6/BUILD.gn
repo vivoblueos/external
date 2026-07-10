@@ -18,6 +18,7 @@
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("memchr") {
+  crate_name = "memchr"
   epoch = "2"
   crate_type = "rlib"
   sources = [ "//external/vendor/memchr-2.7.6/src/lib.rs" ]
@@ -29,6 +30,7 @@ cargo_crate("memchr") {
   ]
 
   cargo_pkg_name = "memchr"
+  cargo_manifest_dir = "//external/vendor/memchr-2.7.6"
   cargo_pkg_version = "2.7.6"
 
   rustflags = [

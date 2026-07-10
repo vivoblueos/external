@@ -1,0 +1,10 @@
+Name: zerotrie
+URL: https://crates.io/crates/zerotrie
+Version: 0.2.4
+Revision: c9fac4e625ccb2c6a7aa35079fff9709db4385ac
+License: Unicode-3.0
+License File: //external/vendor/zerotrie-0.2.4/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A data structure that efficiently maps strings to integers
