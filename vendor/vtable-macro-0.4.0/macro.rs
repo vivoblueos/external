@@ -7,6 +7,8 @@
 Implementation detail for the vtable crate
 */
 
+#![feature(let_chains)]
+
 extern crate proc_macro;
 use proc_macro::TokenStream;
 use quote::quote;
@@ -180,9 +182,12 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
     let vtable_name = input.ident.to_string();
     if !vtable_name.ends_with("VTable") {
-        return Error::new(input.ident.span(), "The structure does not ends in 'VTable'")
-            .to_compile_error()
-            .into();
+        return Error::new(
+            input.ident.span(),
+            "The structure does not ends in 'VTable'",
+        )
+        .to_compile_error()
+        .into();
     }
 
     let trait_name = Ident::new(&vtable_name[..vtable_name.len() - 6], input.ident.span());
@@ -198,7 +203,13 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
         attrs: input
             .attrs
             .iter()
-            .filter(|a| a.path().get_ident().as_ref().map(|i| *i == "doc").unwrap_or(false))
+            .filter(|a| {
+                a.path()
+                    .get_ident()
+                    .as_ref()
+                    .map(|i| *i == "doc")
+                    .unwrap_or(false)
+            })
             .cloned()
             .collect(),
         vis: Visibility::Public(Default::default()),
@@ -216,9 +227,11 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
     let additional_doc =
         format!("\nNote: Was generated from the [`#[vtable]`](vtable) macro on [`{vtable_name}`]");
-    generated_trait
-        .attrs
-        .append(&mut Attribute::parse_outer.parse2(quote!(#[doc = #additional_doc])).unwrap());
+    generated_trait.attrs.append(
+        &mut Attribute::parse_outer
+            .parse2(quote!(#[doc = #additional_doc]))
+            .unwrap(),
+    );
 
     let mut generated_trait_assoc_const = None;
 
@@ -297,8 +310,12 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
                 sig_extern.inputs.push(typed_arg.clone());
 
                 // check for the vtable
-                if let Type::Ptr(TypePtr { mutability, elem, .. })
-                | Type::Reference(TypeReference { mutability, elem, .. }) = &param.ty
+                if let Type::Ptr(TypePtr {
+                    mutability, elem, ..
+                })
+                | Type::Reference(TypeReference {
+                    mutability, elem, ..
+                }) = &param.ty
                     && let Type::Path(p) = &**elem
                     && let Some(pointer_to) = p.path.get_ident()
                     && pointer_to == &vtable_name
@@ -568,11 +585,12 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
                     ..generated_trait.clone()
                 });
 
-            let const_type = if let Some(o) = field
-                .attrs
-                .iter()
-                .position(|a| a.path().get_ident().map(|a| a == "field_offset").unwrap_or(false))
-            {
+            let const_type = if let Some(o) = field.attrs.iter().position(|a| {
+                a.path()
+                    .get_ident()
+                    .map(|a| a == "field_offset")
+                    .unwrap_or(false)
+            }) {
                 let a = field.attrs.remove(o);
                 let member_type = match a.parse_args::<Type>() {
                     Err(e) => return e.to_compile_error().into(),
@@ -594,7 +612,9 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
                 // add `: Sized` to the trait in case it does not have it
                 if generated_trait_assoc_const.supertraits.is_empty() {
                     generated_trait_assoc_const.colon_token = Some(Default::default());
-                    generated_trait_assoc_const.supertraits.push(parse_quote!(Sized));
+                    generated_trait_assoc_const
+                        .supertraits
+                        .push(parse_quote!(Sized));
                 }
 
                 let offset_type: Type = parse_quote!(vtable::FieldOffset<Self, #member_type>);
@@ -632,16 +652,18 @@ pub fn vtable(_attr: TokenStream, item: TokenStream) -> TokenStream {
                 field.ty.clone()
             };
 
-            generated_trait_assoc_const.items.push(TraitItem::Const(TraitItemConst {
-                attrs: field.attrs.clone(),
-                const_token: Default::default(),
-                ident: ident.clone(),
-                colon_token: Default::default(),
-                ty: const_type,
-                default: None,
-                semi_token: Default::default(),
-                generics: Default::default(),
-            }));
+            generated_trait_assoc_const
+                .items
+                .push(TraitItem::Const(TraitItemConst {
+                    attrs: field.attrs.clone(),
+                    const_token: Default::default(),
+                    ident: ident.clone(),
+                    colon_token: Default::default(),
+                    ty: const_type,
+                    default: None,
+                    semi_token: Default::default(),
+                    generics: Default::default(),
+                }));
         };
     }
 

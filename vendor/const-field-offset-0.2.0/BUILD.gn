@@ -24,7 +24,7 @@ cargo_crate("const_field_offset") {
   inputs = []
   edition = "2021"
 
-  # deps = [ "//external/vendor/field-offset-0.3.6:field_offset" ]
+  deps = [ "//external/vendor/field-offset-0.3.6:field_offset" ]
   proc_macro_deps = [
     "//external/vendor/const-field-offset-macro-0.2.0:const_field_offset_macro",
   ]

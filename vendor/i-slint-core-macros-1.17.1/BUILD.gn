@@ -38,6 +38,8 @@ cargo_crate("i_slint_core_macros") {
   cargo_pkg_name = "i-slint-core-macros"
   cargo_pkg_version = "1.17.1"
 
+  rustenv = [ "CARGO_MANIFEST_DIR=" +
+              rebase_path("//external/vendor/i-slint-core-macros-1.17.1") ]
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates
     "--extern",

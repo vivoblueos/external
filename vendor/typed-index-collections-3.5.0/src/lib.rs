@@ -220,7 +220,10 @@
 //! [`BorrowDecode`]: https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html
 //! [RUSTSEC-2025-0141]: https://rustsec.org/advisories/RUSTSEC-2025-0141
 
+#![feature(const_vec_string_slice)]
+#![feature(const_eq_ignore_ascii_case)]
 #![cfg_attr(docsrs, feature(doc_cfg))]
+#![feature(vec_pop_if)]
 #![no_std]
 
 #[cfg(any(feature = "alloc", test))]

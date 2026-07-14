@@ -6,6 +6,7 @@
 
 #![doc = include_str!("README.md")]
 #![doc(html_logo_url = "https://slint.dev/logo/slint-logo-square-light.svg")]
+#![feature(let_chains)]
 
 extern crate proc_macro;
 use proc_macro::TokenStream;
@@ -24,7 +25,10 @@ pub fn slint_element(input: TokenStream) -> TokenStream {
     let input = syn::parse_macro_input!(input as syn::DeriveInput);
 
     let fields = match &input.data {
-        syn::Data::Struct(syn::DataStruct { fields: f @ syn::Fields::Named(..), .. }) => f,
+        syn::Data::Struct(syn::DataStruct {
+            fields: f @ syn::Fields::Named(..),
+            ..
+        }) => f,
         _ => {
             return syn::Error::new(
                 input.ident.span(),
@@ -66,8 +70,10 @@ pub fn slint_element(input: TokenStream) -> TokenStream {
         })
         .map(|f| (f.ident.as_ref().unwrap(), &f.ty))
         .unzip();
-    let plain_field_names_normalized =
-        plain_field_names.iter().map(|f| normalize_identifier(f)).collect::<Vec<_>>();
+    let plain_field_names_normalized = plain_field_names
+        .iter()
+        .map(|f| normalize_identifier(f))
+        .collect::<Vec<_>>();
 
     let mut callback_field_names = Vec::new();
     let mut callback_field_names_normalized = Vec::new();
@@ -134,7 +140,10 @@ fn normalize_identifier(name: &syn::Ident) -> String {
 
 // Try to match `Property<Foo>` on the syn tree and return Foo if found
 fn property_type(ty: &syn::Type) -> Option<&syn::Type> {
-    if let syn::Type::Path(syn::TypePath { path: syn::Path { segments, .. }, .. }) = ty
+    if let syn::Type::Path(syn::TypePath {
+        path: syn::Path { segments, .. },
+        ..
+    }) = ty
         && let Some(syn::PathSegment {
             ident,
             arguments:
@@ -153,7 +162,10 @@ fn property_type(ty: &syn::Type) -> Option<&syn::Type> {
 
 // Try to match `Callback<Args, Ret>` on the syn tree and return Args and Ret if found
 fn callback_arg(ty: &syn::Type) -> Option<(&syn::Type, Option<&syn::Type>)> {
-    if let syn::Type::Path(syn::TypePath { path: syn::Path { segments, .. }, .. }) = ty
+    if let syn::Type::Path(syn::TypePath {
+        path: syn::Path { segments, .. },
+        ..
+    }) = ty
         && let Some(syn::PathSegment {
             ident,
             arguments:

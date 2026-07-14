@@ -31,7 +31,8 @@ cargo_crate("i_slint_core") {
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/chrono-0.4.45:chrono",
+
+    # "//external/vendor/chrono-0.4.45:chrono",
     "//external/vendor/clru-0.6.3:clru",
     "//external/vendor/const-field-offset-0.2.0:const_field_offset",
     "//external/vendor/derive_more-2.1.1:derive_more",
