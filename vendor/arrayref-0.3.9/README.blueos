@@ -1,0 +1,9 @@
+Name: arrayref
+URL: https://crates.io/crates/arrayref
+Version: 0.3.9
+License: Apache-2.0
+License File: //external/vendor/arrayref-0.3.9/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Macros to take array references of slices

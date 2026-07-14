@@ -1,0 +1,10 @@
+Name: ndk-sys
+URL: https://crates.io/crates/ndk-sys
+Version: 0.6.0+11769913
+Revision: 49bbbba16c58ff63cb8a0ad0eca5a9fb7ecaec25
+License: Apache-2.0
+License File: //external/vendor/ndk-sys-0.6.0+11769913/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: FFI bindings for the Android NDK

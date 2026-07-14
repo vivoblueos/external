@@ -27,7 +27,7 @@ cargo_crate("darling_core") {
     "//external/vendor/fnv-1.0.7:fnv",
     "//external/vendor/ident_case-1.0.1:ident_case",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
   ]
 

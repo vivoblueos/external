@@ -1,0 +1,10 @@
+Name: skia-safe
+URL: https://crates.io/crates/skia-safe
+Version: 0.99.0
+Revision: a25a0fdb7d90429aa2d1355eab3b910ced359f50
+License: MIT
+License File: //external/vendor/skia-safe-0.99.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Safe Skia Bindings for Rust

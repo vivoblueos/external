@@ -23,6 +23,12 @@ cargo_crate("bitflags") {
   sources = [ "//external/vendor/bitflags-2.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+  deps = [ "//external/vendor/serde_core-1.0.228:serde_core" ]
+  features = [
+    "serde",
+    "serde_core",
+    "std",
+  ]
 
   cargo_pkg_name = "bitflags"
   cargo_pkg_version = "2.10.0"

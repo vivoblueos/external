@@ -1,0 +1,10 @@
+Name: windows_x86_64_msvc
+URL: https://crates.io/crates/windows_x86_64_msvc
+Version: 0.48.5
+Revision: b769fa7570f8eeaede0ed1995a7dbe1e9591a35b
+License: Apache-2.0
+License File: //external/vendor/windows_x86_64_msvc-0.48.5/license-apache-2.0
+Shipped: yes
+Security Critical: yes
+
+Description: Import lib for Windows

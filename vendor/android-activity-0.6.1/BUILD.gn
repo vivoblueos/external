@@ -1,0 +1,48 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("android_activity") {
+  epoch = "0.6"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/android-activity-0.6.1/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/android-properties-0.2.2:android_properties",
+    "//external/vendor/bitflags-2.10.0:bitflags",
+    "//external/vendor/jni-0.22.4:jni",
+    "//external/vendor/libc-0.2.186:libc",
+    "//external/vendor/log-0.4.28:log",
+    "//external/vendor/ndk-0.9.0:ndk",
+    "//external/vendor/ndk-context-0.1.1:ndk_context",
+    "//external/vendor/ndk-sys-0.6.0:ndk_sys",
+    "//external/vendor/num_enum-0.7.6:num_enum",
+    "//external/vendor/thiserror-2.0.17:thiserror",
+  ]
+  build_deps = [ "//external/vendor/cc-1.2.44:cc" ]
+
+  cargo_pkg_name = "android-activity"
+  cargo_pkg_version = "0.6.1"
+  build_root = "//external/vendor/android-activity-0.6.1/build.rs"
+  build_sources = [ "//external/vendor/android-activity-0.6.1/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

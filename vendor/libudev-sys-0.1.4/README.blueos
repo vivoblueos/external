@@ -1,0 +1,9 @@
+Name: libudev-sys
+URL: https://crates.io/crates/libudev-sys
+Version: 0.1.4
+License: MIT
+License File: //external/vendor/libudev-sys-0.1.4/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: FFI bindings to libudev

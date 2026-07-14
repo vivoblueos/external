@@ -23,7 +23,10 @@ cargo_crate("smallvec") {
   sources = [ "//external/vendor/smallvec-1.15.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  features = [ "const_generics" ]
+  features = [
+    "const_generics",
+    "const_new",
+  ]
 
   cargo_pkg_name = "smallvec"
   cargo_pkg_version = "1.15.1"

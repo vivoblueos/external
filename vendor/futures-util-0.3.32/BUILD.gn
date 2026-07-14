@@ -24,9 +24,30 @@ cargo_crate("futures_util") {
   inputs = []
   edition = "2018"
   deps = [
+    "//external/vendor/futures-channel-0.3.32:futures_channel",
     "//external/vendor/futures-core-0.3.32:futures_core",
+    "//external/vendor/futures-io-0.3.32:futures_io",
+    "//external/vendor/futures-sink-0.3.32:futures_sink",
     "//external/vendor/futures-task-0.3.32:futures_task",
+    "//external/vendor/memchr-2.7.6:memchr",
     "//external/vendor/pin-project-lite-0.2.17:pin_project_lite",
+    "//external/vendor/slab-0.4.12:slab",
+  ]
+  proc_macro_deps = [ "//external/vendor/futures-macro-0.3.32:futures_macro" ]
+  features = [
+    "alloc",
+    "async-await",
+    "async-await-macro",
+    "channel",
+    "futures-channel",
+    "futures-io",
+    "futures-macro",
+    "futures-sink",
+    "io",
+    "memchr",
+    "sink",
+    "slab",
+    "std",
   ]
 
   cargo_pkg_name = "futures-util"

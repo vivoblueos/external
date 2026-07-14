@@ -1,0 +1,10 @@
+Name: resvg
+URL: https://crates.io/crates/resvg
+Version: 0.47.0
+Revision: 3a0fdba53ccf2d346b54cc53ba7adf0ee60d0707
+License: Apache-2.0
+License File: //external/vendor/resvg-0.47.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An SVG rendering library.

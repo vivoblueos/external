@@ -1,0 +1,10 @@
+Name: sys-locale
+URL: https://crates.io/crates/sys-locale
+Version: 0.3.2
+Revision: 7026899e5723a593a819abdf46e1d4b3794a4d68
+License: Apache-2.0
+License File: //external/vendor/sys-locale-0.3.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Small and lightweight library to obtain the active system locale

@@ -1,0 +1,10 @@
+Name: num_enum
+URL: https://crates.io/crates/num_enum
+Version: 0.7.6
+Revision: f11d81c6cb644489f8a0fc24f9eea9a53d66f92e
+License: Apache-2.0
+License File: //external/vendor/num_enum-0.7.6/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Procedural macros to make inter-operation between primitives and enums easier.

@@ -1,0 +1,10 @@
+Name: simplecss
+URL: https://crates.io/crates/simplecss
+Version: 0.2.2
+Revision: 6eacb39ca5c4c2390bfde374ed0651f0e35c9d8d
+License: Apache-2.0
+License File: //external/vendor/simplecss-0.2.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A simple CSS 2 parser and selector.

@@ -1,0 +1,11 @@
+Name: web-sys
+URL: https://crates.io/crates/web-sys
+Version: 0.3.103
+Revision: 21ac804a96c0c5c5d6459084686a9a17a8a3c865
+License: Apache-2.0
+License File: //external/vendor/web-sys-0.3.103/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings for all Web APIs, a procedurally generated crate from WebIDL
+

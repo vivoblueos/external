@@ -1,0 +1,11 @@
+Name: tracing
+URL: https://crates.io/crates/tracing
+Version: 0.1.44
+Revision: 2d55f6faf9be83e7e4634129fb96813241aac2b8
+License: MIT
+License File: //external/vendor/tracing-0.1.44/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Application-level tracing for Rust.
+

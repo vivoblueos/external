@@ -1,0 +1,10 @@
+Name: icu_locale_core
+URL: https://crates.io/crates/icu_locale_core
+Version: 2.2.0
+Revision: c9fac4e625ccb2c6a7aa35079fff9709db4385ac
+License: Unicode-3.0
+License File: //external/vendor/icu_locale_core-2.2.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: API for managing Unicode Language and Locale Identifiers

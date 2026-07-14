@@ -1,0 +1,10 @@
+Name: kurbo
+URL: https://crates.io/crates/kurbo
+Version: 0.13.1
+Revision: 838b69ef35f3381cefc007d86aa8364f5a6dc673
+License: Apache-2.0
+License File: //external/vendor/kurbo-0.13.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A 2D curves library

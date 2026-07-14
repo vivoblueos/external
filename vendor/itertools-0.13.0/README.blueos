@@ -1,0 +1,9 @@
+Name: itertools
+URL: https://crates.io/crates/itertools
+Version: 0.13.0
+License: Apache-2.0
+License File: //external/vendor/itertools-0.13.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Extra iterator adaptors, iterator methods, free functions, and macros.

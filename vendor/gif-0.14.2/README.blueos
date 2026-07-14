@@ -1,0 +1,10 @@
+Name: gif
+URL: https://crates.io/crates/gif
+Version: 0.14.2
+Revision: a0127e2acbef333398414bb61d097c19c1b09d8a
+License: Apache-2.0
+License File: //external/vendor/gif-0.14.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: GIF de- and encoder

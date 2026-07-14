@@ -1,0 +1,9 @@
+Name: prettyplease
+URL: https://crates.io/crates/prettyplease
+Version: 0.2.37
+License: Apache-2.0
+License File: //external/vendor/prettyplease-0.2.37/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A minimal `syn` syntax tree pretty-printer

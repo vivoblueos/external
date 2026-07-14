@@ -1,0 +1,10 @@
+Name: blocking
+URL: https://crates.io/crates/blocking
+Version: 1.6.2
+Revision: 6c4eddec184c36ebf01db23a640109bd98cd3707
+License: Apache-2.0
+License File: //external/vendor/blocking-1.6.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A thread pool for isolating blocking I/O in async programs

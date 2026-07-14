@@ -1,0 +1,10 @@
+Name: regex-syntax
+URL: https://crates.io/crates/regex-syntax
+Version: 0.8.11
+Revision: 140167995737fa11dfe11b8af8b9aa143b790b4e
+License: Apache-2.0
+License File: //external/vendor/regex-syntax-0.8.11/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A regular expression parser.

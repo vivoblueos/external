@@ -1,0 +1,9 @@
+Name: ttf-parser
+URL: https://crates.io/crates/ttf-parser
+Version: 0.25.1
+License: Apache-2.0
+License File: //external/vendor/ttf-parser-0.25.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A high-level, safe, zero-allocation font parser for TrueType, OpenType, and AAT.

@@ -23,6 +23,15 @@ cargo_crate("bytemuck") {
   sources = [ "//external/vendor/bytemuck-1.25.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+  proc_macro_deps =
+      [ "//external/vendor/bytemuck_derive-1.11.0:bytemuck_derive" ]
+  features = [
+    "aarch64_simd",
+    "bytemuck_derive",
+    "derive",
+    "extern_crate_alloc",
+    "min_const_generics",
+  ]
 
   cargo_pkg_name = "bytemuck"
   cargo_pkg_version = "1.25.0"

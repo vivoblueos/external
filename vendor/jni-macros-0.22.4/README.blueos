@@ -1,0 +1,10 @@
+Name: jni-macros
+URL: https://crates.io/crates/jni-macros
+Version: 0.22.4
+Revision: 33045a124105c939d1e2cbdcb5a39e5d868ffa03
+License: Apache-2.0
+License File: //external/vendor/jni-macros-0.22.4/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Procedural macros for the jni crate

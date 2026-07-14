@@ -1,0 +1,10 @@
+Name: icu_segmenter
+URL: https://crates.io/crates/icu_segmenter
+Version: 2.2.0
+Revision: ed9cb2a8ac23f90c4042b369de43f1c998aa011c
+License: Unicode-3.0
+License File: //external/vendor/icu_segmenter-2.2.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode line breaking and text segmentation algorithms for text boundaries analysis

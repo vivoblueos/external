@@ -1,0 +1,10 @@
+Name: async-signal
+URL: https://crates.io/crates/async-signal
+Version: 0.2.14
+Revision: d750e57adccbd90c4c4e93d184aeabcf5b22f057
+License: Apache-2.0
+License File: //external/vendor/async-signal-0.2.14/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async signal handling

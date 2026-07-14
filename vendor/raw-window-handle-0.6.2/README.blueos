@@ -1,0 +1,10 @@
+Name: raw-window-handle
+URL: https://crates.io/crates/raw-window-handle
+Version: 0.6.2
+Revision: 5fda8e8420b069368e9450e70c2869e32dcdffc1
+License: Apache-2.0
+License File: //external/vendor/raw-window-handle-0.6.2/LICENSE-APACHE.md
+Shipped: yes
+Security Critical: yes
+
+Description: Interoperability library for Rust Windowing applications.

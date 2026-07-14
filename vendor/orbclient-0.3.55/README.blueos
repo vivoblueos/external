@@ -1,0 +1,9 @@
+Name: orbclient
+URL: https://crates.io/crates/orbclient
+Version: 0.3.55
+License: MIT
+License File: //external/vendor/orbclient-0.3.55/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: The Orbital Client Library

@@ -1,0 +1,9 @@
+Name: errno
+URL: https://crates.io/crates/errno
+Version: 0.3.14
+License: Apache-2.0
+License File: //external/vendor/errno-0.3.14/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Cross-platform interface to the `errno` variable.

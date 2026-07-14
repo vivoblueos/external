@@ -1,0 +1,10 @@
+Name: usvg
+URL: https://crates.io/crates/usvg
+Version: 0.47.0
+Revision: 3a0fdba53ccf2d346b54cc53ba7adf0ee60d0707
+License: Apache-2.0
+License File: //external/vendor/usvg-0.47.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An SVG simplification library.

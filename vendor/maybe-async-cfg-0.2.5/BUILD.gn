@@ -27,7 +27,7 @@ cargo_crate("maybe_async_cfg") {
     "//external/vendor/manyhow-0.11.4:manyhow",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/pulldown-cmark-0.11.3:pulldown_cmark",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-1.0.109:syn",
   ]
   features = [

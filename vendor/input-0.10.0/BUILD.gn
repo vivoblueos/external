@@ -1,0 +1,49 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("input") {
+  epoch = "0.10"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/input-0.10.0/src/lib.rs" ]
+  inputs = []
+  edition = "2018"
+  deps = [
+    "//external/vendor/bitflags-2.10.0:bitflags",
+    "//external/vendor/input-sys-1.19.0:input_sys",
+    "//external/vendor/libc-0.2.186:libc",
+    "//external/vendor/log-0.4.28:log",
+    "//external/vendor/udev-0.9.3:udev",
+  ]
+  features = [
+    "libinput_1_11",
+    "libinput_1_14",
+    "libinput_1_15",
+    "libinput_1_19",
+    "libinput_1_21",
+    "log",
+    "udev",
+  ]
+
+  cargo_pkg_name = "input"
+  cargo_pkg_version = "0.10.0"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

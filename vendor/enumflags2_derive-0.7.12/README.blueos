@@ -1,0 +1,10 @@
+Name: enumflags2_derive
+URL: https://crates.io/crates/enumflags2_derive
+Version: 0.7.12
+Revision: 332c37f47577e5f6b7104419da7e761963032086
+License: Apache-2.0
+License File: //external/vendor/enumflags2_derive-0.7.12/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Do not use directly, use the reexport in the `enumflags2` crate. This allows for better compatibility across versions.

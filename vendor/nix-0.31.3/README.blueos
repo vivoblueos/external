@@ -1,0 +1,10 @@
+Name: nix
+URL: https://crates.io/crates/nix
+Version: 0.31.3
+Revision: b5933ca178802b558a667514f717a86b3a1cedcc
+License: MIT
+License File: //external/vendor/nix-0.31.3/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Rust friendly bindings to *nix APIs

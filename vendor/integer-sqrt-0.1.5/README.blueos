@@ -1,0 +1,10 @@
+Name: integer-sqrt
+URL: https://crates.io/crates/integer-sqrt
+Version: 0.1.5
+Revision: 282d0d4e26fd41d888894f5578b9d7553f7be0c8
+License: Apache-2.0
+License File: //external/vendor/integer-sqrt-0.1.5/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: An implementation of integer square root algorithm for primitive rust types

@@ -1,0 +1,10 @@
+Name: serde_spanned
+URL: https://crates.io/crates/serde_spanned
+Version: 1.1.1
+Revision: 9db8aad6eafbc62f6b9d1950117649cc41eaf695
+License: Apache-2.0
+License File: //external/vendor/serde_spanned-1.1.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Serde-compatible spanned Value

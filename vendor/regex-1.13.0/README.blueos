@@ -1,0 +1,12 @@
+Name: regex
+URL: https://crates.io/crates/regex
+Version: 1.13.0
+Revision: 926af2e68eca3ce089815790541cf50759ba2c59
+License: Apache-2.0
+License File: //external/vendor/regex-1.13.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An implementation of regular expressions for Rust. This implementation uses
+finite automata and guarantees linear time matching on all inputs.
+

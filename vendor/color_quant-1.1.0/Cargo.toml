@@ -1,0 +1,18 @@
+[package]
+name = "color_quant"
+version = "2.0.0"
+edition = "2021"
+resolver = "2"
+
+# For now, the minimal version where this field can be defined and respected.
+rust-version = "1.56"
+
+license = "MIT"
+description = "Color quantization library to reduce n colors to 256 colors."
+authors = ["nwin <nwin@users.noreply.github.com>", "The image-rs Developers"]
+readme = "README.md"
+
+documentation = "https://docs.rs/color_quant"
+repository = "https://github.com/image-rs/color_quant.git"
+homepage = "https://github.com/image-rs/color_quant"
+categories = ["multimedia::images"]

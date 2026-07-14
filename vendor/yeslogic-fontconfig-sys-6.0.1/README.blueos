@@ -1,0 +1,10 @@
+Name: yeslogic-fontconfig-sys
+URL: https://crates.io/crates/yeslogic-fontconfig-sys
+Version: 6.0.1
+Revision: be4b2836d6d22db9322dfb485449323528437a72
+License: MIT
+License File: //external/vendor/yeslogic-fontconfig-sys-6.0.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Raw bindings to Fontconfig without a vendored C library

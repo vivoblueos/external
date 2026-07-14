@@ -1,0 +1,10 @@
+Name: imgref
+URL: https://crates.io/crates/imgref
+Version: 1.12.2
+Revision: 5264931837f492683f5f9ca46a10076ab3dd7f04
+License: Apache-2.0
+License File: //external/vendor/imgref-1.12.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A basic 2-dimensional slice for safe and convenient handling of pixel buffers with width, height & stride

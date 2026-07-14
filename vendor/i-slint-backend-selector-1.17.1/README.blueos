@@ -1,0 +1,10 @@
+Name: i-slint-backend-selector
+URL: https://crates.io/crates/i-slint-backend-selector
+Version: 1.17.1
+Revision: cf62c975c311e7036d599ed8ed0b7e6a8386a934
+License: Apache-2.0
+License File: //external/vendor/i-slint-backend-selector-1.17.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Helper crate to pick the default rendering backend for Slint

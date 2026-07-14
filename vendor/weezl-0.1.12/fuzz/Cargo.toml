@@ -1,0 +1,45 @@
+
+[package]
+name = "lzw-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.3"
+lzw = { package = "weezl", version = "0.0.1" }
+
+[dependencies.weezl]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "diff"
+path = "fuzz_targets/diff.rs"
+
+[[bin]]
+name = "roundtrip"
+path = "fuzz_targets/roundtrip.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "decode0"
+path = "fuzz_targets/decode0.rs"
+
+[[bin]]
+name = "roundtrip_all"
+path = "fuzz_targets/roundtrip_all.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "lowbit"
+path = "fuzz_targets/lowbit.rs"

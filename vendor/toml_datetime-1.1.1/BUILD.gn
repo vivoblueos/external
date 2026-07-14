@@ -26,6 +26,7 @@ cargo_crate("toml_datetime") {
   deps = [ "//external/vendor/serde_core-1.0.228:serde_core" ]
   features = [
     "alloc",
+    "serde",
     "std",
   ]
 

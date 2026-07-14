@@ -1,0 +1,13 @@
+Name: tar
+URL: https://crates.io/crates/tar
+Version: 0.4.46
+License: Apache-2.0
+License File: //external/vendor/tar-0.4.46/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A Rust implementation of a TAR file reader and writer. This library does not
+currently handle compression, but it is abstract over all I/O readers and
+writers. Additionally, great lengths are taken to ensure that the entire
+contents are never required to be entirely resident in memory all at once.
+

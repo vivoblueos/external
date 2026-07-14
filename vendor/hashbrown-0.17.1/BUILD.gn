@@ -23,6 +23,11 @@ cargo_crate("hashbrown") {
   sources = [ "//external/vendor/hashbrown-0.17.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+  deps = [ "//external/vendor/foldhash-0.2.0:foldhash" ]
+  features = [
+    "default-hasher",
+    "raw-entry",
+  ]
 
   cargo_pkg_name = "hashbrown"
   cargo_pkg_version = "0.17.1"

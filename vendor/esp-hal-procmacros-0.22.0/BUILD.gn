@@ -26,7 +26,7 @@ cargo_crate("esp_hal_procmacros") {
   deps = [
     "//external/vendor/proc-macro-crate-3.5.0:proc_macro_crate",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",
     "//external/vendor/termcolor-1.4.1:termcolor",
   ]

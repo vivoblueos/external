@@ -1,0 +1,10 @@
+Name: polycool
+URL: https://crates.io/crates/polycool
+Version: 0.4.0
+Revision: 0ffc830eca99e68ba6bab54224cfac2c66bde2f9
+License: Apache-2.0
+License File: //external/vendor/polycool-0.4.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Polynomial root-finding

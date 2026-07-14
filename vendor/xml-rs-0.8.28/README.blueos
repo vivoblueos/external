@@ -1,0 +1,10 @@
+Name: xml-rs
+URL: https://crates.io/crates/xml-rs
+Version: 0.8.28
+Revision: abeb2b7b4b2ff597bf1be7b219725b0ca901e93c
+License: MIT
+License File: //external/vendor/xml-rs-0.8.28/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: An XML library in pure Rust

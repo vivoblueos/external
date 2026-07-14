@@ -1,0 +1,10 @@
+Name: cgl
+URL: https://crates.io/crates/cgl
+Version: 0.3.2
+Revision: 46348b6c10543dd6465d47a7e14ee0f37516e08e
+License: Apache-2.0
+License File: //external/vendor/cgl-0.3.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Rust bindings for CGL on Mac

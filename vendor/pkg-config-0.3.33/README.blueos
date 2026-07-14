@@ -1,0 +1,11 @@
+Name: pkg-config
+URL: https://crates.io/crates/pkg-config
+Version: 0.3.33
+License: Apache-2.0
+License File: //external/vendor/pkg-config-0.3.33/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A library to run the pkg-config system tool at build time in order to be used in
+Cargo build scripts.
+

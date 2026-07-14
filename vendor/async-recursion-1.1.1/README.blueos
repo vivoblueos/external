@@ -1,0 +1,10 @@
+Name: async-recursion
+URL: https://crates.io/crates/async-recursion
+Version: 1.1.1
+Revision: 3254b12e384f7688f9a1b95c54cfa07fe82baee7
+License: Apache-2.0
+License File: //external/vendor/async-recursion-1.1.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Recursion for async functions

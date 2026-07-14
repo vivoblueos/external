@@ -1,0 +1,10 @@
+Name: smol_str
+URL: https://crates.io/crates/smol_str
+Version: 0.3.6
+Revision: 3c4ae110c7682cfc723f9f0adb49c19e2e7a0893
+License: Apache-2.0
+License File: //external/vendor/smol_str-0.3.6/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: small-string optimized string type with O(1) clone

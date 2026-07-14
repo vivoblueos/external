@@ -1,0 +1,10 @@
+Name: polling
+URL: https://crates.io/crates/polling
+Version: 3.11.0
+Revision: f404d08dd2a61994ac5fe0ed663bc051bd94c053
+License: Apache-2.0
+License File: //external/vendor/polling-3.11.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Portable interface to epoll, kqueue, event ports, and IOCP

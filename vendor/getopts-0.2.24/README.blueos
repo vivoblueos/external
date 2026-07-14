@@ -1,0 +1,9 @@
+Name: getopts
+URL: https://crates.io/crates/getopts
+Version: 0.2.24
+License: Apache-2.0
+License File: //external/vendor/getopts-0.2.24/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: getopts-like option parsing

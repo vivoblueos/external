@@ -1,0 +1,9 @@
+Name: clru
+URL: https://crates.io/crates/clru
+Version: 0.6.3
+License: MIT
+License File: //external/vendor/clru-0.6.3/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: An LRU cache implementation with constant time operations and weighted semantic

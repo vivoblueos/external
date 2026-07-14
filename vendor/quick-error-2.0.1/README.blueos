@@ -1,0 +1,10 @@
+Name: quick-error
+URL: https://crates.io/crates/quick-error
+Version: 2.0.1
+License: Apache-2.0
+License File: //external/vendor/quick-error-2.0.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description:     A macro which makes error types pleasant to write.
+

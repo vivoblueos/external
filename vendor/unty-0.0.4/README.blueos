@@ -1,0 +1,10 @@
+Name: unty
+URL: https://crates.io/crates/unty
+Version: 0.0.4
+Revision: 5455639ae05f42202a270f16bb4d79f6791d9b70
+License: Apache-2.0
+License File: //external/vendor/unty-0.0.4/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Explicitly types your generics

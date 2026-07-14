@@ -1,0 +1,10 @@
+Name: async-executor
+URL: https://crates.io/crates/async-executor
+Version: 1.14.0
+Revision: 543403e773ec4941a6272e29c2ff649bfd01a4f8
+License: Apache-2.0
+License File: //external/vendor/async-executor-1.14.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async executor

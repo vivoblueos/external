@@ -1,0 +1,9 @@
+Name: swash
+URL: https://crates.io/crates/swash
+Version: 0.2.9
+License: Apache-2.0
+License File: //external/vendor/swash-0.2.9/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Font introspection, complex text shaping and glyph rendering.

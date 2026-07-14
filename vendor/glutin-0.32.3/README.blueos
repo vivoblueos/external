@@ -1,0 +1,10 @@
+Name: glutin
+URL: https://crates.io/crates/glutin
+Version: 0.32.3
+Revision: 20d1c103172aa4025f02cc94ca16a3169bea789c
+License: Apache-2.0
+License File: //external/vendor/glutin-0.32.3/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Cross-platform OpenGL context provider.

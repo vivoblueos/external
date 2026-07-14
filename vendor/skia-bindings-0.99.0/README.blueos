@@ -1,0 +1,10 @@
+Name: skia-bindings
+URL: https://crates.io/crates/skia-bindings
+Version: 0.99.0
+Revision: a25a0fdb7d90429aa2d1355eab3b910ced359f50
+License: MIT
+License File: //external/vendor/skia-bindings-0.99.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Skia Bindings for Rust

@@ -1,0 +1,10 @@
+Name: unicode-script
+URL: https://crates.io/crates/unicode-script
+Version: 0.5.8
+License: Apache-2.0
+License File: //external/vendor/unicode-script-0.5.8/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: This crate exposes the Unicode `Script` and `Script_Extension` properties from [UAX #24](http://www.unicode.org/reports/tr24/)
+

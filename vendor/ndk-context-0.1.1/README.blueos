@@ -1,0 +1,10 @@
+Name: ndk-context
+URL: https://crates.io/crates/ndk-context
+Version: 0.1.1
+Revision: 10f2ba388fca20f7349996ebae26ccda7a6fda5c
+License: Apache-2.0
+License File: //external/vendor/ndk-context-0.1.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Handles for accessing Android APIs

@@ -1,0 +1,10 @@
+Name: image
+URL: https://crates.io/crates/image
+Version: 0.25.10
+Revision: 76e57184f22772dad1138e96954e57945406b15e
+License: Apache-2.0
+License File: //external/vendor/image-0.25.10/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Imaging library. Provides basic image processing and encoders/decoders for common image formats.

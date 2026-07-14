@@ -1,0 +1,10 @@
+Name: input-sys
+URL: https://crates.io/crates/input-sys
+Version: 1.19.0
+Revision: 691c8502d4ed7e6de89338d3f6a4cf6dec36483c
+License: MIT
+License File: //external/vendor/input-sys-1.19.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Bindgen generated unsafe libinput wrapper

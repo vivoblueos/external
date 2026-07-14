@@ -23,7 +23,10 @@ cargo_crate("libc") {
   sources = [ "//external/vendor/libc-0.2.186/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  features = [ "std" ]
+  features = [
+    "extra_traits",
+    "std",
+  ]
 
   cargo_pkg_name = "libc"
   cargo_pkg_version = "0.2.186"

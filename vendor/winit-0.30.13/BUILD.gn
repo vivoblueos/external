@@ -1,0 +1,94 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("winit") {
+  epoch = "0.30"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/winit-0.30.13/src/lib.rs" ]
+  inputs = [
+    "//external/vendor/winit-0.30.13/src/changelog/unreleased.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.10.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.11.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.12.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.13.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.14.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.15.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.16.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.17.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.18.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.19.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.20.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.21.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.22.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.23.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.24.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.25.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.26.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.27.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.28.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.29.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.30.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.8.md",
+    "//external/vendor/winit-0.30.13/src/changelog/v0.9.md",
+  ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/bitflags-2.10.0:bitflags",
+    "//external/vendor/cursor-icon-1.2.0:cursor_icon",
+    "//external/vendor/dpi-0.1.2:dpi",
+    "//external/vendor/raw-window-handle-0.6.2:raw_window_handle",
+    "//external/vendor/smol_str-0.2.2:smol_str",
+    "//external/vendor/tracing-0.1.44:tracing",
+  ]
+  deps = [
+    "//external/vendor/calloop-0.13.0:calloop",
+    "//external/vendor/libc-0.2.186:libc",
+    "//external/vendor/rustix-0.38.44:rustix",
+    "//external/vendor/xkbcommon-dl-0.4.2:xkbcommon_dl",
+  ]
+  deps = [
+    "//external/vendor/android-activity-0.6.1:android_activity",
+    "//external/vendor/ndk-0.9.0:ndk",
+  ]
+  deps = [
+    "//external/vendor/block2-0.5.1:block2",
+    "//external/vendor/core-foundation-0.9.4:core_foundation",
+    "//external/vendor/objc2-0.5.2:objc2",
+    "//external/vendor/objc2-foundation-0.2.2:objc2_foundation",
+    "//external/vendor/objc2-ui-kit-0.2.2:objc2_ui_kit",
+  ]
+  deps = [
+    "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
+    "//external/vendor/windows-sys-0.52.0:windows_sys",
+  ]
+  build_deps = [ "//external/vendor/cfg_aliases-0.2.1:cfg_aliases" ]
+  features = [ "rwh_06" ]
+  aliased_deps = {
+    rwh_06 = "//external/vendor/raw-window-handle-0.6.2:raw_window_handle"
+  }
+
+  cargo_pkg_name = "winit"
+  cargo_pkg_version = "0.30.13"
+  build_root = "//external/vendor/winit-0.30.13/build.rs"
+  build_sources = [ "//external/vendor/winit-0.30.13/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

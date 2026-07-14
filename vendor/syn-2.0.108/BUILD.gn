@@ -25,17 +25,19 @@ cargo_crate("syn") {
   edition = "2021"
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/unicode-ident-1.0.22:unicode_ident",
   ]
   features = [
     "clone-impls",
     "derive",
     "extra-traits",
+    "fold",
     "full",
     "parsing",
     "printing",
     "proc-macro",
+    "visit",
     "visit-mut",
   ]
 

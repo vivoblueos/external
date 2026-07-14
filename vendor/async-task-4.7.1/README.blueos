@@ -1,0 +1,10 @@
+Name: async-task
+URL: https://crates.io/crates/async-task
+Version: 4.7.1
+Revision: 3065c372e1ef1611230195ad7f3aae80ffde8261
+License: Apache-2.0
+License File: //external/vendor/async-task-4.7.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Task abstraction for building executors

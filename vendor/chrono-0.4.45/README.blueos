@@ -1,0 +1,10 @@
+Name: chrono
+URL: https://crates.io/crates/chrono
+Version: 0.4.45
+Revision: 170338250e836976a211e64728ec956e45e78a39
+License: Apache-2.0
+License File: //external/vendor/chrono-0.4.45/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Date and time library for Rust

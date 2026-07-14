@@ -1,0 +1,10 @@
+Name: write-fonts
+URL: https://crates.io/crates/write-fonts
+Version: 0.48.1
+Revision: fd0178ce4ea48301a7f06b35a6fce9879c102292
+License: Apache-2.0
+License File: //external/vendor/write-fonts-0.48.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Writing font files.

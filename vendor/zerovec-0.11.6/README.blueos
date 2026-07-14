@@ -1,0 +1,10 @@
+Name: zerovec
+URL: https://crates.io/crates/zerovec
+Version: 0.11.6
+Revision: c9fac4e625ccb2c6a7aa35079fff9709db4385ac
+License: Unicode-3.0
+License File: //external/vendor/zerovec-0.11.6/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Zero-copy vector backed by a byte array

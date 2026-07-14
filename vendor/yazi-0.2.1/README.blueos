@@ -1,0 +1,10 @@
+Name: yazi
+URL: https://crates.io/crates/yazi
+Version: 0.2.1
+Revision: 8a710ce8d6d923a2dc41f78d1a534257dc2a37d8
+License: Apache-2.0
+License File: //external/vendor/yazi-0.2.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: DEFLATE/zlib compression and decompression.

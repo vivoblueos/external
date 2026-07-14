@@ -1,0 +1,10 @@
+Name: unicode-bidi-mirroring
+URL: https://crates.io/crates/unicode-bidi-mirroring
+Version: 0.4.0
+Revision: ba8e39b2a3b90d18d1dc2a1ddd1ee3a4a48fd63e
+License: Apache-2.0
+License File: //external/vendor/unicode-bidi-mirroring-0.4.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode Bidi Mirroring property detection

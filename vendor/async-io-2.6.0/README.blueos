@@ -1,0 +1,10 @@
+Name: async-io
+URL: https://crates.io/crates/async-io
+Version: 2.6.0
+Revision: 576b470ca3cadefdec8b169279df23c9a0a63495
+License: Apache-2.0
+License File: //external/vendor/async-io-2.6.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async I/O and timers

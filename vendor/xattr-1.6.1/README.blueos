@@ -1,0 +1,9 @@
+Name: xattr
+URL: https://crates.io/crates/xattr
+Version: 1.6.1
+License: Apache-2.0
+License File: //external/vendor/xattr-1.6.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: unix extended filesystem attributes

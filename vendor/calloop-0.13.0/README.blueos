@@ -1,0 +1,9 @@
+Name: calloop
+URL: https://crates.io/crates/calloop
+Version: 0.13.0
+License: MIT
+License File: //external/vendor/calloop-0.13.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A callback-based event loop

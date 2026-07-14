@@ -1,0 +1,11 @@
+Name: pin-project
+URL: https://crates.io/crates/pin-project
+Version: 1.1.13
+Revision: c3b6b85f7e1674602c0ed693da985b33b2452c3c
+License: Apache-2.0
+License File: //external/vendor/pin-project-1.1.13/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A crate for safe and ergonomic pin-projection.
+

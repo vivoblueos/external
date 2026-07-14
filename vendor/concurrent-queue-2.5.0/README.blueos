@@ -1,0 +1,10 @@
+Name: concurrent-queue
+URL: https://crates.io/crates/concurrent-queue
+Version: 2.5.0
+Revision: e874f701f8413de01948c4903f894e5c845d8950
+License: Apache-2.0
+License File: //external/vendor/concurrent-queue-2.5.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Concurrent multi-producer multi-consumer queue

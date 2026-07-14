@@ -1,0 +1,10 @@
+Name: lyon_extra
+URL: https://crates.io/crates/lyon_extra
+Version: 1.1.0
+Revision: 56219c95c658d4f39de7b190d98e57d5773ba241
+License: Apache-2.0
+License File: //external/vendor/lyon_extra-1.1.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Various optional utilities for the lyon crate.

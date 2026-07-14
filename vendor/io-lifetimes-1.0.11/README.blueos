@@ -1,0 +1,10 @@
+Name: io-lifetimes
+URL: https://crates.io/crates/io-lifetimes
+Version: 1.0.11
+Revision: 081c5bb25a7110e7d8c2215426f5626589af7660
+License: Apache-2.0
+License File: //external/vendor/io-lifetimes-1.0.11/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A low-level I/O ownership and borrowing library

@@ -1,0 +1,10 @@
+Name: endi
+URL: https://crates.io/crates/endi
+Version: 1.1.1
+Revision: 226224559725a9ef0e0687b3a54eca9ad6a5a6c7
+License: MIT
+License File: //external/vendor/endi-1.1.1/LICENSE-MIT
+Shipped: yes
+Security Critical: yes
+
+Description: A simple endian-handling library

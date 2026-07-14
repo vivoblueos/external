@@ -3,7 +3,7 @@ URL: https://crates.io/crates/hashbrown
 Version: 0.17.1
 Revision: c62a63a61b7caf2de8f9ecb7b06a66b0ab6bdf3d
 License: Apache-2.0
-License File: //external/vendor/hashbrown-0.17.1/LICENSE-APACHE
+License File: //external/vendor/hashbrown-0.17.1/README.md
 Shipped: yes
 Security Critical: yes
 

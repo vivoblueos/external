@@ -1,0 +1,10 @@
+Name: zune-jpeg
+URL: https://crates.io/crates/zune-jpeg
+Version: 0.5.15
+Revision: 31d81fed7551c8ccea456d9d8e2b1fd8bebb6995
+License: Apache-2.0
+License File: //external/vendor/zune-jpeg-0.5.15/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A fast, correct and safe jpeg decoder

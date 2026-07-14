@@ -1,0 +1,13 @@
+Name: toml
+URL: https://crates.io/crates/toml
+Version: 1.1.2+spec-1.1.0
+Revision: a3d0047c95dfc6e82997d508dd93c9908650a418
+License: Apache-2.0
+License File: //external/vendor/toml-1.1.2+spec-1.1.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A native Rust encoder and decoder of TOML-formatted files and streams. Provides
+implementations of the standard Serialize/Deserialize traits for TOML data to
+facilitate deserializing and serializing Rust structures.
+

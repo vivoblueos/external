@@ -1,0 +1,10 @@
+Name: clipboard-win
+URL: https://crates.io/crates/clipboard-win
+Version: 5.4.1
+Revision: 3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342
+License: Apache-2.0
+License File: //external/vendor/clipboard-win-5.4.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Provides simple way to interact with Windows clipboard.

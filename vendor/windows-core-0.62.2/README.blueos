@@ -1,0 +1,10 @@
+Name: windows-core
+URL: https://crates.io/crates/windows-core
+Version: 0.62.2
+Revision: 32c3144490c016fe496a0aed769bce60987a2e9d
+License: Apache-2.0
+License File: //external/vendor/windows-core-0.62.2/license-apache-2.0
+Shipped: yes
+Security Critical: yes
+
+Description: Core type support for COM and Windows

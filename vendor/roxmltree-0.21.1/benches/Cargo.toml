@@ -1,0 +1,29 @@
+[package]
+name = "benchmark"
+version = "0.1.0"
+edition = "2021"
+workspace = ".."
+
+[dependencies]
+bencher = "0.1"
+quick-xml = "0.30"
+roxmltree = { path = "../" }
+sxd-document = "0.3"
+xml-rs = "0.8"
+xmltree = "0.10"
+
+# Enables support for libxml for benchmarks. libxml requires native dependencies
+# on your local machine to run, so make sure to have it installed.
+# See: https://github.com/kwarc/rust-libxml/
+#
+# You can run the benchmarks with the libxml feature on with:
+#
+# ```
+# $ cargo bench --features=libxml
+# ```
+libxml = { version = "0.3.1", optional = true }
+
+[[bench]]
+name = "benchmark"
+path = "xml.rs"
+harness = false

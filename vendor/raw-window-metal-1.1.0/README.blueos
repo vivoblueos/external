@@ -1,0 +1,10 @@
+Name: raw-window-metal
+URL: https://crates.io/crates/raw-window-metal
+Version: 1.1.0
+Revision: 1b92ba84006b2d924e066d42ed77aaa58c0b4c62
+License: Apache-2.0
+License File: //external/vendor/raw-window-metal-1.1.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Interop library between Metal and raw-window-handle

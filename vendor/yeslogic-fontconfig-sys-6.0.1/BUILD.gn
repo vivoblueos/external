@@ -1,0 +1,40 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("yeslogic_fontconfig_sys") {
+  epoch = "6"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/yeslogic-fontconfig-sys-6.0.1/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/dlib-0.5.3:dlib",
+    "//external/vendor/once_cell-1.21.4:once_cell",
+  ]
+  build_deps = [ "//external/vendor/pkg-config-0.3.33:pkg_config" ]
+
+  cargo_pkg_name = "yeslogic-fontconfig-sys"
+  cargo_pkg_version = "6.0.1"
+  build_root = "//external/vendor/yeslogic-fontconfig-sys-6.0.1/build.rs"
+  build_sources = [ "//external/vendor/yeslogic-fontconfig-sys-6.0.1/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

@@ -1,0 +1,10 @@
+Name: hermit-abi
+URL: https://crates.io/crates/hermit-abi
+Version: 0.5.2
+Revision: 356f491b8c68aaa893a4450b10b9c080f6d2e63a
+License: Apache-2.0
+License File: //external/vendor/hermit-abi-0.5.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Hermit system calls definitions.

@@ -1,0 +1,10 @@
+Name: tiny-skia-path
+URL: https://crates.io/crates/tiny-skia-path
+Version: 0.12.0
+Revision: e48b9027762d33731e60e40eb17eaa4f583b0185
+License: BSD-3-Clause
+License File: //external/vendor/tiny-skia-path-0.12.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A tiny-skia Bezier path implementation

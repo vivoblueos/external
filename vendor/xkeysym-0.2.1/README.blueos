@@ -1,0 +1,9 @@
+Name: xkeysym
+URL: https://crates.io/crates/xkeysym
+Version: 0.2.1
+License: Apache-2.0
+License File: //external/vendor/xkeysym-0.2.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A library for working with X11 keysyms

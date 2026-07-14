@@ -1,0 +1,9 @@
+Name: copypasta
+URL: https://crates.io/crates/copypasta
+Version: 0.10.2
+License: Apache-2.0
+License File: //external/vendor/copypasta-0.10.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: copypasta is a cross-platform library for getting and setting the contents of the OS-level clipboard.

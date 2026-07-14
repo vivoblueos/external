@@ -1,0 +1,10 @@
+Name: dpi
+URL: https://crates.io/crates/dpi
+Version: 0.1.2
+Revision: 587ade844dfb0eada3696ba1cb263c66eea80581
+License: Apache-2.0
+License File: //external/vendor/dpi-0.1.2/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Types for handling UI scaling

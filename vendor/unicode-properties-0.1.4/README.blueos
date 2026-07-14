@@ -1,0 +1,11 @@
+Name: unicode-properties
+URL: https://crates.io/crates/unicode-properties
+Version: 0.1.4
+License: Apache-2.0
+License File: //external/vendor/unicode-properties-0.1.4/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Query character Unicode properties according to
+UAX #44 and UTR #51.
+

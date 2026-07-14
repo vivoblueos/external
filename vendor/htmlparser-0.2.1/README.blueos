@@ -1,0 +1,9 @@
+Name: htmlparser
+URL: https://crates.io/crates/htmlparser
+Version: 0.2.1
+License: Apache-2.0
+License File: //external/vendor/htmlparser-0.2.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Pull-based, zero-allocation HTML parser.

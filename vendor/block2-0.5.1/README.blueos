@@ -1,0 +1,10 @@
+Name: block2
+URL: https://crates.io/crates/block2
+Version: 0.5.1
+Revision: 4fc083f1c6d6784577e38b0ee8dbd344481e2fd2
+License: MIT
+License File: //external/vendor/block2-0.5.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Apple's C language extension of blocks

@@ -1,0 +1,10 @@
+Name: lyon_algorithms
+URL: https://crates.io/crates/lyon_algorithms
+Version: 1.0.20
+Revision: 66b9ea7f4ab935763970e828781d8fd5e9305542
+License: Apache-2.0
+License File: //external/vendor/lyon_algorithms-1.0.20/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: 2D Path manipulation/transformation algorithms.

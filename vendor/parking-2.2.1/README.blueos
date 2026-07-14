@@ -1,0 +1,10 @@
+Name: parking
+URL: https://crates.io/crates/parking
+Version: 2.2.1
+Revision: 0ece32dbfd6cd1bc1510ede6ed56acb772edf83f
+License: Apache-2.0
+License File: //external/vendor/parking-2.2.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Thread parking and unparking

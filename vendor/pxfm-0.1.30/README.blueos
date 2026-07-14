@@ -1,0 +1,10 @@
+Name: pxfm
+URL: https://crates.io/crates/pxfm
+Version: 0.1.30
+Revision: acf7acd00cfc845307eda7b7b2de19e42303de82
+License: Apache-2.0
+License File: //external/vendor/pxfm-0.1.30/LICENSE-APACHE.md
+Shipped: yes
+Security Critical: yes
+
+Description: Fast and accurate math

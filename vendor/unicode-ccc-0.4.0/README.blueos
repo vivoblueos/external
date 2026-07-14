@@ -1,0 +1,10 @@
+Name: unicode-ccc
+URL: https://crates.io/crates/unicode-ccc
+Version: 0.4.0
+Revision: cd2218002fe159d0c01dc084fb6eef883d0cd553
+License: Apache-2.0
+License File: //external/vendor/unicode-ccc-0.4.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode Canonical Combining Class detection

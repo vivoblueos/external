@@ -1,0 +1,9 @@
+Name: simd_cesu8
+URL: https://crates.io/crates/simd_cesu8
+Version: 1.1.1
+License: Apache-2.0
+License File: //external/vendor/simd_cesu8-1.1.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: An extremely fast, SIMD accelerated, encoding and decoding library for CESU-8 and Modified UTF-8.

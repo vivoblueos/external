@@ -1,0 +1,10 @@
+Name: objc2-core-image
+URL: https://crates.io/crates/objc2-core-image
+Version: 0.3.2
+Revision: 7b1abfd750a2cacaea71d6a56ecfb83cb7de560b
+License: Apache-2.0
+License File: //external/vendor/objc2-core-image-0.3.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings to the CoreImage framework

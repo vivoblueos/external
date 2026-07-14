@@ -1,0 +1,11 @@
+Name: derive_utils
+URL: https://crates.io/crates/derive_utils
+Version: 0.15.1
+Revision: 6e6fc10f7d7a0c131215be42b7f991bd2c1dadd0
+License: Apache-2.0
+License File: //external/vendor/derive_utils-0.15.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A procedural macro helper for easily writing derive macros for enums.
+

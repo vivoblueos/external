@@ -1,0 +1,9 @@
+Name: cursor-icon
+URL: https://crates.io/crates/cursor-icon
+Version: 1.2.0
+License: Apache-2.0
+License File: //external/vendor/cursor-icon-1.2.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Cross platform cursor icon type

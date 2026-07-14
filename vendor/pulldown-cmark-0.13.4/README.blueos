@@ -1,0 +1,10 @@
+Name: pulldown-cmark
+URL: https://crates.io/crates/pulldown-cmark
+Version: 0.13.4
+Revision: 38e4d08f14ec4bd9783270e9623db7681ebed968
+License: MIT
+License File: //external/vendor/pulldown-cmark-0.13.4/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A pull parser for CommonMark

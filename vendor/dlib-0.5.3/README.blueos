@@ -1,0 +1,9 @@
+Name: dlib
+URL: https://crates.io/crates/dlib
+Version: 0.5.3
+License: MIT
+License File: //external/vendor/dlib-0.5.3/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Helper macros for handling manually loading optional system libraries.

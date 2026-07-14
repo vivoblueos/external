@@ -1,0 +1,10 @@
+Name: linebender_resource_handle
+URL: https://crates.io/crates/linebender_resource_handle
+Version: 0.1.1
+Revision: bd8694ffca7550e8d569346c50de5fdcb5c51a7f
+License: Apache-2.0
+License File: //external/vendor/linebender_resource_handle-0.1.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Raw resource handle for immutable blobs with dynamic lifetimes.
