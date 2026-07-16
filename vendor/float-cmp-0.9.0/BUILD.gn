@@ -27,7 +27,6 @@ cargo_crate("float_cmp") {
   features = [
     "num-traits",
     "ratio",
-    "std",
   ]
 
   cargo_pkg_name = "float-cmp"
