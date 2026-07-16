@@ -31,8 +31,7 @@ cargo_crate("i_slint_core") {
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-
-    # "//external/vendor/chrono-0.4.45:chrono",
+    "//external/vendor/chrono-0.4.45:chrono",
     "//external/vendor/clru-0.6.3:clru",
     "//external/vendor/const-field-offset-0.2.0:const_field_offset",
     "//external/vendor/derive_more-2.1.1:derive_more",
@@ -47,7 +46,8 @@ cargo_crate("i_slint_core") {
     "//external/vendor/lyon_path-1.0.19:lyon_path",
     "//external/vendor/num-traits-0.2.19:num_traits",
     "//external/vendor/once_cell-1.21.4:once_cell",
-    "//external/vendor/parley-0.10.0:parley",
+
+    # "//external/vendor/parley-0.10.0:parley",
     "//external/vendor/pin-project-1.1.13:pin_project",
     "//external/vendor/pin-weak-1.1.0:pin_weak",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
@@ -59,7 +59,8 @@ cargo_crate("i_slint_core") {
     "//external/vendor/skrifa-0.42.1:skrifa",
     "//external/vendor/slab-0.4.12:slab",
     "//external/vendor/strum-0.28.0:strum",
-    "//external/vendor/swash-0.2.9:swash",
+
+    # "//external/vendor/swash-0.2.9:swash",
     "//external/vendor/sys-locale-0.3.2:sys_locale",
     "//external/vendor/taffy-0.10.1:taffy",
     "//external/vendor/unicode-linebreak-0.1.5:unicode_linebreak",
@@ -74,18 +75,22 @@ cargo_crate("i_slint_core") {
     "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros",
   ]
   features = [
-    "box-shadow-cache",
-    "image-decoders",
+    # "box-shadow-cache",
+
+    # "image-decoders",
+
     "libm",
-    "path",
-    "shared-fontique",
-    "shared-parley",
-    "shared-swash",
-    "std",
-    "svg",
-    "unicode",
-    "unicode-linebreak",
-    "unicode-script",
+
+    # "path",
+
+    # "shared-fontique",
+    # "shared-parley",
+    # "shared-swash",
+    # "std",
+    # "svg",
+    # "unicode",
+    # "unicode-linebreak",
+    # "unicode-script",
     "unsafe-single-threaded",
   ]
   aliased_deps = {

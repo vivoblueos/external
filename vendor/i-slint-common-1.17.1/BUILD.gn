@@ -30,7 +30,8 @@ cargo_crate("i_slint_common") {
   edition = "2021"
   deps = [
     "//external/vendor/derive_more-2.1.1:derive_more",
-    "//external/vendor/fontique-0.10.0:fontique",
+
+    # "//external/vendor/fontique-0.10.0:fontique",
     "//external/vendor/htmlparser-0.2.1:htmlparser",
     "//external/vendor/icu_decimal-2.2.0:icu_decimal",
     "//external/vendor/icu_locale_core-2.2.0:icu_locale_core",
@@ -44,8 +45,9 @@ cargo_crate("i_slint_common") {
     "color-parsing",
     "locale-decimal-separator",
     "markdown",
-    "shared-fontique",
-    "svg-text",
+
+    # "shared-fontique",
+    # "svg-text",
   ]
 
   cargo_pkg_name = "i-slint-common"

@@ -44,7 +44,7 @@ cargo_crate("slint") {
   ]
   proc_macro_deps = [
     "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros",
-    "//external/vendor/slint-macros-1.17.1:slint_macros",
+    # "//external/vendor/slint-macros-1.17.1:slint_macros",
   ]
   features = [
     "compat-1-2",

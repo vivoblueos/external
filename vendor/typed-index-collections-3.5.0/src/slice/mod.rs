@@ -680,7 +680,7 @@ impl<K, V> TiSlice<K, V> {
     ///
     /// [`slice::reverse`]: https://doc.rust-lang.org/std/primitive.slice.html#method.reverse
     #[inline]
-    pub const fn reverse(&mut self) {
+    pub fn reverse(&mut self) {
         self.raw.reverse();
     }
 
@@ -1520,7 +1520,7 @@ impl<K, V> TiSlice<K, V> {
     ///
     /// [`slice::copy_from_slice`]: https://doc.rust-lang.org/std/primitive.slice.html#method.copy_from_slice
     #[inline]
-    pub const fn copy_from_slice(&mut self, src: &Self)
+    pub fn copy_from_slice(&mut self, src: &Self)
     where
         V: Copy,
     {

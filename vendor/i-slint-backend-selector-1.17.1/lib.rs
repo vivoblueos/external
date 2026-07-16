@@ -1,6 +1,7 @@
 // Copyright © SixtyFPS GmbH <info@slint.dev>
 // SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0
 
+#![feature(let_chains)]
 #![doc = include_str!("README.md")]
 #![doc(html_logo_url = "https://slint.dev/logo/slint-logo-square-light.svg")]
 #![cfg_attr(
@@ -16,9 +17,9 @@
 extern crate alloc;
 
 use alloc::boxed::Box;
-pub use i_slint_core::SlintContext;
 use i_slint_core::platform::Platform;
 use i_slint_core::platform::PlatformError;
+pub use i_slint_core::SlintContext;
 
 #[cfg(all(feature = "i-slint-backend-qt", not(no_qt), not(target_os = "android")))]
 fn create_qt_backend() -> Result<Box<dyn Platform + 'static>, PlatformError> {
@@ -32,7 +33,9 @@ fn create_winit_backend() -> Result<Box<dyn Platform + 'static>, PlatformError> 
 
 #[cfg(all(feature = "i-slint-backend-linuxkms", target_os = "linux"))]
 fn create_linuxkms_backend() -> Result<Box<dyn Platform + 'static>, PlatformError> {
-    Ok(Box::new(i_slint_backend_linuxkms::BackendBuilder::default().build()?))
+    Ok(Box::new(
+        i_slint_backend_linuxkms::BackendBuilder::default().build()?,
+    ))
 }
 
 #[cfg(all(feature = "mcp", supports_headless))]
@@ -152,15 +155,17 @@ cfg_if::cfg_if! {
 }
 
 pub fn parse_backend_env_var(backend_config: &str) -> (&str, &str) {
-    backend_config.split_once('-').unwrap_or(match backend_config {
-        "qt" => ("qt", ""),
-        "gl" | "winit" => ("winit", ""),
-        "femtovg" => ("winit", "femtovg"),
-        "skia" => ("winit", "skia"),
-        "sw" | "software" => ("winit", "software"),
-        "linuxkms" => ("linuxkms", ""),
-        x => (x, ""),
-    })
+    backend_config
+        .split_once('-')
+        .unwrap_or(match backend_config {
+            "qt" => ("qt", ""),
+            "gl" | "winit" => ("winit", ""),
+            "femtovg" => ("winit", "femtovg"),
+            "skia" => ("winit", "skia"),
+            "sw" | "software" => ("winit", "software"),
+            "linuxkms" => ("linuxkms", ""),
+            x => (x, ""),
+        })
 }
 
 #[cfg(any(feature = "system-testing", feature = "mcp"))]

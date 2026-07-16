@@ -43,20 +43,22 @@ cargo_crate("i_slint_compiler") {
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/rowan-0.16.1:rowan",
-
-    # "//external/vendor/smol_str-0.3.6:smol_str",
+    "//external/vendor/smol_str-0.3.6:smol_str",
     "//external/vendor/strum-0.28.0:strum",
     "//external/vendor/typed-index-collections-3.5.0:typed_index_collections",
     "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
     "//external/vendor/url-2.5.8:url",
   ]
   features = [
-    "display-diagnostics",
+    # "display-diagnostics",
     "proc-macro2",
     "proc_macro_span",
     "quote",
     "rust",
   ]
+
+  rustenv = [ "SLINT_WIDGETS_LIBRARY=" +
+              rebase_path("//external/vendor/slint-1.17.1") ]
 
   cargo_pkg_name = "i-slint-compiler"
   cargo_pkg_version = "1.17.1"

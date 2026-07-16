@@ -7,6 +7,7 @@ use core::cell::Cell;
 use i_slint_core::api::Window;
 use i_slint_core::platform::Renderer;
 use i_slint_core::window::WindowAdapter;
+use core::ops::AsyncFnOnce;
 
 /// This is a minimal adapter for a Window that doesn't have any other feature than rendering
 /// using the software renderer.

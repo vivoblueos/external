@@ -43,10 +43,13 @@ cargo_crate("i_slint_renderer_software") {
     "//external/vendor/zeno-0.3.3:zeno",
   ]
   features = [
-    "libm",
-    "path",
-    "std",
-    "systemfonts",
+    "experimental",
+
+    # "libm",
+    # "path",
+
+    # "std",
+    # "systemfonts",
   ]
 
   cargo_pkg_name = "i-slint-renderer-software"

@@ -68,7 +68,10 @@ impl Item for TouchArea {
         _window_adapter: &Rc<dyn WindowAdapter>,
         _self_rc: &ItemRc,
     ) -> LayoutInfo {
-        LayoutInfo { stretch: 1., ..LayoutInfo::default() }
+        LayoutInfo {
+            stretch: 1.,
+            ..LayoutInfo::default()
+        }
     }
 
     fn input_event_filter_before_children(
@@ -82,12 +85,15 @@ impl Item for TouchArea {
             self.has_hover.set(false);
             if self.grabbed.replace(false) {
                 self.pressed.set(false);
-                Self::FIELD_OFFSETS.pointer_event().apply_pin(self).call(&(PointerEvent {
-                    button: PointerEventButton::Other,
-                    kind: PointerEventKind::Cancel,
-                    modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
-                    touch_finger_id: 0,
-                },));
+                Self::FIELD_OFFSETS
+                    .pointer_event()
+                    .apply_pin(self)
+                    .call(&(PointerEvent {
+                        button: PointerEventButton::Other,
+                        kind: PointerEventKind::Cancel,
+                        modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
+                        touch_finger_id: 0,
+                    },));
             }
             return InputEventFilterResult::ForwardAndIgnore;
         }
@@ -96,11 +102,20 @@ impl Item for TouchArea {
             return InputEventFilterResult::ForwardAndIgnore;
         }
         if let Some(pos) = event.position() {
-            Self::FIELD_OFFSETS.mouse_x().apply_pin(self).set(pos.x_length());
-            Self::FIELD_OFFSETS.mouse_y().apply_pin(self).set(pos.y_length());
+            Self::FIELD_OFFSETS
+                .mouse_x()
+                .apply_pin(self)
+                .set(pos.x_length());
+            Self::FIELD_OFFSETS
+                .mouse_y()
+                .apply_pin(self)
+                .set(pos.y_length());
         }
         let hovering = !matches!(event, MouseEvent::Exit);
-        Self::FIELD_OFFSETS.has_hover().apply_pin(self).set(hovering);
+        Self::FIELD_OFFSETS
+            .has_hover()
+            .apply_pin(self)
+            .set(hovering);
         if hovering {
             *cursor = self.mouse_cursor();
         }
@@ -121,37 +136,59 @@ impl Item for TouchArea {
             return InputEventResult::EventIgnored;
         }
         match event {
-            MouseEvent::Pressed { position, button, touch_finger_id, .. } => {
+            MouseEvent::Pressed {
+                position,
+                button,
+                touch_finger_id,
+                ..
+            } => {
                 self.grabbed.set(true);
                 if *button == PointerEventButton::Left {
-                    Self::FIELD_OFFSETS.pressed_x().apply_pin(self).set(position.x_length());
-                    Self::FIELD_OFFSETS.pressed_y().apply_pin(self).set(position.y_length());
+                    Self::FIELD_OFFSETS
+                        .pressed_x()
+                        .apply_pin(self)
+                        .set(position.x_length());
+                    Self::FIELD_OFFSETS
+                        .pressed_y()
+                        .apply_pin(self)
+                        .set(position.y_length());
                     Self::FIELD_OFFSETS.pressed().apply_pin(self).set(true);
                 }
-                Self::FIELD_OFFSETS.pointer_event().apply_pin(self).call(&(PointerEvent {
-                    button: *button,
-                    kind: PointerEventKind::Down,
-                    modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
-                    touch_finger_id: *touch_finger_id,
-                },));
+                Self::FIELD_OFFSETS
+                    .pointer_event()
+                    .apply_pin(self)
+                    .call(&(PointerEvent {
+                        button: *button,
+                        kind: PointerEventKind::Down,
+                        modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
+                        touch_finger_id: *touch_finger_id,
+                    },));
 
                 InputEventResult::GrabMouse
             }
             MouseEvent::Exit => {
                 Self::FIELD_OFFSETS.pressed().apply_pin(self).set(false);
                 if self.grabbed.replace(false) {
-                    Self::FIELD_OFFSETS.pointer_event().apply_pin(self).call(&(PointerEvent {
-                        button: PointerEventButton::Other,
-                        kind: PointerEventKind::Cancel,
-                        modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
-                        touch_finger_id: 0,
-                    },));
+                    Self::FIELD_OFFSETS
+                        .pointer_event()
+                        .apply_pin(self)
+                        .call(&(PointerEvent {
+                            button: PointerEventButton::Other,
+                            kind: PointerEventKind::Cancel,
+                            modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
+                            touch_finger_id: 0,
+                        },));
                 }
 
                 InputEventResult::EventAccepted
             }
 
-            MouseEvent::Released { button, position, click_count, touch_finger_id } => {
+            MouseEvent::Released {
+                button,
+                position,
+                click_count,
+                touch_finger_id,
+            } => {
                 let geometry = self_rc.geometry();
                 if *button == PointerEventButton::Left
                     && LogicalRect::new(LogicalPoint::default(), geometry.size).contains(*position)
@@ -159,7 +196,10 @@ impl Item for TouchArea {
                 {
                     Self::FIELD_OFFSETS.clicked().apply_pin(self).call(&());
                     if (click_count % 2) == 1 {
-                        Self::FIELD_OFFSETS.double_clicked().apply_pin(self).call(&())
+                        Self::FIELD_OFFSETS
+                            .double_clicked()
+                            .apply_pin(self)
+                            .call(&())
                     }
                 }
 
@@ -167,22 +207,30 @@ impl Item for TouchArea {
                 if *button == PointerEventButton::Left {
                     Self::FIELD_OFFSETS.pressed().apply_pin(self).set(false);
                 }
-                Self::FIELD_OFFSETS.pointer_event().apply_pin(self).call(&(PointerEvent {
-                    button: *button,
-                    kind: PointerEventKind::Up,
-                    modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
-                    touch_finger_id: *touch_finger_id,
-                },));
+                Self::FIELD_OFFSETS
+                    .pointer_event()
+                    .apply_pin(self)
+                    .call(&(PointerEvent {
+                        button: *button,
+                        kind: PointerEventKind::Up,
+                        modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
+                        touch_finger_id: *touch_finger_id,
+                    },));
 
                 InputEventResult::EventAccepted
             }
-            MouseEvent::Moved { touch_finger_id, .. } => {
-                Self::FIELD_OFFSETS.pointer_event().apply_pin(self).call(&(PointerEvent {
-                    button: PointerEventButton::Other,
-                    kind: PointerEventKind::Move,
-                    modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
-                    touch_finger_id: *touch_finger_id,
-                },));
+            MouseEvent::Moved {
+                touch_finger_id, ..
+            } => {
+                Self::FIELD_OFFSETS
+                    .pointer_event()
+                    .apply_pin(self)
+                    .call(&(PointerEvent {
+                        button: PointerEventButton::Other,
+                        kind: PointerEventKind::Move,
+                        modifiers: window_adapter.window().0.context().0.modifiers.get().into(),
+                        touch_finger_id: *touch_finger_id,
+                    },));
                 if self.grabbed.get() {
                     Self::FIELD_OFFSETS.moved().apply_pin(self).call(&());
                     InputEventResult::GrabMouse
@@ -190,10 +238,16 @@ impl Item for TouchArea {
                     InputEventResult::EventAccepted
                 }
             }
-            MouseEvent::Wheel { delta_x, delta_y, .. } => {
+            MouseEvent::Wheel {
+                delta_x, delta_y, ..
+            } => {
                 let modifiers = window_adapter.window().0.context().0.modifiers.get().into();
                 let r = Self::FIELD_OFFSETS.scroll_event().apply_pin(self).call(&(
-                    PointerScrollEvent { delta_x: *delta_x, delta_y: *delta_y, modifiers },
+                    PointerScrollEvent {
+                        delta_x: *delta_x,
+                        delta_y: *delta_y,
+                        modifiers,
+                    },
                 ));
                 if self.grabbed.get() {
                     InputEventResult::GrabMouse
@@ -272,14 +326,18 @@ impl ItemConsts for TouchArea {
     const cached_rendering_data_offset: const_field_offset::FieldOffset<
         TouchArea,
         CachedRenderingData,
-    > = TouchArea::FIELD_OFFSETS.cached_rendering_data().as_unpinned_projection();
+    > = TouchArea::FIELD_OFFSETS
+        .cached_rendering_data()
+        .as_unpinned_projection();
 }
 
 impl ItemConsts for KeyBinding {
     const cached_rendering_data_offset: const_field_offset::FieldOffset<
         KeyBinding,
         CachedRenderingData,
-    > = KeyBinding::FIELD_OFFSETS.cached_rendering_data().as_unpinned_projection();
+    > = KeyBinding::FIELD_OFFSETS
+        .cached_rendering_data()
+        .as_unpinned_projection();
 }
 
 #[repr(C)]
@@ -380,8 +438,13 @@ impl Item for KeyBinding {
 /// An optimized ShortcutList that is only initialized when it is
 /// first accessed.
 #[repr(C)]
-#[derive(Default)] // results in a null pointer, which we will initialize on first access
 pub struct MaybeKeyBindingList(Cell<*const KeyBindingList>);
+
+impl Default for MaybeKeyBindingList {
+    fn default() -> Self {
+        Self(Cell::new(core::ptr::null()))
+    }
+}
 
 impl MaybeKeyBindingList {
     fn ensure_init(&self) {
@@ -517,7 +580,10 @@ impl Item for FocusScope {
         _window_adapter: &Rc<dyn WindowAdapter>,
         _self_rc: &ItemRc,
     ) -> LayoutInfo {
-        LayoutInfo { stretch: 1., ..LayoutInfo::default() }
+        LayoutInfo {
+            stretch: 1.,
+            ..LayoutInfo::default()
+        }
     }
 
     fn input_event_filter_before_children(
@@ -657,13 +723,25 @@ impl Item for FocusScope {
                 };
 
                 self.has_focus.set(true);
-                Self::FIELD_OFFSETS.focus_changed_event().apply_pin(self).call(&(*reason,));
-                Self::FIELD_OFFSETS.focus_gained().apply_pin(self).call(&(*reason,));
+                Self::FIELD_OFFSETS
+                    .focus_changed_event()
+                    .apply_pin(self)
+                    .call(&(*reason,));
+                Self::FIELD_OFFSETS
+                    .focus_gained()
+                    .apply_pin(self)
+                    .call(&(*reason,));
             }
             FocusEvent::FocusOut(reason) => {
                 self.has_focus.set(false);
-                Self::FIELD_OFFSETS.focus_changed_event().apply_pin(self).call(&(*reason,));
-                Self::FIELD_OFFSETS.focus_lost().apply_pin(self).call(&(*reason,));
+                Self::FIELD_OFFSETS
+                    .focus_changed_event()
+                    .apply_pin(self)
+                    .call(&(*reason,));
+                Self::FIELD_OFFSETS
+                    .focus_lost()
+                    .apply_pin(self)
+                    .call(&(*reason,));
             }
         }
         FocusEventResult::FocusAccepted
@@ -697,7 +775,9 @@ impl ItemConsts for FocusScope {
     const cached_rendering_data_offset: const_field_offset::FieldOffset<
         FocusScope,
         CachedRenderingData,
-    > = FocusScope::FIELD_OFFSETS.cached_rendering_data().as_unpinned_projection();
+    > = FocusScope::FIELD_OFFSETS
+        .cached_rendering_data()
+        .as_unpinned_projection();
 }
 
 #[repr(C)]
@@ -737,7 +817,10 @@ impl Item for SwipeGestureHandler {
         _window_adapter: &Rc<dyn WindowAdapter>,
         _self_rc: &ItemRc,
     ) -> LayoutInfo {
-        LayoutInfo { stretch: 1., ..LayoutInfo::default() }
+        LayoutInfo {
+            stretch: 1.,
+            ..LayoutInfo::default()
+        }
     }
 
     fn input_event_filter_before_children(
@@ -755,7 +838,11 @@ impl Item for SwipeGestureHandler {
         }
 
         match event {
-            MouseEvent::Pressed { position, button: PointerEventButton::Left, .. } => {
+            MouseEvent::Pressed {
+                position,
+                button: PointerEventButton::Left,
+                ..
+            } => {
                 Self::FIELD_OFFSETS
                     .pressed_position()
                     .apply_pin(self)
@@ -769,7 +856,10 @@ impl Item for SwipeGestureHandler {
                 self.cancel_impl();
                 InputEventFilterResult::ForwardAndIgnore
             }
-            MouseEvent::Released { button: PointerEventButton::Left, .. } => {
+            MouseEvent::Released {
+                button: PointerEventButton::Left,
+                ..
+            } => {
                 if self.swiping() {
                     InputEventFilterResult::Intercept
                 } else {
@@ -819,7 +909,8 @@ impl Item for SwipeGestureHandler {
                 if !self.pressed.get() && !self.swiping() {
                     return InputEventResult::EventIgnored;
                 }
-                self.current_position.set(crate::lengths::logical_position_to_api(*position));
+                self.current_position
+                    .set(crate::lengths::logical_position_to_api(*position));
                 self.pressed.set(false);
                 if self.swiping() {
                     Self::FIELD_OFFSETS.swiping().apply_pin(self).set(false);
@@ -833,14 +924,19 @@ impl Item for SwipeGestureHandler {
                 if !self.pressed.get() {
                     return InputEventResult::EventAccepted;
                 }
-                self.current_position.set(crate::lengths::logical_position_to_api(*position));
+                self.current_position
+                    .set(crate::lengths::logical_position_to_api(*position));
                 let mut swiping = self.swiping();
                 if !swiping && self.is_over_threshold(position) {
                     Self::FIELD_OFFSETS.swiping().apply_pin(self).set(true);
                     swiping = true;
                 }
                 Self::FIELD_OFFSETS.moved().apply_pin(self).call(&());
-                if swiping { InputEventResult::GrabMouse } else { InputEventResult::EventAccepted }
+                if swiping {
+                    InputEventResult::GrabMouse
+                } else {
+                    InputEventResult::EventAccepted
+                }
             }
             MouseEvent::Wheel { .. } => InputEventResult::EventIgnored,
             MouseEvent::PinchGesture { .. } | MouseEvent::RotationGesture { .. } => {
@@ -903,7 +999,9 @@ impl Item for SwipeGestureHandler {
 
 impl ItemConsts for SwipeGestureHandler {
     const cached_rendering_data_offset: const_field_offset::FieldOffset<Self, CachedRenderingData> =
-        Self::FIELD_OFFSETS.cached_rendering_data().as_unpinned_projection();
+        Self::FIELD_OFFSETS
+            .cached_rendering_data()
+            .as_unpinned_projection();
 }
 
 impl SwipeGestureHandler {
@@ -1016,7 +1114,10 @@ impl Item for ScaleRotateGestureHandler {
         _window_adapter: &Rc<dyn WindowAdapter>,
         _self_rc: &ItemRc,
     ) -> LayoutInfo {
-        LayoutInfo { stretch: 1., ..LayoutInfo::default() }
+        LayoutInfo {
+            stretch: 1.,
+            ..LayoutInfo::default()
+        }
     }
 
     fn input_event_filter_before_children(
@@ -1049,7 +1150,11 @@ impl Item for ScaleRotateGestureHandler {
     ) -> InputEventResult {
         use crate::input::TouchPhase;
         match event {
-            MouseEvent::PinchGesture { delta, phase, position } => {
+            MouseEvent::PinchGesture {
+                delta,
+                phase,
+                position,
+            } => {
                 if !self.enabled() {
                     if self.active() {
                         self.cancel_impl();
@@ -1082,14 +1187,21 @@ impl Item for ScaleRotateGestureHandler {
                     }
                 }
             }
-            MouseEvent::RotationGesture { delta, phase, position } => {
+            MouseEvent::RotationGesture {
+                delta,
+                phase,
+                position,
+            } => {
                 if !self.enabled() {
                     return InputEventResult::EventIgnored;
                 }
                 let center = crate::lengths::logical_position_to_api(*position);
                 Self::FIELD_OFFSETS.center().apply_pin(self).set(center);
                 let new_rotation = self.rotation() + delta;
-                Self::FIELD_OFFSETS.rotation().apply_pin(self).set(new_rotation);
+                Self::FIELD_OFFSETS
+                    .rotation()
+                    .apply_pin(self)
+                    .set(new_rotation);
                 match phase {
                     TouchPhase::Started => {
                         if !self.active() {
@@ -1171,7 +1283,9 @@ impl Item for ScaleRotateGestureHandler {
 
 impl ItemConsts for ScaleRotateGestureHandler {
     const cached_rendering_data_offset: const_field_offset::FieldOffset<Self, CachedRenderingData> =
-        Self::FIELD_OFFSETS.cached_rendering_data().as_unpinned_projection();
+        Self::FIELD_OFFSETS
+            .cached_rendering_data()
+            .as_unpinned_projection();
 }
 
 impl ScaleRotateGestureHandler {

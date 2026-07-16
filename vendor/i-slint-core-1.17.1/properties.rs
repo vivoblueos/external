@@ -55,7 +55,10 @@ mod single_linked_list_pin {
 
     impl<T> SingleLinkedListPinHead<T> {
         pub fn push_front(&mut self, value: T) -> Pin<&T> {
-            let node = SingleLinkedListPinNode { next: self.0.take(), value };
+            let node = SingleLinkedListPinNode {
+                next: self.0.take(),
+                value,
+            };
             // Safety: raw allocation, written once and never moved
             let ptr = unsafe {
                 let layout = core::alloc::Layout::new::<SingleLinkedListPinNode<T>>();
@@ -102,7 +105,9 @@ mod single_linked_list_pin {
         head.push_front(2);
         head.push_front(3);
         assert_eq!(
-            head.iter().map(|x: Pin<&i32>| *x.get_ref()).collect::<std::vec::Vec<i32>>(),
+            head.iter()
+                .map(|x: Pin<&i32>| *x.get_ref())
+                .collect::<std::vec::Vec<i32>>(),
             std::vec![3, 2, 1]
         );
     }
@@ -244,7 +249,11 @@ pub(crate) mod dependency_tracker {
 
     impl<T> DependencyNode<T> {
         pub fn new(binding: T) -> Self {
-            Self { next: Cell::new(core::ptr::null()), prev: Cell::new(core::ptr::null()), binding }
+            Self {
+                next: Cell::new(core::ptr::null()),
+                prev: Cell::new(core::ptr::null()),
+                binding,
+            }
         }
 
         /// Assert that the invariant of `next` and `prev` are met.
@@ -411,7 +420,9 @@ mod current_binding_storage {
 
     #[cfg(all(not(feature = "std"), feature = "unsafe-single-threaded"))]
     pub(super) fn set<T>(value: Option<*const BindingHolder>, f: impl FnOnce() -> T) -> T {
-        let old = CURRENT_BINDING.0.replace(value.unwrap_or(core::ptr::null()));
+        let old = CURRENT_BINDING
+            .0
+            .replace(value.unwrap_or(core::ptr::null()));
         let res = f();
         CURRENT_BINDING.0.set(old);
         res
@@ -547,13 +558,20 @@ fn alloc_binding_holder<T, B: BindingCallable<T> + 'static>(binding: B) -> *mut 
 }
 
 #[repr(transparent)]
-#[derive(Default)]
 struct PropertyHandle {
     /// Either a pointer to a binding or the head of the dependent-properties list.
     /// The two least significant bits are flags (the pointer is always aligned).
     /// Bit 0 (`0b01`): the binding is borrowed.
     /// Bit 1 (`0b10`): the value is a pointer to a binding.
     handle: Cell<*mut ()>,
+}
+
+impl Default for PropertyHandle {
+    fn default() -> Self {
+        Self {
+            handle: Cell::new(core::ptr::null_mut()),
+        }
+    }
 }
 
 const BINDING_BORROWED: usize = 0b01;
@@ -711,7 +729,8 @@ impl PropertyHandle {
                 );
             }
         }
-        self.handle.set((binding as *mut ()).map_addr(|a| a | BINDING_POINTER_TO_BINDING));
+        self.handle
+            .set((binding as *mut ()).map_addr(|a| a | BINDING_POINTER_TO_BINDING));
         if !is_constant {
             self.mark_dirty(
                 #[cfg(slint_debug_property)]
@@ -1086,7 +1105,8 @@ impl<T: Clone> Property<T> {
     /// Any of the properties accessed during the last evaluation of the closure called
     /// from the last call to evaluate is potentially dirty.
     pub fn is_dirty(&self) -> bool {
-        self.handle.access(|binding| binding.is_some_and(|b| b.dirty.get()))
+        self.handle
+            .access(|binding| binding.is_some_and(|b| b.dirty.get()))
     }
 
     /// Internal function to mark the property as dirty and notify dependencies, regardless of
@@ -1191,7 +1211,10 @@ unsafe impl<F: Fn() -> i32> crate::properties::BindingCallable<StateInfo> for St
 
 /// Sets a binding that returns a state to a StateInfo property
 pub fn set_state_binding(property: Pin<&Property<StateInfo>>, binding: impl Fn() -> i32 + 'static) {
-    let bind_callable = StateInfoBinding { dirty_time: Cell::new(None), binding };
+    let bind_callable = StateInfoBinding {
+        dirty_time: Cell::new(None),
+        binding,
+    };
     // Safety: The StateInfoBinding is a BindingCallable for type StateInfo
     unsafe {
         property.handle.set_binding(
@@ -1404,7 +1427,10 @@ fn test_property_handler_binding() {
         )),
         false
     );
-    assert_eq!(PropertyHandle::has_no_binding_or_lock(core::ptr::null_mut()), true);
+    assert_eq!(
+        PropertyHandle::has_no_binding_or_lock(core::ptr::null_mut()),
+        true
+    );
 }
 
 #[test]
@@ -1426,7 +1452,9 @@ fn test_property_listener_scope() {
     assert!(!scope.is_dirty());
     prop1.as_ref().set(1);
     assert!(!scope.is_dirty());
-    scope.as_ref().evaluate_if_dirty(|| panic!("should not be dirty"));
+    scope
+        .as_ref()
+        .evaluate_if_dirty(|| panic!("should not be dirty"));
     scope.set_dirty();
     let mut ok = false;
     scope.as_ref().evaluate_if_dirty(|| ok = true);
@@ -1439,16 +1467,20 @@ fn test_nested_property_trackers() {
     let tracker2 = Box::pin(<PropertyTracker>::default());
     let prop = Box::pin(Property::new(42));
 
-    let r = tracker1.as_ref().evaluate(|| tracker2.as_ref().evaluate(|| prop.as_ref().get()));
+    let r = tracker1
+        .as_ref()
+        .evaluate(|| tracker2.as_ref().evaluate(|| prop.as_ref().get()));
     assert_eq!(r, 42);
 
     prop.as_ref().set(1);
     assert!(tracker2.as_ref().is_dirty());
     assert!(tracker1.as_ref().is_dirty());
 
-    let r = tracker1
-        .as_ref()
-        .evaluate(|| tracker2.as_ref().evaluate_as_dependency_root(|| prop.as_ref().get()));
+    let r = tracker1.as_ref().evaluate(|| {
+        tracker2
+            .as_ref()
+            .evaluate_as_dependency_root(|| prop.as_ref().get())
+    });
     assert_eq!(r, 1);
     prop.as_ref().set(100);
     assert!(tracker2.as_ref().is_dirty());
@@ -1490,8 +1522,9 @@ fn test_property_tracker_drop() {
     let inner_tracker = Box::pin(<PropertyTracker>::default());
     let prop = Box::pin(Property::new(42));
 
-    let r =
-        outer_tracker.as_ref().evaluate(|| inner_tracker.as_ref().evaluate(|| prop.as_ref().get()));
+    let r = outer_tracker
+        .as_ref()
+        .evaluate(|| inner_tracker.as_ref().evaluate(|| prop.as_ref().get()));
     assert_eq!(r, 42);
 
     drop(inner_tracker);
@@ -1504,8 +1537,9 @@ fn test_nested_property_tracker_dirty() {
     let inner_tracker = Box::pin(PropertyTracker::<true, ()>::default());
     let prop = Box::pin(Property::new(42));
 
-    let r =
-        outer_tracker.as_ref().evaluate(|| inner_tracker.as_ref().evaluate(|| prop.as_ref().get()));
+    let r = outer_tracker
+        .as_ref()
+        .evaluate(|| inner_tracker.as_ref().evaluate(|| prop.as_ref().get()));
     assert_eq!(r, 42);
 
     assert!(!outer_tracker.is_dirty());
@@ -1526,7 +1560,10 @@ fn test_nested_property_tracker_evaluate_if_dirty() {
 
     let mut cache = 0;
     let mut cache_or_evaluate = || {
-        if let Some(x) = inner_tracker.as_ref().evaluate_if_dirty(|| prop.as_ref().get() + 1) {
+        if let Some(x) = inner_tracker
+            .as_ref()
+            .evaluate_if_dirty(|| prop.as_ref().get() + 1)
+        {
             cache = x;
         }
         cache

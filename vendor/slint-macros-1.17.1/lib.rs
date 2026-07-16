@@ -3,6 +3,8 @@
 
 // cSpell:ignore punct
 
+#![feature(proc_macro_span)]
+#![feature(let_chains)]
 #![doc = include_str!("README.md")]
 #![doc(html_logo_url = "https://slint.dev/logo/slint-logo-square-light.svg")]
 
@@ -215,8 +217,8 @@ fn fill_token_vec(stream: impl Iterator<Item = TokenTree>, vec: &mut Vec<parser:
                 });
             }
             TokenTree::Group(g) => {
-                use SyntaxKind::*;
                 use proc_macro::Delimiter::*;
+                use SyntaxKind::*;
                 let (l, r, sl, sr) = match g.delimiter() {
                     Parenthesis => (LParent, RParent, "(", ")"),
                     Brace => (LBrace, RBrace, "{", "}"),
@@ -246,7 +248,11 @@ fn extract_path(literal: proc_macro::Literal) -> std::path::PathBuf {
     let path_with_quotes = literal.to_string();
     let path_with_quotes_stripped = if let Some(p) = path_with_quotes.strip_prefix('r') {
         let hash_removed = p.trim_matches('#');
-        hash_removed.strip_prefix('\"').unwrap().strip_suffix('\"').unwrap()
+        hash_removed
+            .strip_prefix('\"')
+            .unwrap()
+            .strip_suffix('\"')
+            .unwrap()
     } else {
         // FIXME: unescape
         path_with_quotes.trim_matches('\"')

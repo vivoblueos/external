@@ -212,7 +212,7 @@ compile_error!(
     forward compatibility with future version of this crate"
 );
 
-pub use slint_macros::slint;
+// pub use slint_macros::slint;
 
 pub use i_slint_backend_selector::api::*;
 pub use i_slint_core::api::*;
@@ -236,7 +236,7 @@ pub use i_slint_core::styled_text::StyledText;
 #[cfg(feature = "std")]
 pub use i_slint_core::styled_text::StyledTextFromMarkdownError;
 pub use i_slint_core::timers::{Timer, TimerMode};
-pub use i_slint_core::translations::{SelectBundledTranslationError, select_bundled_translation};
+pub use i_slint_core::translations::{select_bundled_translation, SelectBundledTranslationError};
 
 pub mod private_unstable_api;
 
@@ -431,12 +431,12 @@ pub mod platform {
     ))]
     pub mod femtovg_renderer {
         #[cfg(feature = "renderer-femtovg")]
+        pub use i_slint_renderer_femtovg::opengl::OpenGLInterface;
+        #[cfg(feature = "renderer-femtovg")]
         pub use i_slint_renderer_femtovg::FemtoVGOpenGLRenderer as FemtoVGRenderer;
         /// Use this type to render to a WGPU texture using FemtoVG.
         #[cfg(feature = "unstable-wgpu-29")]
         pub use i_slint_renderer_femtovg::FemtoVGWGPURenderer;
-        #[cfg(feature = "renderer-femtovg")]
-        pub use i_slint_renderer_femtovg::opengl::OpenGLInterface;
     }
 
     /// This module contains the [`skia_renderer::SkiaWGPURenderer`] and related types.
@@ -500,7 +500,10 @@ pub mod language {
     doc,
     all(
         target_os = "android",
-        any(feature = "backend-android-activity-05", feature = "backend-android-activity-06")
+        any(
+            feature = "backend-android-activity-05",
+            feature = "backend-android-activity-06"
+        )
     )
 ))]
 pub mod android;
@@ -688,8 +691,8 @@ pub mod winit_030 {
     //! and [`BackendSelector::with_winit_window_attributes_hook()`](crate::BackendSelector::with_winit_window_attributes_hook()).
 
     pub use i_slint_backend_winit::{
-        CustomApplicationHandler, EventLoopBuilder, EventResult, SlintEvent, WinitWindowAccessor,
-        winit,
+        winit, CustomApplicationHandler, EventLoopBuilder, EventResult, SlintEvent,
+        WinitWindowAccessor,
     };
 
     #[deprecated(note = "Renamed to `EventResult`")]

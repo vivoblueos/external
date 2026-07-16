@@ -24,19 +24,20 @@ cargo_crate("chrono") {
   inputs = []
   edition = "2021"
   deps = [ "//external/vendor/num-traits-0.2.19:num_traits" ]
+
   # deps = [ "//external/vendor/iana-time-zone-0.1.65:iana_time_zone" ]
   # deps = [ "//external/vendor/windows-link-0.2.1:windows_link" ]
   features = [
     "alloc",
-    "clock",
-    "iana-time-zone",
-    "js-sys",
-    "now",
-    "std",
-    "wasm-bindgen",
-    "wasmbind",
-    "winapi",
-    "windows-link",
+    # "clock",
+    # "iana-time-zone",
+    # "js-sys",
+    # "now",
+    # "std",
+    # "wasm-bindgen",
+    # "wasmbind",
+    # "winapi",
+    # "windows-link",
   ]
 
   cargo_pkg_name = "chrono"

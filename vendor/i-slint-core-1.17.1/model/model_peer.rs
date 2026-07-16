@@ -38,9 +38,16 @@ struct ModelNotifyInner {
 
 /// Dispatch notifications from a [`Model`] to one or several [`ModelPeer`].
 /// Typically, you would want to put this in the implementation of the Model
-#[derive(Default)]
 pub struct ModelNotify {
     inner: Pin<Box<ModelNotifyInner>>,
+}
+
+impl Default for ModelNotify {
+    fn default() -> Self {
+        Self {
+            inner: Box::pin(ModelNotifyInner::default()),
+        }
+    }
 }
 
 impl ModelNotify {
@@ -103,7 +110,10 @@ impl ModelTracker for ModelNotify {
     }
 
     fn track_row_count_changes(&self) {
-        self.inner().project_ref().model_row_count_dirty_property.get();
+        self.inner()
+            .project_ref()
+            .model_row_count_dirty_property
+            .get();
     }
 
     fn track_row_data_changes(&self, row: usize) {
@@ -152,7 +162,10 @@ impl<T: ModelChangeListener> PinnedDrop for ModelChangeListenerContainer<T> {
 
 impl<T: ModelChangeListener + 'static> ModelChangeListenerContainer<T> {
     pub fn new(data: T) -> Self {
-        Self { peer: Default::default(), data }
+        Self {
+            peer: Default::default(),
+            data,
+        }
     }
 
     pub fn model_peer(self: Pin<&Self>) -> ModelPeer<'_> {

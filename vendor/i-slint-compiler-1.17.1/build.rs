@@ -24,7 +24,11 @@ fn widget_library() -> &'static [(&'static str, &'static BuiltinDirectory<'stati
 "#
     )?;
 
-    for style in cargo_manifest_dir.join(&library_dir).read_dir()?.filter_map(Result::ok) {
+    for style in cargo_manifest_dir
+        .join(&library_dir)
+        .read_dir()?
+        .filter_map(Result::ok)
+    {
         if !style.file_type().is_ok_and(|f| f.is_dir()) {
             continue;
         }
@@ -40,7 +44,10 @@ fn widget_library() -> &'static [(&'static str, &'static BuiltinDirectory<'stati
     writeln!(file, "]\n}}")?;
     file.flush()?;
 
-    println!("cargo:rustc-env=SLINT_WIDGETS_LIBRARY={}", output_file_path.display());
+    println!(
+        "cargo:rustc-env=SLINT_WIDGETS_LIBRARY={}",
+        output_file_path.display()
+    );
 
     Ok(())
 }

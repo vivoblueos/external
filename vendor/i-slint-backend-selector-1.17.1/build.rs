@@ -42,7 +42,7 @@ fn main() {
     // out_dir is something like
     // <target_dir>/build/i-slint-backend-selector-1fe5c4ab61eb0584/out
     // and we want to write to a common directory, so write in the build/ dir
-    let target_path =
-        Path::new(&out_dir).parent().unwrap().parent().unwrap().join("SLINT_DEFAULT_STYLE.txt");
-    std::fs::write(target_path, style).unwrap();
+    // let target_path =
+    //     Path::new(&out_dir).parent().unwrap().parent().unwrap().join("SLINT_DEFAULT_STYLE.txt");
+    // std::fs::write(target_path, style).unwrap();
 }

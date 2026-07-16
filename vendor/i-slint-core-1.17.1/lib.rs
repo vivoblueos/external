@@ -3,6 +3,10 @@
 
 // cSpell: ignore sharedvector textlayout
 
+#![feature(round_char_boundary)]
+#![feature(trait_upcasting)]
+#![feature(let_chains)]
+#![feature(unsigned_is_multiple_of)]
 #![doc = include_str!("README.md")]
 #![doc(html_logo_url = "https://slint.dev/logo/slint-logo-square-light.svg")]
 #![cfg_attr(docsrs, feature(doc_cfg))]
@@ -98,7 +102,7 @@ pub use graphics::BorderRadius;
 #[doc(inline)]
 pub use data_transfer::DataTransfer;
 
-pub use context::{SlintContext, SlintContextWeak, with_global_context};
+pub use context::{with_global_context, SlintContext, SlintContextWeak};
 
 #[cfg(not(slint_int_coord))]
 pub type Coord = f32;
@@ -148,11 +152,13 @@ pub fn detect_operating_system() -> OperatingSystemType {
     // Querying the navigator involves a round-trip to JavaScript and some string processing, so
     // cache the result: it cannot change for the lifetime of the page.
     static DETECTED: std::sync::LazyLock<OperatingSystemType> = std::sync::LazyLock::new(|| {
-        let mut user_agent =
-            web_sys::window().and_then(|w| w.navigator().user_agent().ok()).unwrap_or_default();
+        let mut user_agent = web_sys::window()
+            .and_then(|w| w.navigator().user_agent().ok())
+            .unwrap_or_default();
         user_agent.make_ascii_lowercase();
-        let mut platform =
-            web_sys::window().and_then(|w| w.navigator().platform().ok()).unwrap_or_default();
+        let mut platform = web_sys::window()
+            .and_then(|w| w.navigator().platform().ok())
+            .unwrap_or_default();
         platform.make_ascii_lowercase();
 
         if user_agent.contains("ipad") || user_agent.contains("iphone") {
@@ -174,18 +180,26 @@ pub fn detect_operating_system() -> OperatingSystemType {
 
 /// Returns true if the current platform is an Apple platform (macOS, iOS, iPadOS)
 pub fn is_apple_platform() -> bool {
-    matches!(detect_operating_system(), OperatingSystemType::Macos | OperatingSystemType::Ios)
+    matches!(
+        detect_operating_system(),
+        OperatingSystemType::Macos | OperatingSystemType::Ios
+    )
 }
 
 pub fn open_url(url: &str, window: &crate::api::Window) -> Result<(), crate::api::PlatformError> {
-    crate::window::WindowInner::from_pub(window).context().platform().open_url(url)
+    crate::window::WindowInner::from_pub(window)
+        .context()
+        .platform()
+        .open_url(url)
 }
 
 #[cfg(target_os = "macos")]
 pub fn macos_bring_all_windows_to_front() {
     use objc2::MainThreadMarker;
     use objc2_app_kit::NSApplication;
-    let Some(mtm) = MainThreadMarker::new() else { return };
+    let Some(mtm) = MainThreadMarker::new() else {
+        return;
+    };
     NSApplication::sharedApplication(mtm).arrangeInFront(None);
 }
 
