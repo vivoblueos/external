@@ -36,6 +36,7 @@ cargo_crate("i_slint_backend_linuxkms") {
   deps = [
     "//external/vendor/bytemuck-1.25.0:bytemuck",
     "//external/vendor/calloop-0.14.4:calloop",
+
     # "//external/vendor/drm-0.14.1:drm",
     # "//external/vendor/input-0.10.0:input",
     # "//external/vendor/memmap2-0.9.11:memmap2",

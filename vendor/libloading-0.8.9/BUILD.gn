@@ -24,6 +24,7 @@ cargo_crate("libloading") {
   inputs = []
   edition = "2015"
   deps = [ "//external/vendor/cfg-if-1.0.4:cfg_if" ]
+
   # deps = [ "//external/vendor/windows-link-0.2.1:windows_link" ]
 
   cargo_pkg_name = "libloading"

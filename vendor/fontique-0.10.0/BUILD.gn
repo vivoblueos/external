@@ -26,14 +26,16 @@ cargo_crate("fontique") {
   deps = [
     "//external/vendor/hashbrown-0.17.1:hashbrown",
     "//external/vendor/linebender_resource_handle-0.1.1:linebender_resource_handle",
+
     # "//external/vendor/memmap2-0.9.11:memmap2",
     "//external/vendor/parlance-0.1.0:parlance",
     "//external/vendor/read-fonts-0.39.2:read_fonts",
     "//external/vendor/smallvec-1.15.1:smallvec",
   ]
   deps += [ "//external/vendor/roxmltree-0.21.1:roxmltree" ]
+
   # deps += [
-    # "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys",
+  # "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys",
   # ]
   # deps = [
   #   "//external/vendor/windows-0.62.2:windows",
@@ -43,8 +45,9 @@ cargo_crate("fontique") {
     "std",
     "system",
   ]
+
   # aliased_deps = {
-    # fontconfig_sys = "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys"
+  # fontconfig_sys = "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys"
   # }
 
   cargo_pkg_name = "fontique"
