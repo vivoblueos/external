@@ -234,106 +234,106 @@ license_files = ["LICENSE-MIT", "LICENSE-Apache-2.0"]
 license_files = ["LICENSE-MIT"]
 
 [crate.embedded-graphics-core]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.filetime]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.softbuffer]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.arrayref]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.clru]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.getopts]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.drm-fourcc]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-foundation]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-user-notifications]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.zmij]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.async-trait]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.hex]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-uniform-type-identifiers]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.tinyvec]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.glow]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.lyon_geom]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.const-field-offset-macro]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.memmap2]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.xkbcommon]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.khronos_api]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.swash]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.iana-time-zone]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-io-surface]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.simd_cesu8]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.redox_syscall]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-contacts]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.const-field-offset]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.i-slint-core-macros]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.quick-error]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.i-slint-common]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.taffy]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.slint]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.foldhash]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.libredox]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-core-graphics]
 license_files = ["README.md"]
@@ -564,52 +564,52 @@ license_files = ["README.md"]
 license_files = ["README.md"]
 
 [crate.errno]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.udev]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2-core-video]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.copypasta]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.dispatch2]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.glob]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.ndk-context]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.android-properties]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.clipboard-win]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.unicode-width]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.imagesize]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.cursor-icon]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.objc2]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.ttf-parser]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.r-efi]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.lyon_extra]
-license_files = ["README.md"]
+license_files = ["LICENSE-MIT"]
 
 [crate.roxmltree]
 license_files = ["README.md"]
