@@ -25,7 +25,6 @@ cargo_crate("embedded_io") {
   edition = "2021"
   features = [
     "alloc",
-    "std",
   ]
 
   cargo_pkg_name = "embedded-io"
