@@ -30,6 +30,9 @@ cargo_crate("num_traits") {
   build_root = "//external/vendor/num-traits-0.2.19/build.rs"
   build_sources = [ "//external/vendor/num-traits-0.2.19/build.rs" ]
 
+  deps = [ "//external/vendor/libm-0.2.16:libm" ]
+  
+  features = [ "libm" ]
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates
   ]
