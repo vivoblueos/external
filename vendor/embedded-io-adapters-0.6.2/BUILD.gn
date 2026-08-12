@@ -28,10 +28,6 @@ cargo_crate("embedded_io_adapters") {
     "//external/vendor/embedded-io-async-0.6.1:embedded_io_async",
     "//external/vendor/tokio-1.52.3:tokio",
   ]
-  features = [
-    "std",
-    "tokio-1",
-  ]
 
   cargo_pkg_name = "embedded-io-adapters"
   cargo_pkg_version = "0.6.2"

@@ -24,10 +24,6 @@ cargo_crate("embedded_io_async") {
   inputs = []
   edition = "2021"
   deps = [ "//external/vendor/embedded-io-0.6.1:embedded_io" ]
-  features = [
-    "alloc",
-    "std",
-  ]
 
   cargo_pkg_name = "embedded-io-async"
   cargo_pkg_version = "0.6.1"
