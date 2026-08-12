@@ -13,7 +13,9 @@
 # limitations under the License.
 
 # @generated from external/BLUE_BUILD.gn.hbs by gnrt
-# Do not edit!
+# 手动追加 board 条件分支:每个 out 目录只编一个板子,c3/c6 feature 互斥但分属不同
+# build,故按 board 变量切 chip feature 与对应 PAC/wifi-sys dep 路径。
+# 注意:ninja run_gnrt 会覆盖本文件,c3 已稳定不频繁跑,覆盖后需重新打此补丁。
 
 import("//build/templates/cargo_crate.gni")
 
@@ -29,16 +31,30 @@ cargo_crate("esp_phy") {
     "//external/vendor/esp-hal-1.1.1:esp_hal",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
     "//external/vendor/esp-sync-0.2.1:esp_sync",
-    "//external/vendor/esp-wifi-sys-esp32c3-0.2.0:esp_wifi_sys_esp32c3",
-    "//external/vendor/esp32c3-0.32.2:esp32c3",
   ]
+
+  # chip 相关依赖按 board 切:C3 引 esp-wifi-sys-esp32c3 + esp32c3(0.32.2),
+  # C6 引 esp-wifi-sys-esp32c6 + esp32c6(0.23.0)。两者版本经各自 Cargo.toml 核实。
+  if (board == "esp32c6_devkitc_1") {
+    deps += [
+      "//external/vendor/esp-wifi-sys-esp32c6-0.2.0:esp_wifi_sys_esp32c6",
+      "//external/vendor/esp32c6-0.23.0:esp32c6",
+    ]
+    features = [ "esp32c6" ]
+  } else {
+    deps += [
+      "//external/vendor/esp-wifi-sys-esp32c3-0.2.0:esp_wifi_sys_esp32c3",
+      "//external/vendor/esp32c3-0.32.2:esp32c3",
+    ]
+    features = [ "esp32c3" ]
+  }
+
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
-  features = [ "esp32c3" ]
 
   cargo_pkg_name = "esp-phy"
   cargo_pkg_version = "0.2.0"

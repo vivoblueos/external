@@ -13,7 +13,8 @@
 # limitations under the License.
 
 # @generated from external/BLUE_BUILD.gn.hbs by gnrt
-# Do not edit!
+# 手动追加 board 条件分支:按 board 切 chip feature 与对应 PAC dep 路径(C3↔C6)。
+# 注意:ninja run_gnrt 会覆盖本文件,覆盖后需重新打此补丁。
 
 import("//build/templates/cargo_crate.gni")
 
@@ -37,12 +38,22 @@ cargo_crate("esp_hal") {
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
     "//external/vendor/esp-rom-sys-0.1.4:esp_rom_sys",
     "//external/vendor/esp-sync-0.2.1:esp_sync",
-    "//external/vendor/esp32c3-0.32.2:esp32c3",
     "//external/vendor/fugit-0.3.9:fugit",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
     "//external/vendor/riscv-0.15.0:riscv",
     "//external/vendor/strum-0.27.2:strum",
   ]
+
+  # PAC dep 按 board 切:C3→esp32c3(0.32.2),C6→esp32c6(0.23.0)。
+  # 注意 esp-riscv-rt 虽被 esp32c3/esp32c6 feature 拉动,但 C3 deps 也未列它
+  # (cargo_crate 机制下 optional dep 由 --extern 决定,C3 一直能编,C6 同构即可)。
+  if (board == "esp32c6_devkitc_1") {
+    deps += [ "//external/vendor/esp32c6-0.23.0:esp32c6" ]
+    features = [ "esp32c6" ]
+  } else {
+    deps += [ "//external/vendor/esp32c3-0.32.2:esp32c3" ]
+    features = [ "esp32c3" ]
+  }
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
@@ -54,7 +65,6 @@ cargo_crate("esp_hal") {
     "//external/vendor/instability-0.3.12:instability",
     "//external/vendor/paste-1.0.15:paste",
   ]
-  features = [ "esp32c3" ]
   aliased_deps = {
     procmacros = "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros(//build/toolchain:host)"
   }

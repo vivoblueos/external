@@ -24,8 +24,13 @@ cargo_crate("embedded_io_adapters") {
   inputs = []
   edition = "2021"
   deps = [
-    "//external/vendor/embedded-io-0.6.1:embedded_io",
-    "//external/vendor/embedded-io-async-0.6.1:embedded_io_async",
+    # std.rs 引用 embedded_io 的 std-gated impl(From<SeekFrom> for std::io::SeekFrom
+    # 等),须用 embedded_io_std(开 std)。本 crate 属 std 子图,与 embedded_tls /
+    # agent_loop 同 bin,统一指向 embedded_io_std 以避免与 no_std embedded_io 同名冲突。
+    "//external/vendor/embedded-io-0.6.1:embedded_io_std",
+    # std 子图:adapters 属 std bin(agent_loop/wifi/tls),须统一指 std 变体
+    # embedded_io_async_std,与同 bin 的 embedded_io_std 一致。
+    "//external/vendor/embedded-io-async-0.6.1:embedded_io_async_std",
     "//external/vendor/tokio-1.52.3:tokio",
   ]
 

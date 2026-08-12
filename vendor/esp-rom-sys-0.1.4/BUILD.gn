@@ -13,7 +13,8 @@
 # limitations under the License.
 
 # @generated from external/BLUE_BUILD.gn.hbs by gnrt
-# Do not edit!
+# 手动追加 board 条件分支:按 board 切 chip feature 与对应 PAC dep 路径(C3↔C6)。
+# 注意:ninja run_gnrt 会覆盖本文件,覆盖后需重新打此补丁。
 
 import("//build/templates/cargo_crate.gni")
 
@@ -25,14 +26,21 @@ cargo_crate("esp_rom_sys") {
   edition = "2021"
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/esp32c3-0.32.2:esp32c3",
   ]
+
+  # PAC dep 按 board 切:C3→esp32c3(0.32.2),C6→esp32c6(0.23.0)。
+  if (board == "esp32c6_devkitc_1") {
+    deps += [ "//external/vendor/esp32c6-0.23.0:esp32c6" ]
+    features = [ "esp32c6" ]
+  } else {
+    deps += [ "//external/vendor/esp32c3-0.32.2:esp32c3" ]
+    features = [ "esp32c3" ]
+  }
   build_deps = [
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
-  features = [ "esp32c3" ]
 
   cargo_pkg_name = "esp-rom-sys"
   cargo_pkg_version = "0.1.4"
