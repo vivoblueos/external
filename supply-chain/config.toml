@@ -323,6 +323,9 @@ criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 [policy."fnv:1.0.7"]
 criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 
+[policy."ft6336u-driver:1.0.0"]
+criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
+
 [policy."fugit:0.3.9"]
 criteria = ["crypto-safe", "safe-to-deploy", "ub-risk-2"]
 
