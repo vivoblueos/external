@@ -1,0 +1,10 @@
+Name: parley_data
+URL: https://crates.io/crates/parley_data
+Version: 0.10.0
+Revision: 1df9544bf0bd675d304001c0d0b35df2d220cd14
+License: Apache-2.0
+License File: //external/vendor/parley_data-0.10.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode data for Parley

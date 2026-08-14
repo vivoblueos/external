@@ -1,0 +1,10 @@
+Name: tempfile
+URL: https://crates.io/crates/tempfile
+Version: 3.27.0
+Revision: 5c8fa12eb584931b4f1bccfde87eb72fbfa7dc61
+License: Apache-2.0
+License File: //external/vendor/tempfile-3.27.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A library for managing temporary files and directories.

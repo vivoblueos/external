@@ -1,0 +1,10 @@
+Name: core-graphics
+URL: https://crates.io/crates/core-graphics
+Version: 0.23.2
+Revision: 07be553c3f1d435b5087c16e787d73cb24b65efb
+License: Apache-2.0
+License File: //external/vendor/core-graphics-0.23.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings to Core Graphics for macOS

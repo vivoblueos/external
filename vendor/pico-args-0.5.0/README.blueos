@@ -1,0 +1,9 @@
+Name: pico-args
+URL: https://crates.io/crates/pico-args
+Version: 0.5.0
+License: MIT
+License File: //external/vendor/pico-args-0.5.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: An ultra simple CLI arguments parser.

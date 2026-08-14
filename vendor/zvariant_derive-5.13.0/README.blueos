@@ -1,0 +1,10 @@
+Name: zvariant_derive
+URL: https://crates.io/crates/zvariant_derive
+Version: 5.13.0
+Revision: 61c0495b08aa2d460941b0e59d5e3c44c1ccb529
+License: MIT
+License File: //external/vendor/zvariant_derive-5.13.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: D-Bus & GVariant encoding & decoding

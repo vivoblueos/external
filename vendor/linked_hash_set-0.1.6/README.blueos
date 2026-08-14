@@ -1,0 +1,10 @@
+Name: linked_hash_set
+URL: https://crates.io/crates/linked_hash_set
+Version: 0.1.6
+Revision: 93cd1ab24ba85553840d7d7c7f9a06a8ef3596de
+License: Apache-2.0
+License File: //external/vendor/linked_hash_set-0.1.6/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: HashSet with insertion ordering

@@ -1,0 +1,61 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("objc2") {
+  epoch = "0.6"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/objc2-0.6.4/src/lib.rs" ]
+  inputs = [
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/CHANGELOG.md",
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/README.md",
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/cargo_features.md",
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/deref.md",
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/list_data.md",
+    "//external/vendor/objc2-0.6.4/src/topics/about_generated/list_unsupported.md",
+    "//external/vendor/objc2-0.6.4/src/topics/alternatives.md",
+    "//external/vendor/objc2-0.6.4/src/topics/crate_interop.md",
+    "//external/vendor/objc2-0.6.4/src/topics/cross_compiling.md",
+    "//external/vendor/objc2-0.6.4/src/topics/goals.md",
+    "//external/vendor/objc2-0.6.4/src/topics/interior_mutability.md",
+    "//external/vendor/objc2-0.6.4/src/topics/kvo.md",
+    "//external/vendor/objc2-0.6.4/src/topics/layered_safety.md",
+    "//external/vendor/objc2-0.6.4/src/topics/migrating_from_objc.md",
+    "//external/vendor/objc2-0.6.4/src/topics/mvc.md",
+    "//external/vendor/objc2-0.6.4/src/topics/run_loop.md",
+    "//external/vendor/objc2-0.6.4/src/topics/swift.md",
+    "//external/vendor/objc2-0.6.4/src/topics/weak_property.md",
+  ]
+  edition = "2021"
+  deps = [ "//external/vendor/objc2-encode-4.1.0:objc2_encode" ]
+  features = [
+    "alloc",
+    "disable-encoding-assertions",
+    "relax-sign-encoding",
+    "std",
+  ]
+
+  cargo_pkg_name = "objc2"
+  cargo_pkg_version = "0.6.4"
+  build_root = "//external/vendor/objc2-0.6.4/build.rs"
+  build_sources = [ "//external/vendor/objc2-0.6.4/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

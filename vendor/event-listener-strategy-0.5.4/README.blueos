@@ -1,0 +1,10 @@
+Name: event-listener-strategy
+URL: https://crates.io/crates/event-listener-strategy
+Version: 0.5.4
+Revision: f533c437e8a6561e9b625c3ee036a8ea7d19375c
+License: Apache-2.0
+License File: //external/vendor/event-listener-strategy-0.5.4/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Block or poll on event_listener easily

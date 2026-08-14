@@ -1,0 +1,10 @@
+Name: rustix
+URL: https://crates.io/crates/rustix
+Version: 0.38.44
+Revision: acf4a284ea893efa93953e1ff2f2f0ab00be1cdc
+License: Apache-2.0
+License File: //external/vendor/rustix-0.38.44/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls

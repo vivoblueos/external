@@ -1,0 +1,10 @@
+Name: glutin_egl_sys
+URL: https://crates.io/crates/glutin_egl_sys
+Version: 0.7.1
+Revision: d9b4fd7036386c5f23b0a1015a31a986805d4db3
+License: Apache-2.0
+License File: //external/vendor/glutin_egl_sys-0.7.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: The egl bindings for glutin

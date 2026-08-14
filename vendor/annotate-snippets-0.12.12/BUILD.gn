@@ -1,0 +1,39 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("annotate_snippets") {
+  epoch = "0.12"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/annotate-snippets-0.12.12/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/anstyle-1.0.14:anstyle",
+    "//external/vendor/memchr-2.7.6:memchr",
+    "//external/vendor/unicode-width-0.2.2:unicode_width",
+  ]
+  features = [ "std" ]
+
+  cargo_pkg_name = "annotate-snippets"
+  cargo_pkg_version = "0.12.12"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

@@ -1,0 +1,10 @@
+Name: annotate-snippets
+URL: https://crates.io/crates/annotate-snippets
+Version: 0.12.12
+Revision: ff632000a2e7f44b7855641537067b1811d55b5a
+License: Apache-2.0
+License File: //external/vendor/annotate-snippets-0.12.12/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Format diagnostic reports, including highlighting snippets of text

@@ -1,0 +1,61 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("i_slint_renderer_software") {
+  epoch = "1"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/i-slint-renderer-software-1.17.1/lib.rs" ]
+  inputs = [
+    "//external/vendor/i-slint-renderer-software-1.17.1/.cargo_vcs_info.json",
+    "//external/vendor/i-slint-renderer-software-1.17.1/LICENSES/LicenseRef-Slint-Royalty-free-2.0.md",
+    "//external/vendor/i-slint-renderer-software-1.17.1/LICENSES/LicenseRef-Slint-Software-3.0.md",
+    "//external/vendor/i-slint-renderer-software-1.17.1/README.md",
+  ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/bytemuck-1.25.0:bytemuck",
+    "//external/vendor/clru-0.6.3:clru",
+    "//external/vendor/derive_more-2.1.1:derive_more",
+    "//external/vendor/euclid-0.22.14:euclid",
+    "//external/vendor/i-slint-common-1.17.1:i_slint_common",
+    "//external/vendor/i-slint-core-1.17.1:i_slint_core",
+    "//external/vendor/integer-sqrt-0.1.5:integer_sqrt",
+    "//external/vendor/lyon_path-1.0.19:lyon_path",
+    "//external/vendor/num-traits-0.2.19:num_traits",
+    "//external/vendor/skrifa-0.42.1:skrifa",
+    "//external/vendor/swash-0.2.9:swash",
+    "//external/vendor/zeno-0.3.3:zeno",
+  ]
+  features = [
+    "experimental",
+
+    # "libm",
+    # "path",
+
+    # "std",
+    # "systemfonts",
+  ]
+
+  cargo_pkg_name = "i-slint-renderer-software"
+  cargo_pkg_version = "1.17.1"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

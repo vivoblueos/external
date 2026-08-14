@@ -1,0 +1,10 @@
+Name: svgtypes
+URL: https://crates.io/crates/svgtypes
+Version: 0.16.1
+Revision: fa62387aea54d7af49ad65b47bca8d731136dd56
+License: Apache-2.0
+License File: //external/vendor/svgtypes-0.16.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: SVG types parser.

@@ -26,7 +26,7 @@ cargo_crate("svgbobdoc") {
   deps = [
     "//external/vendor/base64-0.13.1:base64",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-1.0.109:syn",
     "//external/vendor/unicode-width-0.1.14:unicode_width",
   ]

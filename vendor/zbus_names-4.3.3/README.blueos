@@ -1,0 +1,10 @@
+Name: zbus_names
+URL: https://crates.io/crates/zbus_names
+Version: 4.3.3
+Revision: 61c0495b08aa2d460941b0e59d5e3c44c1ccb529
+License: MIT
+License File: //external/vendor/zbus_names-4.3.3/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A collection of D-Bus bus names types

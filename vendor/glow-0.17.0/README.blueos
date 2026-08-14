@@ -1,0 +1,9 @@
+Name: glow
+URL: https://crates.io/crates/glow
+Version: 0.17.0
+License: Apache-2.0
+License File: //external/vendor/glow-0.17.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: GL on Whatever: a set of bindings to run GL (Open GL, OpenGL ES, and WebGL) anywhere, and avoid target-specific code.

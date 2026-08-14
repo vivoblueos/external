@@ -1,0 +1,10 @@
+Name: drm
+URL: https://crates.io/crates/drm
+Version: 0.14.1
+Revision: b65efbc210db58aa5d8b2878006dbc82335fdda3
+License: MIT
+License File: //external/vendor/drm-0.14.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Safe, low-level bindings to the Direct Rendering Manager API

@@ -1,0 +1,10 @@
+Name: foreign-types-shared
+URL: https://crates.io/crates/foreign-types-shared
+Version: 0.3.1
+Revision: bdce800c23ce73b33a337833611e0e5fdf83ce9f
+License: Apache-2.0
+License File: //external/vendor/foreign-types-shared-0.3.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An internal crate used by foreign-types

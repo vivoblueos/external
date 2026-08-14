@@ -1,0 +1,9 @@
+Name: tiny-skia
+URL: https://crates.io/crates/tiny-skia
+Version: 0.12.0
+License: BSD-3-Clause
+License File: //external/vendor/tiny-skia-0.12.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A tiny Skia subset ported to Rust.

@@ -1,0 +1,10 @@
+Name: jni
+URL: https://crates.io/crates/jni
+Version: 0.22.4
+Revision: 5ae9458a4ec44c5318f37ddc7569c1d4ae8a69e7
+License: Apache-2.0
+License File: //external/vendor/jni-0.22.4/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Rust bindings to the JNI

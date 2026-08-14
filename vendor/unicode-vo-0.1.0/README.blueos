@@ -1,0 +1,10 @@
+Name: unicode-vo
+URL: https://crates.io/crates/unicode-vo
+Version: 0.1.0
+Revision: f163f6cc40436cf793742607048273fbb8834fbd
+License: Apache-2.0
+License File: //external/vendor/unicode-vo-0.1.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode vertical orientation detection

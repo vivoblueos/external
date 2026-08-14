@@ -1,0 +1,10 @@
+Name: muda
+URL: https://crates.io/crates/muda
+Version: 0.19.3
+Revision: a375127ff39aded0804924026bf554682291d972
+License: Apache-2.0
+License File: //external/vendor/muda-0.19.3/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Menu Utilities for Desktop Applications

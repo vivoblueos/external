@@ -1,0 +1,10 @@
+Name: input
+URL: https://crates.io/crates/input
+Version: 0.10.0
+Revision: 691c8502d4ed7e6de89338d3f6a4cf6dec36483c
+License: MIT
+License File: //external/vendor/input-0.10.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: libinput bindings for rust

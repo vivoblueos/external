@@ -1,0 +1,10 @@
+Name: keyboard-types
+URL: https://crates.io/crates/keyboard-types
+Version: 0.7.0
+Revision: 61a081f1e78a881a369abc22c3a0e37049bd655e
+License: Apache-2.0
+License File: //external/vendor/keyboard-types-0.7.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Contains types to define keyboard related events.

@@ -1,0 +1,10 @@
+Name: rustybuzz
+URL: https://crates.io/crates/rustybuzz
+Version: 0.20.1
+Revision: 8c52723ff75e91a33ae36e527baed871097e64bf
+License: MIT
+License File: //external/vendor/rustybuzz-0.20.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A complete harfbuzz shaping algorithm port to Rust.

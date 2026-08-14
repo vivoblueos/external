@@ -1,0 +1,10 @@
+Name: core-foundation
+URL: https://crates.io/crates/core-foundation
+Version: 0.10.1
+Revision: 548b65cd3046bb46fc5cebb9f39e7bfd56eaeaa2
+License: Apache-2.0
+License File: //external/vendor/core-foundation-0.10.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings to Core Foundation for macOS

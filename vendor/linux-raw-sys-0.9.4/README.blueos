@@ -1,0 +1,10 @@
+Name: linux-raw-sys
+URL: https://crates.io/crates/linux-raw-sys
+Version: 0.9.4
+Revision: d7d733c04380b4f15e97806b61da254c4e649887
+License: Apache-2.0
+License File: //external/vendor/linux-raw-sys-0.9.4/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Generated bindings for Linux's userspace API

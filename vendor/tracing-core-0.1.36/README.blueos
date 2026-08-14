@@ -1,0 +1,11 @@
+Name: tracing-core
+URL: https://crates.io/crates/tracing-core
+Version: 0.1.36
+Revision: 10a9e838a35e6ded79d66af246be2ee05417136d
+License: MIT
+License File: //external/vendor/tracing-core-0.1.36/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Core primitives for application-level tracing.
+

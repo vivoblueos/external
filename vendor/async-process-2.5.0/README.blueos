@@ -1,0 +1,10 @@
+Name: async-process
+URL: https://crates.io/crates/async-process
+Version: 2.5.0
+Revision: 81112a911898d607d176d37b85f56a1da0061455
+License: Apache-2.0
+License File: //external/vendor/async-process-2.5.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async interface for working with processes

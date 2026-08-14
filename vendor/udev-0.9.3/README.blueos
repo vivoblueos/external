@@ -1,0 +1,9 @@
+Name: udev
+URL: https://crates.io/crates/udev
+Version: 0.9.3
+License: MIT
+License File: //external/vendor/udev-0.9.3/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: libudev bindings for Rust

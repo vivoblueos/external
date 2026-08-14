@@ -1,0 +1,9 @@
+Name: grid
+URL: https://crates.io/crates/grid
+Version: 1.0.1
+License: MIT
+License File: //external/vendor/grid-1.0.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Dynamic generic 2D data structure.

@@ -26,7 +26,7 @@ cargo_crate("darling_core") {
   deps = [
     "//external/vendor/ident_case-1.0.1:ident_case",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
-    "//external/vendor/quote-1.0.41:quote",
+    "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/strsim-0.11.1:strsim",
     "//external/vendor/syn-2.0.108:syn",
   ]

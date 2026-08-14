@@ -1,0 +1,10 @@
+Name: pin-weak
+URL: https://crates.io/crates/pin-weak
+Version: 1.1.0
+Revision: 4877a88cdf3ed33fc46f9e39f3d0fd5c54b49a61
+License: MIT
+License File: //external/vendor/pin-weak-1.1.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Small wrapper around an equivalent of Pin<Weak<T>>

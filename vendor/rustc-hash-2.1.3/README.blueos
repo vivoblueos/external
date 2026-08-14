@@ -1,0 +1,9 @@
+Name: rustc-hash
+URL: https://crates.io/crates/rustc-hash
+Version: 2.1.3
+License: Apache-2.0
+License File: //external/vendor/rustc-hash-2.1.3/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A speedy, non-cryptographic hashing algorithm used by rustc

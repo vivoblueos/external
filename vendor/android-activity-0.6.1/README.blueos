@@ -1,0 +1,10 @@
+Name: android-activity
+URL: https://crates.io/crates/android-activity
+Version: 0.6.1
+Revision: b4ddf059b77be12cdb955d394e65a92e7568d936
+License: Apache-2.0
+License File: //external/vendor/android-activity-0.6.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Glue for building Rust applications on Android with NativeActivity or GameActivity

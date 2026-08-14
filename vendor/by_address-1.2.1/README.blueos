@@ -1,0 +1,10 @@
+Name: by_address
+URL: https://crates.io/crates/by_address
+Version: 1.2.1
+Revision: bb921a29ea2fc1ee30a4dac9ff6d97c6730b5c7f
+License: Apache-2.0
+License File: //external/vendor/by_address-1.2.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Wrapper for comparing and hashing pointers by address

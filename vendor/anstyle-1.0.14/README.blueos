@@ -1,0 +1,10 @@
+Name: anstyle
+URL: https://crates.io/crates/anstyle
+Version: 1.0.14
+Revision: 0fe6f0ff6d52e9f91d4071199bd0b24bd46f3d35
+License: Apache-2.0
+License File: //external/vendor/anstyle-1.0.14/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: ANSI text styling

@@ -1,0 +1,9 @@
+Name: piper
+URL: https://crates.io/crates/piper
+Version: 0.2.5
+License: Apache-2.0
+License File: //external/vendor/piper-0.2.5/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: An asynchronous single-consumer single-producer pipe for bytes.

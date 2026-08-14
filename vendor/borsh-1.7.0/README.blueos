@@ -1,0 +1,11 @@
+Name: borsh
+URL: https://crates.io/crates/borsh
+Version: 1.7.0
+Revision: 3348776d27adf4df8acd0694238590d25e485258
+License: Apache-2.0
+License File: //external/vendor/borsh-1.7.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Binary Object Representation Serializer for Hashing
+

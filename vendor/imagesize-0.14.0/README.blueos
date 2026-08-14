@@ -1,0 +1,9 @@
+Name: imagesize
+URL: https://crates.io/crates/imagesize
+Version: 0.14.0
+License: MIT
+License File: //external/vendor/imagesize-0.14.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Quick probing of image dimensions without loading the entire file.

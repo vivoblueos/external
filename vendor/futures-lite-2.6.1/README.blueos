@@ -1,0 +1,10 @@
+Name: futures-lite
+URL: https://crates.io/crates/futures-lite
+Version: 2.6.1
+Revision: 226ce18976d8714d6bd9700b61dcc81d7200bc9a
+License: Apache-2.0
+License File: //external/vendor/futures-lite-2.6.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Futures, streams, and async I/O combinators

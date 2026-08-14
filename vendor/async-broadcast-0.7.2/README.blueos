@@ -1,0 +1,10 @@
+Name: async-broadcast
+URL: https://crates.io/crates/async-broadcast
+Version: 0.7.2
+Revision: f7a99132b7e12cb03945013df78b93a35ceafbc1
+License: Apache-2.0
+License File: //external/vendor/async-broadcast-0.7.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async broadcast channels

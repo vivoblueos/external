@@ -1,0 +1,9 @@
+Name: android-properties
+URL: https://crates.io/crates/android-properties
+Version: 0.2.2
+License: MIT
+License File: //external/vendor/android-properties-0.2.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Rust-based Android properties wrapper

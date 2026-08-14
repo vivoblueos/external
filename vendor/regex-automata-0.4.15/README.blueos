@@ -1,0 +1,10 @@
+Name: regex-automata
+URL: https://crates.io/crates/regex-automata
+Version: 0.4.15
+Revision: 7d941a93561430cd259bb9ceb84cc66f33ae7be8
+License: Apache-2.0
+License File: //external/vendor/regex-automata-0.4.15/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Automata construction and matching using regular expressions.

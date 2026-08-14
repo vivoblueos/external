@@ -1,0 +1,10 @@
+Name: dispatch2
+URL: https://crates.io/crates/dispatch2
+Version: 0.3.1
+Revision: 8852b424193ca41602281b3d7540d7c8ed51e49a
+License: Apache-2.0
+License File: //external/vendor/dispatch2-0.3.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings and wrappers for Apple's Grand Central Dispatch (GCD)

@@ -1,0 +1,10 @@
+Name: jni-sys-macros
+URL: https://crates.io/crates/jni-sys-macros
+Version: 0.4.1
+Revision: 64d77b7a5f119d7b55b4e2c169a4668067ff59e6
+License: Apache-2.0
+License File: //external/vendor/jni-sys-macros-0.4.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Macros for jni-sys crate

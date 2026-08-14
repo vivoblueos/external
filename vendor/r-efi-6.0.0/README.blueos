@@ -1,0 +1,9 @@
+Name: r-efi
+URL: https://crates.io/crates/r-efi
+Version: 6.0.0
+License: Apache-2.0
+License File: //external/vendor/r-efi-6.0.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: UEFI Reference Specification Protocol Constants and Definitions

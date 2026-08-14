@@ -1,0 +1,10 @@
+Name: image-webp
+URL: https://crates.io/crates/image-webp
+Version: 0.2.4
+Revision: 08b57d473c90148dd4b37a075df365afc3dfcc2b
+License: Apache-2.0
+License File: //external/vendor/image-webp-0.2.4/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: WebP encoding and decoding in pure Rust

@@ -1,0 +1,10 @@
+Name: simdutf8
+URL: https://crates.io/crates/simdutf8
+Version: 0.1.5
+Revision: 87ee8d9d20b849eae1974a82b248ee6fe7491bcc
+License: Apache-2.0
+License File: //external/vendor/simdutf8-0.1.5/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: SIMD-accelerated UTF-8 validation.

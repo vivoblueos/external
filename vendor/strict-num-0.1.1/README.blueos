@@ -1,0 +1,10 @@
+Name: strict-num
+URL: https://crates.io/crates/strict-num
+Version: 0.1.1
+Revision: edf5020c215063c3a9eb8fcac463c82eaceba6df
+License: MIT
+License File: //external/vendor/strict-num-0.1.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A collection of bounded numeric types

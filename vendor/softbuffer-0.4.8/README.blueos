@@ -1,0 +1,9 @@
+Name: softbuffer
+URL: https://crates.io/crates/softbuffer
+Version: 0.4.8
+License: Apache-2.0
+License File: //external/vendor/softbuffer-0.4.8/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Cross-platform software buffer

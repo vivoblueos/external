@@ -1,0 +1,10 @@
+Name: drm-fourcc
+URL: https://crates.io/crates/drm-fourcc
+Version: 2.2.0
+Revision: 7b9f80060ffd4b35cd236437e65a17fb517d163c
+License: MIT
+License File: //external/vendor/drm-fourcc-2.2.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Provides an enum with every valid Direct Rendering Manager (DRM) format fourcc

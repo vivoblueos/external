@@ -1,0 +1,9 @@
+Name: moxcms
+URL: https://crates.io/crates/moxcms
+Version: 0.8.1
+License: Apache-2.0
+License File: //external/vendor/moxcms-0.8.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Simple Color Management in Rust

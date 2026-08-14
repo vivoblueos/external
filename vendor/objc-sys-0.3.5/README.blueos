@@ -1,0 +1,10 @@
+Name: objc-sys
+URL: https://crates.io/crates/objc-sys
+Version: 0.3.5
+Revision: 4fc083f1c6d6784577e38b0ee8dbd344481e2fd2
+License: MIT
+License File: //external/vendor/objc-sys-0.3.5/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Raw bindings to the Objective-C runtime and ABI

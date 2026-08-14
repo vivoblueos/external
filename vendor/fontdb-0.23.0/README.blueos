@@ -1,0 +1,9 @@
+Name: fontdb
+URL: https://crates.io/crates/fontdb
+Version: 0.23.0
+License: MIT
+License File: //external/vendor/fontdb-0.23.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A simple, in-memory font database with CSS-like queries.

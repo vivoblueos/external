@@ -1,0 +1,10 @@
+Name: objc2-uniform-type-identifiers
+URL: https://crates.io/crates/objc2-uniform-type-identifiers
+Version: 0.2.2
+Revision: e282618be4c3a3b9542957e0c8540e9588472ce8
+License: MIT
+License File: //external/vendor/objc2-uniform-type-identifiers-0.2.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings to the UniformTypeIdentifiers framework

@@ -1,0 +1,10 @@
+Name: async-lock
+URL: https://crates.io/crates/async-lock
+Version: 3.4.2
+Revision: f07ba65a02ec3eca32fa95e6d13dc754d619bb35
+License: Apache-2.0
+License File: //external/vendor/async-lock-3.4.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Async synchronization primitives

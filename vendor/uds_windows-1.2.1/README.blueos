@@ -1,0 +1,10 @@
+Name: uds_windows
+URL: https://crates.io/crates/uds_windows
+Version: 1.2.1
+Revision: 0b3a6ff289a0426f96bbc0310505b8531469c896
+License: MIT
+License File: //external/vendor/uds_windows-1.2.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Unix Domain Sockets for Windows!

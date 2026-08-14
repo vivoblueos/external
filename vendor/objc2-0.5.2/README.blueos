@@ -1,0 +1,10 @@
+Name: objc2
+URL: https://crates.io/crates/objc2
+Version: 0.5.2
+Revision: 4fc083f1c6d6784577e38b0ee8dbd344481e2fd2
+License: MIT
+License File: //external/vendor/objc2-0.5.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Objective-C interface and runtime bindings

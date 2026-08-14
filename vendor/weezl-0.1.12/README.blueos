@@ -1,0 +1,9 @@
+Name: weezl
+URL: https://crates.io/crates/weezl
+Version: 0.1.12
+License: Apache-2.0
+License File: //external/vendor/weezl-0.1.12/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Fast LZW compression and decompression.

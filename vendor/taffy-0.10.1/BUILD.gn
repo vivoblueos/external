@@ -1,0 +1,45 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("taffy") {
+  epoch = "0.10"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/taffy-0.10.1/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/arrayvec-0.7.8:arrayvec",
+    "//external/vendor/grid-1.0.1:grid",
+    "//external/vendor/serde-1.0.228:serde",
+    "//external/vendor/slotmap-1.1.1:slotmap",
+  ]
+  features = [
+    "alloc",
+    "flexbox",
+    "std",
+    "taffy_tree",
+  ]
+
+  cargo_pkg_name = "taffy"
+  cargo_pkg_version = "0.10.1"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

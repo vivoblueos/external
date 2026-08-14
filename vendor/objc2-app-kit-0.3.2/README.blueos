@@ -1,0 +1,10 @@
+Name: objc2-app-kit
+URL: https://crates.io/crates/objc2-app-kit
+Version: 0.3.2
+Revision: 7b1abfd750a2cacaea71d6a56ecfb83cb7de560b
+License: Apache-2.0
+License File: //external/vendor/objc2-app-kit-0.3.2/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Bindings to the AppKit framework

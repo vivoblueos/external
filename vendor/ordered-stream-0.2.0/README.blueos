@@ -1,0 +1,10 @@
+Name: ordered-stream
+URL: https://crates.io/crates/ordered-stream
+Version: 0.2.0
+Revision: 5c58ca1a3d680c2406f0c6a1520c3476c27048aa
+License: Apache-2.0
+License File: //external/vendor/ordered-stream-0.2.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Streams that are ordered relative to external events

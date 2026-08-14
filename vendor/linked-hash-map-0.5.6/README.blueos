@@ -1,0 +1,10 @@
+Name: linked-hash-map
+URL: https://crates.io/crates/linked-hash-map
+Version: 0.5.6
+Revision: dfc4a57278b79314b0c1892d6c3918f2e00e249b
+License: Apache-2.0
+License File: //external/vendor/linked-hash-map-0.5.6/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A HashMap wrapper that holds key-value pairs in insertion order

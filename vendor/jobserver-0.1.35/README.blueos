@@ -1,0 +1,11 @@
+Name: jobserver
+URL: https://crates.io/crates/jobserver
+Version: 0.1.35
+Revision: 85ba04e3cf89e5c10e7b82de69f6be6dff9d3ec3
+License: Apache-2.0
+License File: //external/vendor/jobserver-0.1.35/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An implementation of the GNU Make jobserver for Rust.
+

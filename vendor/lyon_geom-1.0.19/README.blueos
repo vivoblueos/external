@@ -1,0 +1,10 @@
+Name: lyon_geom
+URL: https://crates.io/crates/lyon_geom
+Version: 1.0.19
+Revision: 56219c95c658d4f39de7b190d98e57d5773ba241
+License: Apache-2.0
+License File: //external/vendor/lyon_geom-1.0.19/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: 2D quadratic and cubic bézier arcs and line segment math on top of euclid.

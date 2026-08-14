@@ -1,0 +1,10 @@
+Name: cfg_aliases
+URL: https://crates.io/crates/cfg_aliases
+Version: 0.2.1
+Revision: 3d55ba79872b61265a7176110a5200df0c9d9e54
+License: MIT
+License File: //external/vendor/cfg_aliases-0.2.1/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: A tiny utility to help save you a lot of effort with long winded `#[cfg()]` checks.

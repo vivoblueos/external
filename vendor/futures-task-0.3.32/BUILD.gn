@@ -23,6 +23,10 @@ cargo_crate("futures_task") {
   sources = [ "//external/vendor/futures-task-0.3.32/src/lib.rs" ]
   inputs = []
   edition = "2018"
+  features = [
+    "alloc",
+    "std",
+  ]
 
   cargo_pkg_name = "futures-task"
   cargo_pkg_version = "0.3.32"

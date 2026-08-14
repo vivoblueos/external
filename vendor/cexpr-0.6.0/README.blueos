@@ -1,0 +1,10 @@
+Name: cexpr
+URL: https://crates.io/crates/cexpr
+Version: 0.6.0
+Revision: c7ccdfbc37b508cfda1171ab4f89afaeb72e82f3
+License: Apache-2.0
+License File: //external/vendor/cexpr-0.6.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A C expression parser and evaluator

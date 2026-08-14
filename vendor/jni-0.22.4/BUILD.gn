@@ -1,0 +1,46 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("jni") {
+  epoch = "0.22"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/jni-0.22.4/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/cfg-if-1.0.4:cfg_if",
+    "//external/vendor/combine-4.6.7:combine",
+    "//external/vendor/jni-sys-0.4.1:jni_sys",
+    "//external/vendor/log-0.4.28:log",
+    "//external/vendor/simd_cesu8-1.1.1:simd_cesu8",
+    "//external/vendor/thiserror-2.0.17:thiserror",
+  ]
+  deps = [ "//external/vendor/windows-link-0.2.1:windows_link" ]
+  build_deps = [ "//external/vendor/walkdir-2.5.0:walkdir" ]
+  proc_macro_deps = [ "//external/vendor/jni-macros-0.22.4:jni_macros" ]
+
+  cargo_pkg_name = "jni"
+  cargo_pkg_version = "0.22.4"
+  build_root = "//external/vendor/jni-0.22.4/build.rs"
+  build_sources = [ "//external/vendor/jni-0.22.4/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

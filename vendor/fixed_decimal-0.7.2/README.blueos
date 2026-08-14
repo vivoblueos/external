@@ -1,0 +1,10 @@
+Name: fixed_decimal
+URL: https://crates.io/crates/fixed_decimal
+Version: 0.7.2
+Revision: c9fac4e625ccb2c6a7aa35079fff9709db4385ac
+License: Unicode-3.0
+License File: //external/vendor/fixed_decimal-0.7.2/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: An API for representing numbers in a human-readable form

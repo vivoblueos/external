@@ -1,0 +1,10 @@
+Name: zbus_macros
+URL: https://crates.io/crates/zbus_macros
+Version: 5.17.0
+Revision: 61c0495b08aa2d460941b0e59d5e3c44c1ccb529
+License: MIT
+License File: //external/vendor/zbus_macros-5.17.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: proc-macros for zbus

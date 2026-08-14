@@ -1,0 +1,9 @@
+Name: zeno
+URL: https://crates.io/crates/zeno
+Version: 0.3.3
+License: Apache-2.0
+License File: //external/vendor/zeno-0.3.3/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: High performance, low level 2D path rasterization.

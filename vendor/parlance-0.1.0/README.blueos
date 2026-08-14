@@ -1,0 +1,10 @@
+Name: parlance
+URL: https://crates.io/crates/parlance
+Version: 0.1.0
+Revision: 8dbecc0545a0c97eb605937b928bc186d2d1295c
+License: Apache-2.0
+License File: //external/vendor/parlance-0.1.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Fundamental text property types

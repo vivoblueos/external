@@ -1,0 +1,10 @@
+Name: pulldown-cmark-escape
+URL: https://crates.io/crates/pulldown-cmark-escape
+Version: 0.11.0
+Revision: d7632acbe066b81a7f4b23c72fdb18c85f9cb1ea
+License: MIT
+License File: //external/vendor/pulldown-cmark-escape-0.11.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: An escape library for HTML created in the pulldown-cmark project

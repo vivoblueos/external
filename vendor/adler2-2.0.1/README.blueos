@@ -1,0 +1,10 @@
+Name: adler2
+URL: https://crates.io/crates/adler2
+Version: 2.0.1
+Revision: 89a031a0f42eeff31c70dc598b398cbf31f1680f
+License: Apache-2.0
+License File: //external/vendor/adler2-2.0.1/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A simple clean-room implementation of the Adler-32 checksum

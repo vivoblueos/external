@@ -1,0 +1,47 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("async_io") {
+  epoch = "2"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/async-io-2.6.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/cfg-if-1.0.4:cfg_if",
+    "//external/vendor/concurrent-queue-2.5.0:concurrent_queue",
+    "//external/vendor/futures-io-0.3.32:futures_io",
+    "//external/vendor/futures-lite-2.6.1:futures_lite",
+    "//external/vendor/parking-2.2.1:parking",
+    "//external/vendor/polling-3.11.0:polling",
+    "//external/vendor/rustix-1.1.4:rustix",
+    "//external/vendor/slab-0.4.12:slab",
+  ]
+  deps = [ "//external/vendor/windows-sys-0.61.2:windows_sys" ]
+  build_deps = [ "//external/vendor/autocfg-1.5.0:autocfg" ]
+
+  cargo_pkg_name = "async-io"
+  cargo_pkg_version = "2.6.0"
+  build_root = "//external/vendor/async-io-2.6.0/build.rs"
+  build_sources = [ "//external/vendor/async-io-2.6.0/build.rs" ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

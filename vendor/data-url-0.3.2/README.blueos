@@ -1,0 +1,10 @@
+Name: data-url
+URL: https://crates.io/crates/data-url
+Version: 0.3.2
+Revision: 91377f48bf35011d042aa5abef9e7f2a0a625aaa
+License: Apache-2.0
+License File: //external/vendor/data-url-0.3.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Processing of data: URL according to WHATWG’s Fetch Standard

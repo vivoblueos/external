@@ -1,0 +1,46 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("image") {
+  epoch = "0.25"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/image-0.25.10/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/vendor/bytemuck-1.25.0:bytemuck",
+    "//external/vendor/byteorder-lite-0.1.0:byteorder_lite",
+    "//external/vendor/moxcms-0.8.1:moxcms",
+    "//external/vendor/num-traits-0.2.19:num_traits",
+    "//external/vendor/png-0.18.1:png",
+    "//external/vendor/zune-core-0.5.1:zune_core",
+    "//external/vendor/zune-jpeg-0.5.15:zune_jpeg",
+  ]
+  features = [
+    "jpeg",
+    "png",
+  ]
+
+  cargo_pkg_name = "image"
+  cargo_pkg_version = "0.25.10"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

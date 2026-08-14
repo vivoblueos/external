@@ -1,0 +1,10 @@
+Name: khronos_api
+URL: https://crates.io/crates/khronos_api
+Version: 3.1.0
+Revision: f150967b1c44ae888e6676f93f639ebc82771bdc
+License: Apache-2.0
+License File: //external/vendor/khronos_api-3.1.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: The Khronos XML API Registry, exposed as byte string constants.

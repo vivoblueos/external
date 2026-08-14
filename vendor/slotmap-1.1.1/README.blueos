@@ -1,0 +1,9 @@
+Name: slotmap
+URL: https://crates.io/crates/slotmap
+Version: 1.1.1
+License: Zlib
+License File: //external/vendor/slotmap-1.1.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Slotmap data structure

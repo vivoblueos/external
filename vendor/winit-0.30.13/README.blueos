@@ -1,0 +1,10 @@
+Name: winit
+URL: https://crates.io/crates/winit
+Version: 0.30.13
+Revision: e9809ef54b18499bb4f2cac945719ecc2a61061b
+License: Apache-2.0
+License File: //external/vendor/winit-0.30.13/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Cross-platform window creation library.

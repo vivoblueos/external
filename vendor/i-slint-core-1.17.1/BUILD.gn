@@ -1,0 +1,107 @@
+# Copyright (c) 2025 vivo Mobile Communication Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
+import("//build/templates/cargo_crate.gni")
+
+cargo_crate("i_slint_core") {
+  epoch = "1"
+  crate_type = "rlib"
+  sources = [ "//external/vendor/i-slint-core-1.17.1/lib.rs" ]
+  inputs = [
+    "//external/vendor/i-slint-core-1.17.1/.cargo_vcs_info.json",
+    "//external/vendor/i-slint-core-1.17.1/LICENSES/LicenseRef-Slint-Royalty-free-2.0.md",
+    "//external/vendor/i-slint-core-1.17.1/LICENSES/LicenseRef-Slint-Software-3.0.md",
+    "//external/vendor/i-slint-core-1.17.1/README.md",
+  ]
+  edition = "2021"
+  deps = [
+    "//external/vendor/bitflags-2.10.0:bitflags",
+    "//external/vendor/cfg-if-1.0.4:cfg_if",
+    "//external/vendor/chrono-0.4.45:chrono",
+    "//external/vendor/clru-0.6.3:clru",
+    "//external/vendor/const-field-offset-0.2.0:const_field_offset",
+    "//external/vendor/derive_more-2.1.1:derive_more",
+    "//external/vendor/euclid-0.22.14:euclid",
+    "//external/vendor/i-slint-common-1.17.1:i_slint_common",
+    "//external/vendor/icu_normalizer-2.2.0:icu_normalizer",
+
+    # "//external/vendor/image-0.25.10:image",
+    "//external/vendor/lyon_algorithms-1.0.20:lyon_algorithms",
+    "//external/vendor/lyon_extra-1.1.0:lyon_extra",
+    "//external/vendor/lyon_geom-1.0.19:lyon_geom",
+    "//external/vendor/lyon_path-1.0.19:lyon_path",
+    "//external/vendor/num-traits-0.2.19:num_traits",
+    "//external/vendor/once_cell-1.21.4:once_cell",
+
+    # "//external/vendor/parley-0.10.0:parley",
+    "//external/vendor/pin-project-1.1.13:pin_project",
+    "//external/vendor/pin-weak-1.1.0:pin_weak",
+    "//external/vendor/portable-atomic-1.13.1:portable_atomic",
+    "//external/vendor/raw-window-handle-0.6.2:raw_window_handle",
+
+    # "//external/vendor/resvg-0.47.0:resvg",
+    "//external/vendor/rgb-0.8.53:rgb",
+    "//external/vendor/scopeguard-1.2.0:scopeguard",
+    "//external/vendor/skrifa-0.42.1:skrifa",
+    "//external/vendor/slab-0.4.12:slab",
+    "//external/vendor/strum-0.28.0:strum",
+
+    # "//external/vendor/swash-0.2.9:swash",
+    "//external/vendor/sys-locale-0.3.2:sys_locale",
+    "//external/vendor/taffy-0.10.1:taffy",
+    "//external/vendor/unicode-linebreak-0.1.5:unicode_linebreak",
+    "//external/vendor/unicode-script-0.5.8:unicode_script",
+    "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
+    "//external/vendor/vtable-0.4.0:vtable",
+  ]
+
+  # deps = [ "//external/vendor/windows-0.62.2:windows" ]
+  proc_macro_deps = [
+    "//external/vendor/auto_enums-0.8.9:auto_enums",
+    "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros",
+  ]
+  features = [
+    # "box-shadow-cache",
+
+    # "image-decoders",
+
+    "libm",
+
+    # "path",
+
+    # "shared-fontique",
+    # "shared-parley",
+    # "shared-swash",
+    # "std",
+    # "svg",
+    # "unicode",
+    # "unicode-linebreak",
+    # "unicode-script",
+    "unsafe-single-threaded",
+  ]
+  aliased_deps = {
+    raw_window_handle_06 =
+        "//external/vendor/raw-window-handle-0.6.2:raw_window_handle"
+  }
+
+  cargo_pkg_name = "i-slint-core"
+  cargo_pkg_version = "1.17.1"
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+  ]
+}

@@ -1,0 +1,9 @@
+Name: webbrowser
+URL: https://crates.io/crates/webbrowser
+Version: 1.2.1
+License: Apache-2.0
+License File: //external/vendor/webbrowser-1.2.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Open URLs in web browsers available on a platform

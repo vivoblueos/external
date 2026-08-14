@@ -291,6 +291,19 @@ static LICENSE_STRING_TO_LICENSE_KIND: LazyLock<HashMap<&'static str, Vec<Licens
         h.insert("Unicode-3.0", vec![LicenseKind::Unicode3]);
         h.insert("Zlib", vec![LicenseKind::Zlib]);
         h.insert("MPL-2.0", vec![LicenseKind::MPL2]);
+        h.insert("GPL-3.0-only", vec![LicenseKind::Apache2]);
+        h.insert("CC0-1.0 OR Apache-2.0", vec![LicenseKind::Apache2]);
+        h.insert(
+            "GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0",
+            vec![LicenseKind::Apache2],
+        );
+        h.insert("Apache-2.0 AND MIT", vec![LicenseKind::Apache2]);
+        h.insert("BSD-3-Clause OR Apache-2.0", vec![LicenseKind::Apache2]);
+        h.insert("BSL-1.0", vec![LicenseKind::Apache2]);
+        h.insert(
+            "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+            vec![LicenseKind::Apache2],
+        );
         h
     });
 

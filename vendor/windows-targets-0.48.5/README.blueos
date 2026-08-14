@@ -1,0 +1,10 @@
+Name: windows-targets
+URL: https://crates.io/crates/windows-targets
+Version: 0.48.5
+Revision: b769fa7570f8eeaede0ed1995a7dbe1e9591a35b
+License: Apache-2.0
+License File: //external/vendor/windows-targets-0.48.5/license-apache-2.0
+Shipped: yes
+Security Critical: yes
+
+Description: Import libs for Windows

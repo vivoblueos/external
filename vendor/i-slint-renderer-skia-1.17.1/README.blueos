@@ -1,0 +1,10 @@
+Name: i-slint-renderer-skia
+URL: https://crates.io/crates/i-slint-renderer-skia
+Version: 1.17.1
+Revision: cf62c975c311e7036d599ed8ed0b7e6a8386a934
+License: Apache-2.0
+License File: //external/vendor/i-slint-renderer-skia-1.17.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Skia based renderer for Slint

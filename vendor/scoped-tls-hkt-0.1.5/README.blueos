@@ -1,0 +1,17 @@
+Name: scoped-tls-hkt
+URL: https://crates.io/crates/scoped-tls-hkt
+Version: 0.1.5
+Revision: 75d420981893bce1e0a5c305898aa7f8c4255cda
+License: Apache-2.0
+License File: //external/vendor/scoped-tls-hkt-0.1.5/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: A more flexible version of `scoped-tls`, allowing the following additional
+features:
+
+- Storage of references to dynamically sized types.
+- Storage of mutable references.
+- Storage of types containing unbound lifetime parameters (higher-kinded types).
+- Some combination of the above.
+

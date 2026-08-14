@@ -1,0 +1,9 @@
+Name: roxmltree
+URL: https://crates.io/crates/roxmltree
+Version: 0.21.1
+License: Apache-2.0
+License File: //external/vendor/roxmltree-0.21.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Represent an XML as a read-only tree.

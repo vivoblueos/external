@@ -1,0 +1,10 @@
+Name: typed-index-collections
+URL: https://crates.io/crates/typed-index-collections
+Version: 3.5.0
+Revision: f87b25bb0c21c3b686b36d2b652ffab6312f3e68
+License: Apache-2.0
+License File: //external/vendor/typed-index-collections-3.5.0/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Typed index version of Rust slice and Vec containers

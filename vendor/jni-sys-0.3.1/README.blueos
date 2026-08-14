@@ -1,0 +1,9 @@
+Name: jni-sys
+URL: https://crates.io/crates/jni-sys
+Version: 0.3.1
+License: Apache-2.0
+License File: //external/vendor/jni-sys-0.3.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Rust definitions corresponding to jni.h

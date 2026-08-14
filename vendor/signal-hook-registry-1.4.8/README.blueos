@@ -1,0 +1,10 @@
+Name: signal-hook-registry
+URL: https://crates.io/crates/signal-hook-registry
+Version: 1.4.8
+Revision: 4d5fd6a6663be38e70774e4ac733d65916c70951
+License: Apache-2.0
+License File: //external/vendor/signal-hook-registry-1.4.8/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Backend crate for signal-hook

@@ -1,0 +1,9 @@
+Name: gl_generator
+URL: https://crates.io/crates/gl_generator
+Version: 0.14.0
+License: Apache-2.0
+License File: //external/vendor/gl_generator-0.14.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Code generators for creating bindings to the Khronos OpenGL APIs.

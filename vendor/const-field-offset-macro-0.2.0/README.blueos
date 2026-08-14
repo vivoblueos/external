@@ -1,0 +1,10 @@
+Name: const-field-offset-macro
+URL: https://crates.io/crates/const-field-offset-macro
+Version: 0.2.0
+Revision: 443908daeed77db500781670448d3688e4be0b9a
+License: Apache-2.0
+License File: //external/vendor/const-field-offset-macro-0.2.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Procedural macro to generate constant field offsets using core::mem::offset_of!

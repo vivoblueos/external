@@ -1,0 +1,10 @@
+Name: windows-implement
+URL: https://crates.io/crates/windows-implement
+Version: 0.60.2
+Revision: 32c3144490c016fe496a0aed769bce60987a2e9d
+License: Apache-2.0
+License File: //external/vendor/windows-implement-0.60.2/license-apache-2.0
+Shipped: yes
+Security Critical: yes
+
+Description: The implement macro for the Windows crates

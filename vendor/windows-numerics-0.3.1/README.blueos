@@ -1,0 +1,10 @@
+Name: windows-numerics
+URL: https://crates.io/crates/windows-numerics
+Version: 0.3.1
+Revision: 32c3144490c016fe496a0aed769bce60987a2e9d
+License: Apache-2.0
+License File: //external/vendor/windows-numerics-0.3.1/license-apache-2.0
+Shipped: yes
+Security Critical: yes
+
+Description: Windows numeric types

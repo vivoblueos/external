@@ -23,10 +23,8 @@ cargo_crate("heapless") {
   sources = [ "//external/vendor/heapless-0.9.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [
-    "//external/vendor/hash32-0.3.1:hash32",
-    "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
-  ]
+  deps = [ "//external/vendor/hash32-0.3.1:hash32" ]
+  deps += [ "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait" ]
 
   cargo_pkg_name = "heapless"
   cargo_pkg_version = "0.9.3"

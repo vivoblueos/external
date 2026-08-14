@@ -1,0 +1,10 @@
+Name: vtable
+URL: https://crates.io/crates/vtable
+Version: 0.4.0
+Revision: 443908daeed77db500781670448d3688e4be0b9a
+License: Apache-2.0
+License File: //external/vendor/vtable-0.4.0/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Helper crate to generate ffi-friendly virtual tables
