@@ -21,8 +21,8 @@ cargo_crate("esp32c6") {
   inputs = []
   edition = "2021"
   deps = [
-    "//external/vendor/vcell-0.1.3:vcell",
     "//external/vendor/critical-section-1.2.0:critical_section",
+    "//external/vendor/vcell-0.1.3:vcell",
   ]
   features = [ "critical-section" ]
 

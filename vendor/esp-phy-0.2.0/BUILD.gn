@@ -28,7 +28,7 @@ cargo_crate("esp_phy") {
     "//external/vendor/esp-sync-0.2.1:esp_sync",
   ]
 
-    if (board == "esp32c6_devkitc_1") {
+  if (board == "esp32c6_devkitc_1") {
     deps += [
       "//external/vendor/esp-wifi-sys-esp32c6-0.2.0:esp_wifi_sys_esp32c6",
       "//external/vendor/esp32c6-0.23.0:esp32c6",
