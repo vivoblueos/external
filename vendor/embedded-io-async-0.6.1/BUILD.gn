@@ -17,18 +17,6 @@
 
 import("//build/templates/cargo_crate.gni")
 
-# no_std 变体:给 no_std 链路(esp_radio_sys_unittest → blueos → esp_sync →
-# embassy-sync-0.6.2/0.7.2 → 本 crate)。这些 unittest bin 带 #[panic_handler]
-# (esp_radio_sys lib.rs:724),绝不能拉入 std 的 panic_impl,否则 E0152。
-#
-# async src/lib.rs:18 `pub use embedded_io::{Error,ErrorType,Read,Write,...}`,
-# 这些 trait 在 embedded-io 里是 alloc-gated(非 std-gated,见 0.6.1 lib.rs:179/213/
-# 300/345/362/462),故 features 只开 alloc 即可编译,deps 指 no_std embedded_io
-# (epoch=0.6)而非 embedded_io_std。
-#
-# 关键:deps 必须指 no_std embedded_io。若指 embedded_io_std(std crate),async 的
-# rlib 元数据会硬依赖 embedded_io_std,链接 no_std unittest 时递归拉入 libstd →
-# std 的 panic_impl 进 no_std bin → E0152(链接期传染,非 feature 传染)。
 cargo_crate("embedded_io_async") {
   epoch = "0.6"
   crate_type = "rlib"
@@ -36,56 +24,11 @@ cargo_crate("embedded_io_async") {
   inputs = []
   edition = "2021"
   deps = [ "//external/vendor/embedded-io-0.6.1:embedded_io" ]
-  features = [
-    "alloc",
-  ]
 
   cargo_pkg_name = "embedded-io-async"
   cargo_pkg_version = "0.6.1"
-
-  rustflags = [
-    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
-  ]
-}
-
-# std 变体:给 std 链路(agent_loop/wifi std bin → embedded_tls /
-# embedded_io_adapters → 本 crate)。同 crate_name(extern 名仍 embedded_io_async,
-# 下游 use 不变),但 features 补 std,deps 指 embedded_io_std。
-#
-# 为何需要双 target(而非单一 target 共用):
-#   - embedded_io_async 被 no_std 派(embassy-sync-0.6.2/0.7.2,进 esp_radio_sys_unittest)
-#     和 std 派(embedded_tls/adapters,进 agent_loop)同时依赖。
-#   - 单一 target 的 deps 只能选一个 embedded_io:指 no_std 版 → std 派的 tls/adapters
-#     trait 来自 no_std embedded_io,与 agent_loop 直接 use 的 embedded_io_std trait
-#     类型不兼容;指 std 版 → no_std 派 unittest 经链接期传染拉入 std panic_impl
-#     → E0152。一个 deps 无法同时满足两派。
-#   - 拆双 target,no_std 派用 no_std 变体、std 派用 std 变体,物理隔离(不同最终 bin)。
-#     先例见 embedded-io-0.6.1/BUILD.gn 的 embedded_io/embedded_io_std 双 target。
-#
-# 为何设独特 epoch="0.6std"(见 build/templates/cargo_crate.gni:32-33):
-#   - no_std 变体 epoch=0.6 → -Cmetadata=embedded_io_async-0.6。
-#   - 本变体若也写 epoch=0.6,metadata 相同;万一两条链路意外汇入同一 bin,rustc
-#     报 E0465 同名 crate 冲突。设 epoch=0.6std → metadata=embedded_io_async-0.6std,
-#     与 0.6/0.7(async-0.7.0 epoch=0.7)都不同,任何情况 rustc 都判为不同 crate。
-#     extern 名仍由 crate_name 决定(裸 embedded_io_async),下游 use 不变。
-#
-# 本文件标 @generated Do not edit,系 gnrt 模板生成;此处新增 target 为临时修正
-# (模板生成时漏 std 变体),待上游 external/BLUE_BUILD.gn.hbs 支持双 target 后可回归。
-cargo_crate("embedded_io_async_std") {
-  crate_name = "embedded_io_async"
-  epoch = "0.6std"
-  crate_type = "rlib"
-  sources = [ "//external/vendor/embedded-io-async-0.6.1/src/lib.rs" ]
-  inputs = []
-  edition = "2021"
-  deps = [ "//external/vendor/embedded-io-0.6.1:embedded_io_std" ]
-  features = [
-    "alloc",
-    "std",
-  ]
-
-  cargo_pkg_name = "embedded-io-async"
-  cargo_pkg_version = "0.6.1"
+  build_root = "//external/vendor/embedded-io-async-0.6.1/build.rs"
+  build_sources = [ "//external/vendor/embedded-io-async-0.6.1/build.rs" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

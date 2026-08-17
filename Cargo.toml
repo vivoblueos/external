@@ -45,8 +45,9 @@ version = "0.4.0"
 [dependencies.esp-wifi-sys-esp32c3]
 version = "0.2.0"
 
-# C6 的 WiFi/Bluetooth 底层驱动 FFI 绑定(对应 C3 的 esp-wifi-sys-esp32c3)。
-# 版本 0.2.0 经 esp-phy-0.2.0/Cargo.toml 与 esp-radio-0.18.0/Cargo.toml 双重核实一致。
+# C6 WiFi/Bluetooth low-level driver FFI bindings (the C6 counterpart of C3's
+# esp-wifi-sys-esp32c3). Version 0.2.0 cross-verified against both
+# esp-phy-0.2.0/Cargo.toml and esp-radio-0.18.0/Cargo.toml.
 [dependencies.esp-wifi-sys-esp32c6]
 version = "0.2.0"
 
@@ -54,8 +55,9 @@ version = "0.2.0"
 version = "0.32"
 features = ["critical-section"]
 
-# C6 PAC(对应 C3 的 esp32c3 0.32)。版本 0.23 经 esp-phy/esp-radio Cargo.toml 核实。
-# critical-section feature 与 C3 对齐(esp-hal 依赖它做跨核临界区)。
+# C6 PAC (the C6 counterpart of C3's esp32c3 0.32). Version 0.23 verified against
+# the esp-phy/esp-radio Cargo.toml. The critical-section feature is aligned with
+# C3 (esp-hal relies on it for cross-core critical sections).
 [dependencies.esp32c6]
 version = "0.23"
 features = ["critical-section"]

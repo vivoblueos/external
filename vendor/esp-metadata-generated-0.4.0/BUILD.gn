@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# @generated from external/BLUE_BUILD.gn.hbs by gnrt
-# 手动追加 board 条件分支:按 board 切 chip feature(C3↔C6),build-script feature 保留。
-# 注意:ninja run_gnrt 会覆盖本文件,覆盖后需重新打此补丁。
-
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_metadata_generated") {
@@ -25,7 +21,6 @@ cargo_crate("esp_metadata_generated") {
   inputs = []
   edition = "2021"
 
-  # build-script feature 始终需要(build.rs 依赖),chip feature 按 board 切。
   if (board == "esp32c6_devkitc_1") {
     features = [
       "build-script",

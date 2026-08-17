@@ -36,8 +36,6 @@ cargo_crate("esp_sync") {
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
 
-  # chip feature 按 board 切:C3↔C6(无 PAC dep,只切 feature)。
-  # 注意:ninja run_gnrt 会覆盖本文件,覆盖后需重新打此补丁。
   if (board == "esp32c6_devkitc_1") {
     features = [ "esp32c6" ]
   } else {

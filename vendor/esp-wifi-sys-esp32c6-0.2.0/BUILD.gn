@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 手动生成(对照 esp-wifi-sys-esp32c3-0.2.0/BUILD.gn 抄改)。
-# 背景:gnrt vendor 因 esp-sync-0.2.1 标 edition="2024" 而 cargo metadata 解析整树失败
-# (1.84 cargo 不稳定 edition2024),故 c6 包走手动 vendor,本文件按 c3 模板复刻。
-
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_wifi_sys_esp32c6") {

@@ -195,11 +195,6 @@ fn main() -> ! {
 //! ## Feature Flags
 #![doc = document_features::document_features!(feature_label = r#"<span class="stab portability"><code>{feature}</code></span>"#)]
 #![doc(html_logo_url = "https://avatars.githubusercontent.com/u/46717278")]
-// nightly feature gate:BlueOS 用 nightly rustc 编译。is_multiple_of 在当前
-// rustc(2025-10-21 构建)尚未稳定(track #128101),efuse/esp32c6/mod.rs:22 的
-// flash_encryption() 用了它。此处补 feature gate,与已有的 let_chains /
-// ptr_fn_addr_eq 风格一致。注:不动 esp-hal 的 requires-unstable/unstable
-// feature 机制(build.rs:28 那套),那是另一条路径,无需触发。
 #![feature(let_chains, ptr_fn_addr_eq, unsigned_is_multiple_of)]
 #![allow(asm_sub_register, async_fn_in_trait, stable_features)]
 #![cfg_attr(xtensa, feature(asm_experimental_arch))]
@@ -319,18 +314,7 @@ pub use procmacros::blocking_main as main;
 #[instability::unstable]
 pub use procmacros::handler;
 #[instability::unstable]
-// load_lp_code 宏在 procmacros 里被 `#[cfg(any(feature="has-lp-core",
-// feature="has-ulp-core"))]` 门控(lib.rs:189)。cargo 语义下 esp32c6 feature
-// 会经 `procmacros/has-lp-core` 传递激活它;但 BlueOS 的 cargo_crate GN 模板
-// 不解析跨 crate feature 依赖链(features 字段只作用于本 crate rustc),故
-// procmacros 的 has-lp-core 永不激活,该宏不存在。
-// 原门控 `#[cfg(any(lp_core, ulp_riscv_core))]` 只看 build.rs 输出的 cfg(C6
-// 输出 lp_core),为真就会 re-export 一个不存在的宏 → 编译报错。
-// 修法:让 re-export 条件与 procmacros 宏门控一致,同时要求 has-lp-core /
-// has-ulp-core feature。esp-hal Cargo.toml 无此顶层 feature(它只作跨 crate
-// 传递),故 cfg(feature=...) 对 esp-hal 恒为假,re-export 关闭。
-// 影响:BlueOS 业务代码不调 load_lp_code(经全树 grep 确认),无副作用。
-// C3 无 LP 核心,本就关;C6 关闭此 re-export 不影响 WiFi/agent_loop。
+
 #[cfg(all(any(lp_core, ulp_riscv_core), any(feature = "has-lp-core", feature = "has-ulp-core")))]
 pub use procmacros::load_lp_code;
 pub use procmacros::ram;
