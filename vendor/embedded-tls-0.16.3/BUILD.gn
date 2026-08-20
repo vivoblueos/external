@@ -49,7 +49,7 @@ cargo_crate("embedded_tls") {
     "std",
     "tokio",
   ]
-  cfgs = ["log_level_trace"]
+  cfgs = [ "log_level_trace" ]
   aliased_deps = {
     heapless_typenum = "//external/vendor/heapless-0.6.1:heapless"
   }

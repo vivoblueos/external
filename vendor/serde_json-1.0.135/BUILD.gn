@@ -40,7 +40,5 @@ cargo_crate("serde_json") {
     "CARGO_CFG_TARGET_POINTER_WIDTH=32",
   ]
 
-  rustflags = [
-    "--cap-lints=allow",
-  ]
+  rustflags = [ "--cap-lints=allow" ]
 }

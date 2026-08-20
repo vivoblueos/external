@@ -20,14 +20,10 @@ cargo_crate("httparse") {
   sources = [ "//external/vendor/httparse-1.10.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  features = [
-    "std",
-  ]
+  features = [ "std" ]
 
   cargo_pkg_name = "httparse"
   cargo_pkg_version = "1.10.1"
 
-  rustflags = [
-    "--cap-lints=allow",
-  ]
+  rustflags = [ "--cap-lints=allow" ]
 }

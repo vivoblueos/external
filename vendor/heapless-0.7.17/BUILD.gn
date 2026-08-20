@@ -25,8 +25,8 @@ cargo_crate("heapless") {
   edition = "2018"
   deps = [
     "//external/vendor/hash32-0.2.1:hash32",
-    "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
     "//external/vendor/spin-0.9.8:spin",
+    "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
   ]
   build_deps = [ "//external/vendor/rustc_version-0.4.1:rustc_version" ]
 
