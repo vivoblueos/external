@@ -110,7 +110,7 @@ version = "1.5.0"
 default-features = false
 
 [patch.crates-io]
-thiserror = { path = "./thiserror-2.0.17" } 
+thiserror = { path = "./thiserror-2.0.17" }
 
 [dependencies.goblin]
 version = "0.9.3"
