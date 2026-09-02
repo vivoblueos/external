@@ -34,14 +34,13 @@ cargo_crate("esp_phy") {
       "//external/vendor/esp32c6-0.23.0:esp32c6",
     ]
     features = [ "esp32c6" ]
-    } 
-    else {
+  } else {
     deps += [
       "//external/vendor/esp-wifi-sys-esp32c3-0.2.0:esp_wifi_sys_esp32c3",
       "//external/vendor/esp32c3-0.32.2:esp32c3",
     ]
     features = [ "esp32c3" ]
-    }
+  }
 
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
