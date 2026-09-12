@@ -28,13 +28,14 @@ cargo_crate("i_slint_compiler") {
     "//external/vendor/i-slint-compiler-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/annotate-snippets-0.12.12:annotate_snippets",
     "//external/vendor/by_address-1.2.1:by_address",
     "//external/vendor/data-url-0.3.2:data_url",
     "//external/vendor/derive_more-2.1.1:derive_more",
     "//external/vendor/i-slint-common-1.17.1:i_slint_common",
-    "//external/vendor/icu_normalizer-2.2.0:icu_normalizer",
+    "//external/vendor/icu_normalizer-2.3.0:icu_normalizer",
     "//external/vendor/itertools-0.14.0:itertools",
     "//external/vendor/linked_hash_set-0.1.6:linked_hash_set",
     "//external/vendor/lyon_extra-1.1.0:lyon_extra",
@@ -49,16 +50,14 @@ cargo_crate("i_slint_compiler") {
     "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
     "//external/vendor/url-2.5.8:url",
   ]
+
   features = [
-    # "display-diagnostics",
+    "display-diagnostics",
     "proc-macro2",
     "proc_macro_span",
     "quote",
     "rust",
   ]
-
-  rustenv = [ "SLINT_WIDGETS_LIBRARY=" +
-              rebase_path("//external/vendor/slint-1.17.1") ]
 
   cargo_pkg_name = "i-slint-compiler"
   cargo_pkg_version = "1.17.1"

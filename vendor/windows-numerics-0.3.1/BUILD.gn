@@ -23,10 +23,12 @@ cargo_crate("windows_numerics") {
   sources = [ "//external/vendor/windows-numerics-0.3.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/windows-core-0.62.2:windows_core",
     "//external/vendor/windows-link-0.2.1:windows_link",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "windows-numerics"

@@ -23,6 +23,7 @@ cargo_crate("vtable_macro") {
   sources = [ "//external/vendor/vtable-macro-0.4.0/macro.rs" ]
   inputs = [ "//external/vendor/vtable-macro-0.4.0/.cargo_vcs_info.json" ]
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",

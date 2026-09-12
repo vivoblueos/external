@@ -23,16 +23,23 @@ cargo_crate("rustix") {
   sources = [ "//external/vendor/rustix-1.1.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/bitflags-2.10.0:bitflags" ]
-  deps = [
-    "//external/vendor/errno-0.3.14:errno",
-    "//external/vendor/libc-0.2.186:libc",
-  ]
-  deps = [ "//external/vendor/linux-raw-sys-0.12.1:linux_raw_sys" ]
-  deps = [
-    "//external/vendor/errno-0.3.14:errno",
-    "//external/vendor/windows-sys-0.61.2:windows_sys",
-  ]
+
+  # target-conditioned deps omitted (!(is_win)):
+  # //external/vendor/errno-0.3.14:errno
+  # //external/vendor/libc-0.2.186:libc
+  #
+
+  # target-conditioned deps omitted ((is_android) || (is_linux || is_chromeos)):
+  # //external/vendor/linux-raw-sys-0.12.1:linux_raw_sys
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/errno-0.3.14:errno
+  # //external/vendor/windows-sys-0.61.2:windows_sys
+  #
+
   features = [
     "alloc",
     "event",

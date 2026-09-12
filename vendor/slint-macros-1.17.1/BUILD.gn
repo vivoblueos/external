@@ -28,6 +28,7 @@ cargo_crate("slint_macros") {
     "//external/vendor/slint-macros-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/i-slint-compiler-1.17.1:i_slint_compiler",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",

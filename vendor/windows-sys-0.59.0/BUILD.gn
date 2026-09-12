@@ -23,7 +23,9 @@ cargo_crate("windows_sys") {
   sources = [ "//external/vendor/windows-sys-0.59.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/windows-targets-0.52.6:windows_targets" ]
+
   features = [
     "Win32",
     "Win32_Foundation",

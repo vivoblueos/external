@@ -23,6 +23,7 @@ cargo_crate("esp_radio") {
   sources = [ "//external/vendor/esp-radio-0.18.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/allocator-api2-0.3.1:allocator_api2",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
@@ -40,16 +41,19 @@ cargo_crate("esp_radio") {
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
     "//external/vendor/portable_atomic_enum-0.3.1:portable_atomic_enum",
   ]
+
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
+
   proc_macro_deps = [
     "//external/vendor/document-features-0.2.12:document_features",
     "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros",
     "//external/vendor/instability-0.3.12:instability",
     "//external/vendor/num-derive-0.4.2:num_derive",
   ]
+
   features = [ "esp-alloc" ]
   aliased_deps = {
     procmacros = "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros(//build/toolchain:host)"

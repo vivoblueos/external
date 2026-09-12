@@ -23,6 +23,7 @@ cargo_crate("hmac") {
   sources = [ "//external/vendor/hmac-0.12.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/digest-0.10.7:digest" ]
 
   cargo_pkg_name = "hmac"

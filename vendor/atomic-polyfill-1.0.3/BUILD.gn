@@ -23,6 +23,7 @@ cargo_crate("atomic_polyfill") {
   sources = [ "//external/vendor/atomic-polyfill-1.0.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/critical-section-1.2.0:critical_section" ]
 
   cargo_pkg_name = "atomic-polyfill"

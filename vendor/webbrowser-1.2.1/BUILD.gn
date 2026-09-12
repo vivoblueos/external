@@ -23,18 +23,21 @@ cargo_crate("webbrowser") {
   sources = [ "//external/vendor/webbrowser-1.2.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/log-0.4.28:log",
     "//external/vendor/url-2.5.8:url",
   ]
-  deps = [
-    "//external/vendor/jni-0.22.4:jni",
-    "//external/vendor/ndk-context-0.1.1:ndk_context",
-  ]
-  deps = [
-    "//external/vendor/objc2-0.6.4:objc2",
-    "//external/vendor/objc2-foundation-0.3.2:objc2_foundation",
-  ]
+
+  # target-conditioned deps omitted (is_android):
+  # //external/vendor/jni-0.22.4:jni
+  # //external/vendor/ndk-context-0.1.1:ndk_context
+  #
+
+  # target-conditioned deps omitted (is_ios):
+  # //external/vendor/objc2-0.6.4:objc2
+  # //external/vendor/objc2-foundation-0.3.2:objc2_foundation
+  #
 
   cargo_pkg_name = "webbrowser"
   cargo_pkg_version = "1.2.1"

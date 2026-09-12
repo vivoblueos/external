@@ -23,6 +23,7 @@ cargo_crate("cortex_m") {
   sources = [ "//external/vendor/cortex-m-0.7.7/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/bare-metal-0.2.5:bare_metal",
     "//external/vendor/bitfield-0.13.2:bitfield",

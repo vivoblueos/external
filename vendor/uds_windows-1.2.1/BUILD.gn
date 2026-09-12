@@ -23,11 +23,13 @@ cargo_crate("uds_windows") {
   sources = [ "//external/vendor/uds_windows-1.2.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/memoffset-0.9.1:memoffset" ]
-  deps = [
-    "//external/vendor/tempfile-3.27.0:tempfile",
-    "//external/vendor/windows-sys-0.61.2:windows_sys",
-  ]
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/tempfile-3.27.0:tempfile
+  # //external/vendor/windows-sys-0.61.2:windows_sys
+  #
 
   cargo_pkg_name = "uds_windows"
   cargo_pkg_version = "1.2.1"

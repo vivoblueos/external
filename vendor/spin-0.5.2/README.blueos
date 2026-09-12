@@ -1,0 +1,13 @@
+Name: spin
+URL: https://crates.io/crates/spin
+Version: 0.5.2
+Revision: 0e49d681fba809416d3ea17ad04cc6b50c402efc
+License: MIT
+License File: //external/vendor/spin-0.5.2/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Synchronization primitives based on spinning.
+They may contain data, are usable without `std`,
+and static initializers are available.
+

@@ -23,6 +23,7 @@ cargo_crate("usvg") {
   sources = [ "//external/vendor/usvg-0.47.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/base64-0.22.1:base64",
     "//external/vendor/data-url-0.3.2:data_url",
@@ -45,6 +46,7 @@ cargo_crate("usvg") {
     "//external/vendor/unicode-vo-0.1.0:unicode_vo",
     "//external/vendor/xmlwriter-0.1.0:xmlwriter",
   ]
+
   features = [
     "fontdb",
     "rustybuzz",

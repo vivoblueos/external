@@ -23,8 +23,10 @@ cargo_crate("derive_more") {
   sources = [ "//external/vendor/derive_more-2.1.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps =
       [ "//external/vendor/derive_more-impl-2.1.1:derive_more_impl" ]
+
   features = [
     "add",
     "add_assign",

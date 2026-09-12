@@ -23,6 +23,7 @@ cargo_crate("objc2_ui_kit") {
   sources = [ "//external/vendor/objc2-ui-kit-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/block2-0.6.2:block2",
@@ -31,6 +32,7 @@ cargo_crate("objc2_ui_kit") {
     "//external/vendor/objc2-foundation-0.3.2:objc2_foundation",
     "//external/vendor/objc2-quartz-core-0.3.2:objc2_quartz_core",
   ]
+
   features = [
     "UIFont",
     "UIFontDescriptor",

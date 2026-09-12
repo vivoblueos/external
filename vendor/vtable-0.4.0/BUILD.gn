@@ -23,11 +23,13 @@ cargo_crate("vtable") {
   sources = [ "//external/vendor/vtable-0.4.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
-    "//external/vendor/const-field-offset-0.2.0:const_field_offset",
+    "//external/vendor/const-field-offset-0.2.1:const_field_offset",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
     "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
   ]
+
   proc_macro_deps = [ "//external/vendor/vtable-macro-0.4.0:vtable_macro" ]
 
   cargo_pkg_name = "vtable"

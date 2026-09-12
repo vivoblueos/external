@@ -1,0 +1,10 @@
+Name: webpki
+URL: https://crates.io/crates/webpki
+Version: 0.21.4
+Revision: d5188bd8c0a2c9cb14ec7835e63253e793e720a1
+License: ISC
+License File: //external/vendor/webpki-0.21.4/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Web PKI X.509 Certificate Verification.

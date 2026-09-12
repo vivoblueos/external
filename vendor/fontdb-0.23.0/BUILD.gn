@@ -23,6 +23,7 @@ cargo_crate("fontdb") {
   sources = [ "//external/vendor/fontdb-0.23.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/log-0.4.28:log",
     "//external/vendor/slotmap-1.1.1:slotmap",

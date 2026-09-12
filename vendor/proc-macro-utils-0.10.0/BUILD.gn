@@ -23,11 +23,13 @@ cargo_crate("proc_macro_utils") {
   sources = [ "//external/vendor/proc-macro-utils-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/smallvec-1.15.1:smallvec",
   ]
+
   features = [
     "parser",
     "proc-macro",

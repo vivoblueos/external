@@ -23,7 +23,9 @@ cargo_crate("roxmltree") {
   sources = [ "//external/vendor/roxmltree-0.21.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/memchr-2.7.6:memchr" ]
+
   features = [
     "positions",
     "std",

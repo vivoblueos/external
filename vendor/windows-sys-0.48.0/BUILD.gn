@@ -23,7 +23,9 @@ cargo_crate("windows_sys") {
   sources = [ "//external/vendor/windows-sys-0.48.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/windows-targets-0.48.5:windows_targets" ]
+
   features = [
     "Win32",
     "Win32_Foundation",

@@ -23,7 +23,9 @@ cargo_crate("zune_jpeg") {
   sources = [ "//external/vendor/zune-jpeg-0.5.15/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [ "//external/vendor/zune-core-0.5.1:zune_core" ]
+
+  deps = [ "//external/vendor/zune-core-0.5.3:zune_core" ]
+
   features = [
     "neon",
     "std",

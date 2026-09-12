@@ -23,6 +23,7 @@ cargo_crate("aead") {
   sources = [ "//external/vendor/aead-0.5.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/crypto-common-0.1.7:crypto_common",
     "//external/vendor/generic-array-0.14.7:generic_array",

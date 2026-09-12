@@ -23,10 +23,12 @@ cargo_crate("flate2") {
   sources = [ "//external/vendor/flate2-1.1.9/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
-    "//external/vendor/crc32fast-1.5.0:crc32fast",
+    "//external/vendor/crc32fast-1.5.1:crc32fast",
     "//external/vendor/miniz_oxide-0.8.9:miniz_oxide",
   ]
+
   features = [
     "any_impl",
     "miniz_oxide",

@@ -23,6 +23,7 @@ cargo_crate("aes_gcm") {
   sources = [ "//external/vendor/aes-gcm-0.10.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/aead-0.5.2:aead",
     "//external/vendor/aes-0.8.4:aes",
@@ -31,6 +32,7 @@ cargo_crate("aes_gcm") {
     "//external/vendor/ghash-0.5.1:ghash",
     "//external/vendor/subtle-2.6.1:subtle",
   ]
+
   features = [ "aes" ]
 
   cargo_pkg_name = "aes-gcm"

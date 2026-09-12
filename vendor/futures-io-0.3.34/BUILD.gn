@@ -23,6 +23,7 @@ cargo_crate("futures_io") {
   sources = [ "//external/vendor/futures-io-0.3.34/src/lib.rs" ]
   inputs = []
   edition = "2018"
+  features = [ "std" ]
 
   cargo_pkg_name = "futures-io"
   cargo_pkg_version = "0.3.34"

@@ -23,6 +23,7 @@ cargo_crate("serde_repr") {
   sources = [ "//external/vendor/serde_repr-0.1.20/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",

@@ -23,7 +23,9 @@ cargo_crate("defmt") {
   sources = [ "//external/vendor/defmt-0.3.100/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/defmt-1.0.1:defmt" ]
+
   features = [
     "alloc",
     "ip_in_core",

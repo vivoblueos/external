@@ -23,10 +23,15 @@ cargo_crate("sha1") {
   sources = [ "//external/vendor/sha1-0.10.7/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/digest-0.10.7:digest",
   ]
+
+  # target-conditioned deps omitted ((current_cpu == "arm64") || (current_cpu == "x64") || (current_cpu == "x86")):
+  # //external/vendor/cpufeatures-0.2.17:cpufeatures
+  #
 
   cargo_pkg_name = "sha1"
   cargo_pkg_version = "0.10.7"

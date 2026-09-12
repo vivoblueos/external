@@ -23,6 +23,7 @@ cargo_crate("async_executor") {
   sources = [ "//external/vendor/async-executor-1.14.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/async-task-4.7.1:async_task",
     "//external/vendor/concurrent-queue-2.5.0:concurrent_queue",

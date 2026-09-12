@@ -23,10 +23,12 @@ cargo_crate("bincode") {
   sources = [ "//external/vendor/bincode-2.0.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/serde-1.0.228:serde",
     "//external/vendor/unty-0.0.4:unty",
   ]
+
   features = [
     "alloc",
     "std",

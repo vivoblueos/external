@@ -23,6 +23,7 @@ cargo_crate("generic_array") {
   sources = [ "//external/vendor/generic-array-0.13.3/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [ "//external/vendor/typenum-1.20.1:typenum" ]
 
   cargo_pkg_name = "generic-array"

@@ -23,7 +23,9 @@ cargo_crate("thiserror") {
   sources = [ "//external/vendor/thiserror-2.0.17/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps = [ "//external/vendor/thiserror-impl-2.0.17:thiserror_impl" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "thiserror"

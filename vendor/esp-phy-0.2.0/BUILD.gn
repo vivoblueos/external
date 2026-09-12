@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_phy") {
@@ -20,6 +23,7 @@ cargo_crate("esp_phy") {
   sources = [ "//external/vendor/esp-phy-0.2.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/embassy-sync-0.8.0:embassy_sync",
@@ -28,24 +32,11 @@ cargo_crate("esp_phy") {
     "//external/vendor/esp-sync-0.2.1:esp_sync",
   ]
 
-  if (board == "esp32c6_devkitc_1") {
-    deps += [
-      "//external/vendor/esp-wifi-sys-esp32c6-0.2.0:esp_wifi_sys_esp32c6",
-      "//external/vendor/esp32c6-0.23.0:esp32c6",
-    ]
-    features = [ "esp32c6" ]
-  } else {
-    deps += [
-      "//external/vendor/esp-wifi-sys-esp32c3-0.2.0:esp_wifi_sys_esp32c3",
-      "//external/vendor/esp32c3-0.32.2:esp32c3",
-    ]
-    features = [ "esp32c3" ]
-  }
-
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
+
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
 
@@ -53,10 +44,6 @@ cargo_crate("esp_phy") {
   cargo_pkg_version = "0.2.0"
   build_root = "//external/vendor/esp-phy-0.2.0/build.rs"
   build_sources = [ "//external/vendor/esp-phy-0.2.0/build.rs" ]
-  build_script_outputs = [
-    "esp_phy_config_table.md",
-    "libesp-phy.a",
-  ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

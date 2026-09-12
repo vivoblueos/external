@@ -23,17 +23,22 @@ cargo_crate("async_io") {
   sources = [ "//external/vendor/async-io-2.6.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/concurrent-queue-2.5.0:concurrent_queue",
-    "//external/vendor/futures-io-0.3.32:futures_io",
+    "//external/vendor/futures-io-0.3.34:futures_io",
     "//external/vendor/futures-lite-2.6.1:futures_lite",
     "//external/vendor/parking-2.2.1:parking",
     "//external/vendor/polling-3.11.0:polling",
     "//external/vendor/rustix-1.1.4:rustix",
     "//external/vendor/slab-0.4.12:slab",
   ]
-  deps = [ "//external/vendor/windows-sys-0.61.2:windows_sys" ]
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-sys-0.61.2:windows_sys
+  #
+
   build_deps = [ "//external/vendor/autocfg-1.5.0:autocfg" ]
 
   cargo_pkg_name = "async-io"

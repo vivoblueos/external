@@ -23,6 +23,7 @@ cargo_crate("jni_sys_macros") {
   sources = [ "//external/vendor/jni-sys-macros-0.4.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-2.0.108:syn",

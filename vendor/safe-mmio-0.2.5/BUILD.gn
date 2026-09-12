@@ -23,6 +23,7 @@ cargo_crate("safe_mmio") {
   sources = [ "//external/vendor/safe-mmio-0.2.5/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/zerocopy-0.8.27:zerocopy" ]
 
   cargo_pkg_name = "safe-mmio"

@@ -23,10 +23,12 @@ cargo_crate("lyon_path") {
   sources = [ "//external/vendor/lyon_path-1.0.19/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/lyon_geom-1.0.19:lyon_geom",
     "//external/vendor/num-traits-0.2.19:num_traits",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "lyon_path"

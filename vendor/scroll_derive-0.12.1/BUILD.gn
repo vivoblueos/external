@@ -23,6 +23,7 @@ cargo_crate("scroll_derive") {
   sources = [ "//external/vendor/scroll_derive-0.12.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",

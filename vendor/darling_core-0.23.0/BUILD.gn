@@ -23,6 +23,7 @@ cargo_crate("darling_core") {
   sources = [ "//external/vendor/darling_core-0.23.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/ident_case-1.0.1:ident_case",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
@@ -30,6 +31,7 @@ cargo_crate("darling_core") {
     "//external/vendor/strsim-0.11.1:strsim",
     "//external/vendor/syn-2.0.108:syn",
   ]
+
   features = [
     "strsim",
     "suggestions",

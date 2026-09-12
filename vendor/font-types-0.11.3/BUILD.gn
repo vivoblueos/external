@@ -23,7 +23,9 @@ cargo_crate("font_types") {
   sources = [ "//external/vendor/font-types-0.11.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/bytemuck-1.25.0:bytemuck" ]
+
   features = [
     "bytemuck",
     "std",

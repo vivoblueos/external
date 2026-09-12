@@ -23,8 +23,11 @@ cargo_crate("sys_locale") {
   sources = [ "//external/vendor/sys-locale-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  deps = []
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
+
+  # target-conditioned deps omitted (is_android):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
   features = [
     "js",
     "js-sys",

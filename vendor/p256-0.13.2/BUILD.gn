@@ -23,10 +23,12 @@ cargo_crate("p256") {
   sources = [ "//external/vendor/p256-0.13.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/elliptic-curve-0.13.8:elliptic_curve",
     "//external/vendor/primeorder-0.13.6:primeorder",
   ]
+
   features = [
     "arithmetic",
     "ecdh",

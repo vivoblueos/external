@@ -23,10 +23,11 @@ cargo_crate("async_broadcast") {
   sources = [ "//external/vendor/async-broadcast-0.7.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
-    "//external/vendor/event-listener-5.4.1:event_listener",
+    "//external/vendor/event-listener-5.4.2:event_listener",
     "//external/vendor/event-listener-strategy-0.5.4:event_listener_strategy",
-    "//external/vendor/futures-core-0.3.32:futures_core",
+    "//external/vendor/futures-core-0.3.34:futures_core",
     "//external/vendor/pin-project-lite-0.2.17:pin_project_lite",
   ]
 

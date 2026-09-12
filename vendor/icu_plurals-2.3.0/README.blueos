@@ -1,0 +1,10 @@
+Name: icu_plurals
+URL: https://crates.io/crates/icu_plurals
+Version: 2.3.0
+Revision: a14f2dad852be26bad277ae704abf27a15cbfed1
+License: Unicode-3.0
+License File: //external/vendor/icu_plurals-2.3.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Unicode Plural Rules categorizer for numeric input

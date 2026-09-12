@@ -23,6 +23,7 @@ cargo_crate("defmt_macros") {
   sources = [ "//external/vendor/defmt-macros-1.0.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/defmt-parser-1.0.0:defmt_parser",
     "//external/vendor/proc-macro-error2-2.0.1:proc_macro_error2",

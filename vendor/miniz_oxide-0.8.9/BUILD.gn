@@ -23,10 +23,12 @@ cargo_crate("miniz_oxide") {
   sources = [ "//external/vendor/miniz_oxide-0.8.9/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/adler2-2.0.1:adler2",
     "//external/vendor/simd-adler32-0.3.9:simd_adler32",
   ]
+
   features = [
     "simd",
     "simd-adler32",

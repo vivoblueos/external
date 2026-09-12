@@ -404,10 +404,9 @@ fn generate_for_third_party(args: GenCommandArgs, paths: &paths::ChromiumPaths) 
             #[cfg(feature = "blueos")]
             {
                 let vendor_dir = paths.third_party_cargo_root.join("vendor");
-                path = vendor_dir.join(format!(
-                    "{}-{}.{}.{}",
-                    dep.package_name, dep.version.major, dep.version.minor, dep.version.patch
-                ));
+                // Must match vendor.rs's `{name}-{version}` directory naming,
+                // including any build metadata (e.g. `toml_edit-0.25.11+spec-1.1.0`).
+                path = vendor_dir.join(format!("{}-{}", dep.package_name, dep.version));
             }
             let previous = map.insert(path, build_file);
             if previous.is_some() {

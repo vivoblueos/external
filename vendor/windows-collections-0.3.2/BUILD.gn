@@ -23,7 +23,9 @@ cargo_crate("windows_collections") {
   sources = [ "//external/vendor/windows-collections-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/windows-core-0.62.2:windows_core" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "windows-collections"

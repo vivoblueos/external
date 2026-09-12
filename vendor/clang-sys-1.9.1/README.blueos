@@ -1,0 +1,10 @@
+Name: clang-sys
+URL: https://crates.io/crates/clang-sys
+Version: 1.9.1
+Revision: 8844c21292e54818d200980cd90a5498e2a5a644
+License: Apache-2.0
+License File: //external/vendor/clang-sys-1.9.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Rust bindings for libclang.

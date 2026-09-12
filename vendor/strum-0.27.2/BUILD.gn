@@ -23,7 +23,9 @@ cargo_crate("strum") {
   sources = [ "//external/vendor/strum-0.27.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps = [ "//external/vendor/strum_macros-0.27.2:strum_macros" ]
+
   features = [
     "derive",
     "strum_macros",

@@ -23,11 +23,13 @@ cargo_crate("annotate_snippets") {
   sources = [ "//external/vendor/annotate-snippets-0.12.12/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/anstyle-1.0.14:anstyle",
     "//external/vendor/memchr-2.7.6:memchr",
     "//external/vendor/unicode-width-0.2.2:unicode_width",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "annotate-snippets"

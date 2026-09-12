@@ -42,7 +42,9 @@ cargo_crate("objc2") {
     "//external/vendor/objc2-0.6.4/src/topics/weak_property.md",
   ]
   edition = "2021"
+
   deps = [ "//external/vendor/objc2-encode-4.1.0:objc2_encode" ]
+
   features = [
     "alloc",
     "disable-encoding-assertions",

@@ -23,6 +23,7 @@ cargo_crate("spin_on") {
   sources = [ "//external/vendor/spin_on-0.1.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/pin-utils-0.1.0:pin_utils" ]
 
   cargo_pkg_name = "spin_on"

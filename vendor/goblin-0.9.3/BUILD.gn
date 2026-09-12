@@ -23,11 +23,13 @@ cargo_crate("goblin") {
   sources = [ "//external/vendor/goblin-0.9.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/log-0.4.28:log",
     "//external/vendor/plain-0.2.3:plain",
     "//external/vendor/scroll-0.12.0:scroll",
   ]
+
   features = [
     "alloc",
     "archive",

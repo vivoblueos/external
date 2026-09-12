@@ -23,6 +23,7 @@ cargo_crate("elliptic_curve") {
   sources = [ "//external/vendor/elliptic-curve-0.13.8/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/base16ct-0.2.0:base16ct",
     "//external/vendor/crypto-bigint-0.5.5:crypto_bigint",
@@ -36,6 +37,7 @@ cargo_crate("elliptic_curve") {
     "//external/vendor/subtle-2.6.1:subtle",
     "//external/vendor/zeroize-1.9.0:zeroize",
   ]
+
   features = [
     "arithmetic",
     "digest",

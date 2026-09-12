@@ -28,6 +28,7 @@ cargo_crate("i_slint_backend_winit") {
     "//external/vendor/i-slint-backend-winit-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/bytemuck-1.25.0:bytemuck",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
@@ -48,21 +49,29 @@ cargo_crate("i_slint_backend_winit") {
     "//external/vendor/webbrowser-1.2.1:webbrowser",
     "//external/vendor/winit-0.30.13:winit",
   ]
-  deps = [
-    "//external/vendor/futures-0.3.32:futures",
-    "//external/vendor/zbus-5.17.0:zbus",
-  ]
-  deps = [
-    "//external/vendor/block2-0.6.2:block2",
-    "//external/vendor/objc2-0.6.4:objc2",
-    "//external/vendor/objc2-foundation-0.3.2:objc2_foundation",
-    "//external/vendor/objc2-quartz-core-0.3.2:objc2_quartz_core",
-    "//external/vendor/objc2-ui-kit-0.3.2:objc2_ui_kit",
-  ]
-  deps = [ "//external/vendor/windows-0.62.2:windows" ]
-  build_deps = [ "//external/vendor/cfg_aliases-0.2.1:cfg_aliases" ]
+
+  # target-conditioned deps omitted (!(is_android)):
+  # //external/vendor/futures-0.3.32:futures
+  # //external/vendor/zbus-5.17.0:zbus
+  #
+
+  # target-conditioned deps omitted (is_ios):
+  # //external/vendor/block2-0.6.2:block2
+  # //external/vendor/objc2-0.6.4:objc2
+  # //external/vendor/objc2-foundation-0.3.2:objc2_foundation
+  # //external/vendor/objc2-quartz-core-0.3.2:objc2_quartz_core
+  # //external/vendor/objc2-ui-kit-0.3.2:objc2_ui_kit
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-0.62.2:windows
+  #
+
+  build_deps = [ "//external/vendor/cfg_aliases-0.2.2:cfg_aliases" ]
+
   proc_macro_deps =
       [ "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros" ]
+
   features = [
     "muda",
     "renderer-software",

@@ -23,7 +23,9 @@ cargo_crate("field_offset") {
   sources = [ "//external/vendor/field-offset-0.3.6/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [ "//external/vendor/memoffset-0.9.1:memoffset" ]
+
   build_deps = [ "//external/vendor/rustc_version-0.4.1:rustc_version" ]
 
   cargo_pkg_name = "field-offset"

@@ -23,7 +23,9 @@ cargo_crate("ttf_parser") {
   sources = [ "//external/vendor/ttf-parser-0.25.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/core_maths-0.1.1:core_maths" ]
+
   features = [
     "apple-layout",
     "core_maths",

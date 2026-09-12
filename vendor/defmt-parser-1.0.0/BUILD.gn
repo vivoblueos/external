@@ -23,6 +23,7 @@ cargo_crate("defmt_parser") {
   sources = [ "//external/vendor/defmt-parser-1.0.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/thiserror-2.0.17:thiserror" ]
 
   cargo_pkg_name = "defmt-parser"

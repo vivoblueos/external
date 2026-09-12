@@ -23,11 +23,13 @@ cargo_crate("mipidsi") {
   sources = [ "//external/vendor/mipidsi-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/embedded-graphics-core-0.4.1:embedded_graphics_core",
     "//external/vendor/embedded-hal-1.0.0:embedded_hal",
     "//external/vendor/heapless-0.8.0:heapless",
   ]
+
   features = [
     "batch",
     "heapless",

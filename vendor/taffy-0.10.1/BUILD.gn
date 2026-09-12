@@ -23,12 +23,14 @@ cargo_crate("taffy") {
   sources = [ "//external/vendor/taffy-0.10.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/arrayvec-0.7.8:arrayvec",
     "//external/vendor/grid-1.0.1:grid",
     "//external/vendor/serde-1.0.228:serde",
     "//external/vendor/slotmap-1.1.1:slotmap",
   ]
+
   features = [
     "alloc",
     "flexbox",

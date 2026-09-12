@@ -23,6 +23,7 @@ cargo_crate("clru") {
   sources = [ "//external/vendor/clru-0.6.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/hashbrown-0.16.1:hashbrown" ]
 
   cargo_pkg_name = "clru"

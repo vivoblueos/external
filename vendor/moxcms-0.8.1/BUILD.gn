@@ -23,10 +23,12 @@ cargo_crate("moxcms") {
   sources = [ "//external/vendor/moxcms-0.8.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/num-traits-0.2.19:num_traits",
     "//external/vendor/pxfm-0.1.30:pxfm",
   ]
+
   features = [
     "avx",
     "avx_luts",

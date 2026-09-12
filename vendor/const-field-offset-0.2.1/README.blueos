@@ -1,0 +1,10 @@
+Name: const-field-offset
+URL: https://crates.io/crates/const-field-offset
+Version: 0.2.1
+Revision: b0fc6a7287a062fefb30133e6aecf0303f76357d
+License: Apache-2.0
+License File: //external/vendor/const-field-offset-0.2.1/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: Derive macro providing const field offsets using core::mem::offset_of!

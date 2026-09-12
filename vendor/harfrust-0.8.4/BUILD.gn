@@ -23,12 +23,14 @@ cargo_crate("harfrust") {
   sources = [ "//external/vendor/harfrust-0.8.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/bytemuck-1.25.0:bytemuck",
     "//external/vendor/read-fonts-0.39.2:read_fonts",
     "//external/vendor/smallvec-1.15.1:smallvec",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "harfrust"

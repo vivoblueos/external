@@ -23,10 +23,12 @@ cargo_crate("der") {
   sources = [ "//external/vendor/der-0.7.10/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/const-oid-0.9.6:const_oid",
     "//external/vendor/zeroize-1.9.0:zeroize",
   ]
+
   features = [
     "oid",
     "zeroize",

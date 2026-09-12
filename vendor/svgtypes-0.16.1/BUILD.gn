@@ -23,10 +23,12 @@ cargo_crate("svgtypes") {
   sources = [ "//external/vendor/svgtypes-0.16.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/kurbo-0.13.1:kurbo",
     "//external/vendor/siphasher-1.0.1:siphasher",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "svgtypes"

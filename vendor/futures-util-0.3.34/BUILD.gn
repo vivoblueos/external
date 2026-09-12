@@ -19,22 +19,38 @@ import("//build/templates/cargo_crate.gni")
 
 cargo_crate("futures_util") {
   epoch = "0.3"
-
-  # Disambiguate StableCrateId from futures-util-0.3.32 (epoch collides at 0.3).
-  rustc_metadata = "futures_util-0.3.34"
   crate_type = "rlib"
   sources = [ "//external/vendor/futures-util-0.3.34/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
+    "//external/vendor/futures-channel-0.3.34:futures_channel",
     "//external/vendor/futures-core-0.3.34:futures_core",
+    "//external/vendor/futures-io-0.3.34:futures_io",
     "//external/vendor/futures-sink-0.3.34:futures_sink",
     "//external/vendor/futures-task-0.3.34:futures_task",
+    "//external/vendor/memchr-2.7.6:memchr",
     "//external/vendor/pin-project-lite-0.2.17:pin_project_lite",
+    "//external/vendor/slab-0.4.12:slab",
   ]
+
+  proc_macro_deps = [ "//external/vendor/futures-macro-0.3.34:futures_macro" ]
+
   features = [
+    "alloc",
+    "async-await",
+    "async-await-macro",
+    "channel",
+    "futures-channel",
+    "futures-io",
+    "futures-macro",
     "futures-sink",
+    "io",
+    "memchr",
     "sink",
+    "slab",
+    "std",
   ]
 
   cargo_pkg_name = "futures-util"

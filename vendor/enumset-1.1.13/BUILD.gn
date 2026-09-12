@@ -23,6 +23,7 @@ cargo_crate("enumset") {
   sources = [ "//external/vendor/enumset-1.1.13/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps = [ "//external/vendor/enumset_derive-0.15.0:enumset_derive" ]
 
   cargo_pkg_name = "enumset"

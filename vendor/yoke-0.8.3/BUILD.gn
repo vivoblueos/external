@@ -23,11 +23,14 @@ cargo_crate("yoke") {
   sources = [ "//external/vendor/yoke-0.8.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
     "//external/vendor/zerofrom-0.1.8:zerofrom",
   ]
+
   proc_macro_deps = [ "//external/vendor/yoke-derive-0.8.2:yoke_derive" ]
+
   features = [
     "alloc",
     "derive",

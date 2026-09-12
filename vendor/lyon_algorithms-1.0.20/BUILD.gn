@@ -23,6 +23,7 @@ cargo_crate("lyon_algorithms") {
   sources = [ "//external/vendor/lyon_algorithms-1.0.20/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/lyon_path-1.0.19:lyon_path",
     "//external/vendor/num-traits-0.2.19:num_traits",

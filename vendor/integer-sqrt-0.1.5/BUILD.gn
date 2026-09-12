@@ -23,6 +23,7 @@ cargo_crate("integer_sqrt") {
   sources = [ "//external/vendor/integer-sqrt-0.1.5/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [ "//external/vendor/num-traits-0.2.19:num_traits" ]
 
   cargo_pkg_name = "integer-sqrt"

@@ -23,12 +23,14 @@ cargo_crate("jni_macros") {
   sources = [ "//external/vendor/jni-macros-0.22.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/simd_cesu8-1.1.1:simd_cesu8",
     "//external/vendor/syn-2.0.108:syn",
   ]
+
   build_deps = [ "//external/vendor/rustc_version-0.4.1:rustc_version" ]
 
   cargo_pkg_name = "jni-macros"

@@ -23,11 +23,13 @@ cargo_crate("objc2_core_foundation") {
   sources = [ "//external/vendor/objc2-core-foundation-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/dispatch2-0.3.1:dispatch2",
     "//external/vendor/objc2-0.6.4:objc2",
   ]
+
   features = [
     "CFArray",
     "CFAttributedString",

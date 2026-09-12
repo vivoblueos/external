@@ -23,12 +23,14 @@ cargo_crate("as_slice") {
   sources = [ "//external/vendor/as-slice-0.1.5/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [
     "//external/vendor/generic-array-0.12.4:generic_array",
     "//external/vendor/generic-array-0.13.3:generic_array",
     "//external/vendor/generic-array-0.14.7:generic_array",
     "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
   ]
+
   aliased_deps = {
     ga13 = "//external/vendor/generic-array-0.13.3:generic_array"
     ga14 = "//external/vendor/generic-array-0.14.7:generic_array"

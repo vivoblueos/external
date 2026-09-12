@@ -23,7 +23,9 @@ cargo_crate("itertools") {
   sources = [ "//external/vendor/itertools-0.14.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  deps = [ "//external/vendor/either-1.16.0:either" ]
+
+  deps = [ "//external/vendor/either-1.18.0:either" ]
+
   features = [
     "use_alloc",
     "use_std",

@@ -23,11 +23,13 @@ cargo_crate("objc2_metal") {
   sources = [ "//external/vendor/objc2-metal-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/objc2-0.6.4:objc2",
     "//external/vendor/objc2-foundation-0.3.2:objc2_foundation",
   ]
+
   features = [
     "MTLAllocation",
     "MTLCommandBuffer",

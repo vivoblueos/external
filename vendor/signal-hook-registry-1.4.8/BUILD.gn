@@ -23,6 +23,7 @@ cargo_crate("signal_hook_registry") {
   sources = [ "//external/vendor/signal-hook-registry-1.4.8/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [
     "//external/vendor/errno-0.3.14:errno",
     "//external/vendor/libc-0.2.186:libc",

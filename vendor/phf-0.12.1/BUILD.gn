@@ -23,8 +23,11 @@ cargo_crate("phf") {
   sources = [ "//external/vendor/phf-0.12.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/phf_shared-0.12.1:phf_shared" ]
+
   proc_macro_deps = [ "//external/vendor/phf_macros-0.12.1:phf_macros" ]
+
   features = [
     "macros",
     "phf_macros",

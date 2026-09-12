@@ -23,6 +23,7 @@ cargo_crate("convert_case") {
   sources = [ "//external/vendor/convert_case-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps =
       [ "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation" ]
 

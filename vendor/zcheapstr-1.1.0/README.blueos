@@ -1,0 +1,10 @@
+Name: zcheapstr
+URL: https://crates.io/crates/zcheapstr
+Version: 1.1.0
+Revision: a9e7595419e5e826c14e35d0a77ebc84b973ca58
+License: MIT
+License File: //external/vendor/zcheapstr-1.1.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: An immutable, cheaply cloneable string type with borrowed, static and shared variants

@@ -23,6 +23,7 @@ cargo_crate("pulldown_cmark") {
   sources = [ "//external/vendor/pulldown-cmark-0.13.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/getopts-0.2.24:getopts",
@@ -30,6 +31,7 @@ cargo_crate("pulldown_cmark") {
     "//external/vendor/pulldown-cmark-escape-0.11.0:pulldown_cmark_escape",
     "//external/vendor/unicase-2.8.1:unicase",
   ]
+
   features = [
     "getopts",
     "html",

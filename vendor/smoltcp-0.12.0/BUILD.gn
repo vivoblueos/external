@@ -23,6 +23,7 @@ cargo_crate("smoltcp") {
   sources = [ "//external/vendor/smoltcp-0.12.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-1.3.2:bitflags",
     "//external/vendor/byteorder-1.5.0:byteorder",
@@ -31,6 +32,7 @@ cargo_crate("smoltcp") {
     "//external/vendor/heapless-0.8.0:heapless",
     "//external/vendor/managed-0.8.0:managed",
   ]
+
   features = [
     "_proto-fragmentation",
     "alloc",

@@ -28,22 +28,28 @@ cargo_crate("i_slint_backend_selector") {
     "//external/vendor/i-slint-backend-selector-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-
-    # "//external/vendor/i-slint-backend-testing-1.17.1:i_slint_backend_testing",
     "//external/vendor/i-slint-core-1.17.1:i_slint_core",
   ]
 
-  # deps =
-  # [ "//external/vendor/i-slint-backend-winit-1.17.1:i_slint_backend_winit" ]
-  # deps = [ "//external/vendor/i-slint-backend-linuxkms-1.17.1:i_slint_backend_linuxkms" ]
+  # target-conditioned deps omitted (!(is_android)):
+  # //external/vendor/i-slint-backend-winit-1.17.1:i_slint_backend_winit
+  #
+
+  # target-conditioned deps omitted (is_linux || is_chromeos):
+  # //external/vendor/i-slint-backend-linuxkms-1.17.1:i_slint_backend_linuxkms
+  #
+
   build_deps = [
-    "//external/vendor/cfg_aliases-0.2.1:cfg_aliases",
+    "//external/vendor/cfg_aliases-0.2.2:cfg_aliases",
     "//external/vendor/i-slint-common-1.17.1:i_slint_common",
   ]
+
   proc_macro_deps =
       [ "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros" ]
+
   features = [ "renderer-software" ]
 
   cargo_pkg_name = "i-slint-backend-selector"

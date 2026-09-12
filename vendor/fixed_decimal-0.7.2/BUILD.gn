@@ -23,11 +23,13 @@ cargo_crate("fixed_decimal") {
   sources = [ "//external/vendor/fixed_decimal-0.7.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/smallvec-1.15.1:smallvec",
-    "//external/vendor/writeable-0.6.3:writeable",
+    "//external/vendor/writeable-0.6.4:writeable",
   ]
-  proc_macro_deps = [ "//external/vendor/displaydoc-0.2.6:displaydoc" ]
+
+  proc_macro_deps = [ "//external/vendor/displaydoc-0.2.7:displaydoc" ]
 
   cargo_pkg_name = "fixed_decimal"
   cargo_pkg_version = "0.7.2"

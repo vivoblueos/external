@@ -23,6 +23,7 @@ cargo_crate("ctr") {
   sources = [ "//external/vendor/ctr-0.9.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/cipher-0.4.4:cipher" ]
 
   cargo_pkg_name = "ctr"

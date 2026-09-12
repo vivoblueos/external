@@ -105,6 +105,13 @@ pub struct CrateConfig {
     /// These do not affect dependency resolution, so it will not change any
     /// other generated targets.
     pub exclude_deps_in_gn: Vec<String>,
+    /// Target-conditioned dependencies to keep in the generated GN file by
+    /// moving them into the unconditional dep group. gnrt's GN conditions are
+    /// chromium-oriented and unrepresentable in blueos, so conditioned groups
+    /// are normally omitted; crates whose conditioned deps are actually
+    /// required on the embedded target list them here.
+    #[serde(default)]
+    pub keep_target_deps: Vec<String>,
     /// Features that are disallowed (e.g. because the feature-gated code hasn't
     /// been audited or because the audit uncovered unsoundness)
     pub ban_features: Vec<String>,

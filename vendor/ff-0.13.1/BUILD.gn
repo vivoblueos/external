@@ -23,6 +23,7 @@ cargo_crate("ff") {
   sources = [ "//external/vendor/ff-0.13.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/rand_core-0.6.4:rand_core",
     "//external/vendor/subtle-2.6.1:subtle",

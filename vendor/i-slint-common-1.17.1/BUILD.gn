@@ -28,26 +28,23 @@ cargo_crate("i_slint_common") {
     "//external/vendor/i-slint-common-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/derive_more-2.1.1:derive_more",
-
-    # "//external/vendor/fontique-0.10.0:fontique",
     "//external/vendor/htmlparser-0.2.1:htmlparser",
-    "//external/vendor/icu_decimal-2.2.0:icu_decimal",
-    "//external/vendor/icu_locale_core-2.2.0:icu_locale_core",
-    "//external/vendor/icu_provider-2.2.0:icu_provider",
+    "//external/vendor/icu_decimal-2.3.0:icu_decimal",
+    "//external/vendor/icu_locale_core-2.3.0:icu_locale_core",
+    "//external/vendor/icu_provider-2.3.1:icu_provider",
     "//external/vendor/pulldown-cmark-0.13.4:pulldown_cmark",
-
-    # "//external/vendor/resvg-0.47.0:resvg",
     "//external/vendor/skrifa-0.42.1:skrifa",
   ]
+
   features = [
     "color-parsing",
     "locale-decimal-separator",
     "markdown",
-
-    # "shared-fontique",
-    # "svg-text",
+    "shared-fontique",
+    "svg-text",
   ]
 
   cargo_pkg_name = "i-slint-common"

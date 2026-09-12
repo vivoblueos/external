@@ -23,6 +23,7 @@ cargo_crate("xkbcommon_dl") {
   sources = [ "//external/vendor/xkbcommon-dl-0.4.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/dlib-0.5.3:dlib",

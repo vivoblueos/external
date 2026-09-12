@@ -23,6 +23,7 @@ cargo_crate("cortex_m_semihosting") {
   sources = [ "//external/vendor/cortex-m-semihosting-0.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/cortex-m-0.7.7:cortex_m" ]
 
   cargo_pkg_name = "cortex-m-semihosting"

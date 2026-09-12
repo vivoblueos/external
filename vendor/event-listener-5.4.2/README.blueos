@@ -1,0 +1,10 @@
+Name: event-listener
+URL: https://crates.io/crates/event-listener
+Version: 5.4.2
+Revision: 77004ac77dcef7884bf71a99c276a50f83a7fa4e
+License: Apache-2.0
+License File: //external/vendor/event-listener-5.4.2/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: Notify async tasks or threads

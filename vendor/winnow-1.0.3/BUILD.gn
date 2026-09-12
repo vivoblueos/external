@@ -23,7 +23,9 @@ cargo_crate("winnow") {
   sources = [ "//external/vendor/winnow-1.0.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/memchr-2.7.6:memchr" ]
+
   features = [
     "alloc",
     "ascii",

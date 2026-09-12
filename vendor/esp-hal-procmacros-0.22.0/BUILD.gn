@@ -23,6 +23,7 @@ cargo_crate("esp_hal_procmacros") {
   sources = [ "//external/vendor/esp-hal-procmacros-0.22.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro-crate-3.5.0:proc_macro_crate",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
@@ -30,6 +31,7 @@ cargo_crate("esp_hal_procmacros") {
     "//external/vendor/syn-2.0.108:syn",
     "//external/vendor/termcolor-1.4.1:termcolor",
   ]
+
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
 

@@ -23,7 +23,9 @@ cargo_crate("strict_num") {
   sources = [ "//external/vendor/strict-num-0.1.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/float-cmp-0.9.0:float_cmp" ]
+
   features = [
     "approx-eq",
     "float-cmp",

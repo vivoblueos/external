@@ -23,6 +23,7 @@ cargo_crate("defmt_rtt") {
   sources = [ "//external/vendor/defmt-rtt-1.1.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/critical-section-1.2.0:critical_section",
     "//external/vendor/defmt-1.0.1:defmt",

@@ -23,11 +23,16 @@ cargo_crate("polyval") {
   sources = [ "//external/vendor/polyval-0.6.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/opaque-debug-0.3.1:opaque_debug",
     "//external/vendor/universal-hash-0.5.1:universal_hash",
   ]
+
+  # target-conditioned deps omitted ((current_cpu == "arm64") || (current_cpu == "x64") || (current_cpu == "x86")):
+  # //external/vendor/cpufeatures-0.2.17:cpufeatures
+  #
 
   cargo_pkg_name = "polyval"
   cargo_pkg_version = "0.6.2"

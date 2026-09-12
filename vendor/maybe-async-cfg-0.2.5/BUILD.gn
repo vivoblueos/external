@@ -23,6 +23,7 @@ cargo_crate("maybe_async_cfg") {
   sources = [ "//external/vendor/maybe-async-cfg-0.2.5/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/manyhow-0.11.4:manyhow",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
@@ -30,6 +31,7 @@ cargo_crate("maybe_async_cfg") {
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-1.0.109:syn",
   ]
+
   features = [
     "doctests",
     "pulldown-cmark",

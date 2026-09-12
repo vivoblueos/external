@@ -23,6 +23,7 @@ cargo_crate("drm_ffi") {
   sources = [ "//external/vendor/drm-ffi-0.9.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/drm-sys-0.8.1:drm_sys",
     "//external/vendor/rustix-1.1.4:rustix",

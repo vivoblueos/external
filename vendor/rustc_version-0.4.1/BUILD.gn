@@ -23,6 +23,7 @@ cargo_crate("rustc_version") {
   sources = [ "//external/vendor/rustc_version-0.4.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/semver-1.0.28:semver" ]
 
   cargo_pkg_name = "rustc_version"

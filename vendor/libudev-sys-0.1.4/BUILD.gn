@@ -23,7 +23,9 @@ cargo_crate("libudev_sys") {
   sources = [ "//external/vendor/libudev-sys-0.1.4/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [ "//external/vendor/libc-0.2.186:libc" ]
+
   build_deps = [ "//external/vendor/pkg-config-0.3.33:pkg_config" ]
 
   cargo_pkg_name = "libudev-sys"

@@ -23,6 +23,7 @@ cargo_crate("input") {
   sources = [ "//external/vendor/input-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/input-sys-1.19.0:input_sys",
@@ -30,6 +31,7 @@ cargo_crate("input") {
     "//external/vendor/log-0.4.28:log",
     "//external/vendor/udev-0.9.3:udev",
   ]
+
   features = [
     "libinput_1_11",
     "libinput_1_14",

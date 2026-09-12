@@ -23,6 +23,7 @@ cargo_crate("objc2_ui_kit") {
   sources = [ "//external/vendor/objc2-ui-kit-0.2.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/block2-0.5.1:block2",
@@ -38,6 +39,7 @@ cargo_crate("objc2_ui_kit") {
     "//external/vendor/objc2-uniform-type-identifiers-0.2.2:objc2_uniform_type_identifiers",
     "//external/vendor/objc2-user-notifications-0.2.2:objc2_user_notifications",
   ]
+
   features = [
     "UIApplication",
     "UIDevice",

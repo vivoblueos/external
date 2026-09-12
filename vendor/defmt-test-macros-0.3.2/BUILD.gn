@@ -23,6 +23,7 @@ cargo_crate("defmt_test_macros") {
   sources = [ "//external/vendor/defmt-test-macros-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",

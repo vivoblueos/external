@@ -23,7 +23,9 @@ cargo_crate("euclid") {
   sources = [ "//external/vendor/euclid-0.22.14/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/num-traits-0.2.19:num_traits" ]
+
   features = [
     "libm",
     "std",

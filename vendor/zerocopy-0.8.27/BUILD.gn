@@ -23,8 +23,10 @@ cargo_crate("zerocopy") {
   sources = [ "//external/vendor/zerocopy-0.8.27/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps =
       [ "//external/vendor/zerocopy-derive-0.8.27:zerocopy_derive" ]
+
   features = [
     "alloc",
     "derive",

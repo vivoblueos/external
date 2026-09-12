@@ -34,25 +34,43 @@ cargo_crate("{{crate_name}}") {
   ]
   edition = "{{edition}}"
   {{#each deps}}
+  {{#if this.cond}}{{#if this.packages}}
+  # target-conditioned deps omitted ({{this.cond}}):
+  # {{#each this.packages}}//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}
+  # {{/each}}
+  {{/if}}{{else}}{{#if this.packages}}
   deps = [
     {{#each this.packages}}
     "//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}",
     {{/each}}
   ]
+  {{/if}}{{/if}}
   {{/each}}
   {{#each build_deps}}
+  {{#if this.cond}}{{#if this.packages}}
+  # target-conditioned build_deps omitted ({{this.cond}}):
+  # {{#each this.packages}}//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}
+  # {{/each}}
+  {{/if}}{{else}}{{#if this.packages}}
   build_deps = [
     {{#each this.packages}}
     "//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}",
     {{/each}}
   ]
+  {{/if}}{{/if}}
   {{/each}}
   {{#each proc_macro_deps}}
+  {{#if this.cond}}{{#if this.packages}}
+  # target-conditioned proc_macro_deps omitted ({{this.cond}}):
+  # {{#each this.packages}}//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}
+  # {{/each}}
+  {{/if}}{{else}}{{#if this.packages}}
   proc_macro_deps = [
     {{#each this.packages}}
     "//external/vendor/{{this.name}}-{{this.epoch}}:{{this.use_name}}",
     {{/each}}
   ]
+  {{/if}}{{/if}}
   {{/each}}
   {{#if features}}
   features = [

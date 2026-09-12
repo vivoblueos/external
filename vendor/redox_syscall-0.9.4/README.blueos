@@ -1,0 +1,10 @@
+Name: redox_syscall
+URL: https://crates.io/crates/redox_syscall
+Version: 0.9.4
+Revision: 1f7fd64078980a6324c24056c9ffe19bda37a22d
+License: MIT
+License File: //external/vendor/redox_syscall-0.9.4/README.md
+Shipped: yes
+Security Critical: yes
+
+Description: A Rust library to access raw Redox system calls

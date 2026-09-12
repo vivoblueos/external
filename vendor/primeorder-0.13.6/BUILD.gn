@@ -23,6 +23,7 @@ cargo_crate("primeorder") {
   sources = [ "//external/vendor/primeorder-0.13.6/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/elliptic-curve-0.13.8:elliptic_curve" ]
 
   cargo_pkg_name = "primeorder"

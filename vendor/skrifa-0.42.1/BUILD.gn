@@ -23,11 +23,13 @@ cargo_crate("skrifa") {
   sources = [ "//external/vendor/skrifa-0.42.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bytemuck-1.25.0:bytemuck",
     "//external/vendor/core_maths-0.1.1:core_maths",
     "//external/vendor/read-fonts-0.39.2:read_fonts",
   ]
+
   features = [
     "autohint_shaping",
     "libm",

@@ -23,7 +23,9 @@ cargo_crate("parley_data") {
   sources = [ "//external/vendor/parley_data-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [ "//external/vendor/icu_properties-2.2.0:icu_properties" ]
+
+  deps = [ "//external/vendor/icu_properties-2.3.0:icu_properties" ]
+
   features = [ "baked" ]
 
   cargo_pkg_name = "parley_data"

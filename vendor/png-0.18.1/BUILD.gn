@@ -23,9 +23,10 @@ cargo_crate("png") {
   sources = [ "//external/vendor/png-0.18.1/src/lib.rs" ]
   inputs = [ "//external/vendor/png-0.18.1/src/filter/optimization-notes.md" ]
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
-    "//external/vendor/crc32fast-1.5.0:crc32fast",
+    "//external/vendor/crc32fast-1.5.1:crc32fast",
     "//external/vendor/fdeflate-0.3.7:fdeflate",
     "//external/vendor/flate2-1.1.9:flate2",
     "//external/vendor/miniz_oxide-0.8.9:miniz_oxide",

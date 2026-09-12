@@ -23,7 +23,9 @@ cargo_crate("simplecss") {
   sources = [ "//external/vendor/simplecss-0.2.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/log-0.4.28:log" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "simplecss"

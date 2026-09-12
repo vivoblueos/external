@@ -23,7 +23,9 @@ cargo_crate("quote") {
   sources = [ "//external/vendor/quote-1.0.46/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/proc-macro2-1.0.103:proc_macro2" ]
+
   features = [ "proc-macro" ]
 
   cargo_pkg_name = "quote"

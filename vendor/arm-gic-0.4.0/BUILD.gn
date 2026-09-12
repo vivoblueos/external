@@ -23,6 +23,7 @@ cargo_crate("arm_gic") {
   sources = [ "//external/vendor/arm-gic-0.4.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/safe-mmio-0.2.5:safe_mmio",

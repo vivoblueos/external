@@ -23,7 +23,9 @@ cargo_crate("smol_str") {
   sources = [ "//external/vendor/smol_str-0.2.2/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/serde-1.0.228:serde" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "smol_str"

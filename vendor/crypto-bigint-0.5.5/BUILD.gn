@@ -23,12 +23,14 @@ cargo_crate("crypto_bigint") {
   sources = [ "//external/vendor/crypto-bigint-0.5.5/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/generic-array-0.14.7:generic_array",
     "//external/vendor/rand_core-0.6.4:rand_core",
     "//external/vendor/subtle-2.6.1:subtle",
     "//external/vendor/zeroize-1.9.0:zeroize",
   ]
+
   features = [
     "generic-array",
     "rand_core",

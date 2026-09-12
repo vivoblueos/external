@@ -23,7 +23,9 @@ cargo_crate("block2") {
   sources = [ "//external/vendor/block2-0.6.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/objc2-0.6.4:objc2" ]
+
   features = [
     "alloc",
     "std",

@@ -23,6 +23,7 @@ cargo_crate("rustybuzz") {
   sources = [ "//external/vendor/rustybuzz-0.20.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/bytemuck-1.25.0:bytemuck",
@@ -35,6 +36,7 @@ cargo_crate("rustybuzz") {
     "//external/vendor/unicode-properties-0.1.4:unicode_properties",
     "//external/vendor/unicode-script-0.5.8:unicode_script",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "rustybuzz"

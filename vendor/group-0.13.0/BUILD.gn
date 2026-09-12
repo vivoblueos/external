@@ -23,6 +23,7 @@ cargo_crate("group") {
   sources = [ "//external/vendor/group-0.13.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/ff-0.13.1:ff",
     "//external/vendor/rand_core-0.6.4:rand_core",

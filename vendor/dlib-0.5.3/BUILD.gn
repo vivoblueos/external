@@ -23,6 +23,7 @@ cargo_crate("dlib") {
   sources = [ "//external/vendor/dlib-0.5.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/libloading-0.8.9:libloading" ]
 
   cargo_pkg_name = "dlib"

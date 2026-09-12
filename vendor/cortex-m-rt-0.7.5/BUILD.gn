@@ -23,6 +23,7 @@ cargo_crate("cortex_m_rt") {
   sources = [ "//external/vendor/cortex-m-rt-0.7.5/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps =
       [ "//external/vendor/cortex-m-rt-macros-0.7.5:cortex_m_rt_macros" ]
 

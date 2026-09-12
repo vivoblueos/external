@@ -23,12 +23,14 @@ cargo_crate("swash") {
   sources = [ "//external/vendor/swash-0.2.9/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/core_maths-0.1.1:core_maths",
     "//external/vendor/skrifa-0.42.1:skrifa",
     "//external/vendor/yazi-0.2.1:yazi",
     "//external/vendor/zeno-0.3.3:zeno",
   ]
+
   features = [
     "libm",
     "render",

@@ -23,6 +23,7 @@ cargo_crate("fdeflate") {
   sources = [ "//external/vendor/fdeflate-0.3.7/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/simd-adler32-0.3.9:simd_adler32" ]
 
   cargo_pkg_name = "fdeflate"

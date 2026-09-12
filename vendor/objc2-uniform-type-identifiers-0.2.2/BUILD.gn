@@ -24,11 +24,13 @@ cargo_crate("objc2_uniform_type_identifiers") {
       [ "//external/vendor/objc2-uniform-type-identifiers-0.2.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/block2-0.5.1:block2",
     "//external/vendor/objc2-0.5.2:objc2",
     "//external/vendor/objc2-foundation-0.2.2:objc2_foundation",
   ]
+
   features = [
     "alloc",
     "std",

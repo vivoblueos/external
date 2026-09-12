@@ -23,6 +23,7 @@ cargo_crate("calloop") {
   sources = [ "//external/vendor/calloop-0.13.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/log-0.4.28:log",

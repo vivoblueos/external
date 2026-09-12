@@ -1,0 +1,10 @@
+Name: combine
+URL: https://crates.io/crates/combine
+Version: 4.6.8
+Revision: 678a1b8c9311c4323d7289d7caba8ee9b607100e
+License: MIT
+License File: //external/vendor/combine-4.6.8/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Fast parser combinators on arbitrary streams with zero-copy support.

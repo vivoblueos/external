@@ -23,7 +23,9 @@ cargo_crate("slotmap") {
   sources = [ "//external/vendor/slotmap-1.1.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   build_deps = [ "//external/vendor/version_check-0.9.5:version_check" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "slotmap"

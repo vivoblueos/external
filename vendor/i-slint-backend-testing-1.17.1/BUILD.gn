@@ -28,13 +28,16 @@ cargo_crate("i_slint_backend_testing") {
     "//external/vendor/i-slint-backend-testing-1.17.1/README.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/i-slint-common-1.17.1:i_slint_common",
     "//external/vendor/i-slint-core-1.17.1:i_slint_core",
     "//external/vendor/i-slint-renderer-software-1.17.1:i_slint_renderer_software",
     "//external/vendor/vtable-0.4.0:vtable",
   ]
-  build_deps = [ "//external/vendor/cfg_aliases-0.2.1:cfg_aliases" ]
+
+  build_deps = [ "//external/vendor/cfg_aliases-0.2.2:cfg_aliases" ]
+
   features = [ "renderer-software" ]
 
   cargo_pkg_name = "i-slint-backend-testing"

@@ -23,6 +23,7 @@ cargo_crate("embedded_hal_bus") {
   sources = [ "//external/vendor/embedded-hal-bus-0.3.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/critical-section-1.2.0:critical_section",
     "//external/vendor/embedded-hal-1.0.0:embedded_hal",

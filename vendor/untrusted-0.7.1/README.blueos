@@ -1,0 +1,10 @@
+Name: untrusted
+URL: https://crates.io/crates/untrusted
+Version: 0.7.1
+Revision: c3a0e38470aa35565764a68c65b75b9e2ffd732d
+License: ISC
+License File: //external/vendor/untrusted-0.7.1/LICENSE.txt
+Shipped: yes
+Security Critical: yes
+
+Description: Safe, fast, zero-panic, zero-crashing, zero-allocation parsing of untrusted inputs in Rust.

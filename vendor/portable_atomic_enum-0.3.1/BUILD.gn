@@ -23,8 +23,11 @@ cargo_crate("portable_atomic_enum") {
   sources = [ "//external/vendor/portable_atomic_enum-0.3.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/portable-atomic-1.13.1:portable_atomic" ]
+
   proc_macro_deps = [ "//external/vendor/portable_atomic_enum_macros-0.2.1:portable_atomic_enum_macros" ]
+
   features = [ "portable-atomic" ]
 
   cargo_pkg_name = "portable_atomic_enum"

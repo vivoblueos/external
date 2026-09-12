@@ -95,9 +95,19 @@ remove_crates = [
     'windows_i686_gnullvm',
     'windows_x86_64_gnu',
     'windows_x86_64_gnullvm',
+    # winapi & its target-specific gnu crates are Windows-only.
+    'winapi',
+    'winapi-i686-pc-windows-gnu',
+    'winapi-x86_64-pc-windows-gnu',
     # Behind a feature that we do not enable.
     'wasi'
 ]
+
+[all-crates]
+# cc has no BUILD.gn of its own (remove_crates above) but ring, minicov and
+# android-activity reference it from their build_deps; drop those references
+# so GN resolution succeeds.
+remove_deps = ["cc"]
 
 
 [crate.defmt]
@@ -136,6 +146,22 @@ build_script_outputs = [ "config.rs" ]
 
 [crate.thiserror]
 build_script_outputs = [ "private.rs" ]
+
+[crate.webpki]
+license = "ISC"
+license_files = ["LICENSE"]
+
+[crate.untrusted]
+license = "ISC"
+license_files = ["LICENSE.txt"]
+
+[crate.ring]
+license = "ISC"
+license_files = ["LICENSE"]
+# winapi sits in a target-conditioned (windows) dep group which the template
+# drops anyway; filter it defensively.
+remove_deps = ["winapi"]
+
 
 [crate.defmt-rtt]
 license_files = ["../../LICENSE-MIT"]
@@ -330,12 +356,14 @@ license_files = ["README.md"]
 
 [crate.i-slint-common]
 license_files = ["README.md"]
+remove_deps = ["fontique", "resvg"]
 
 [crate.taffy]
 license_files = ["README.md"]
 
 [crate.slint]
 license_files = ["README.md"]
+remove_deps = ["slint-macros"]
 
 [crate.foldhash]
 license_files = ["README.md"]
@@ -429,6 +457,7 @@ license_files = ["README.md"]
 
 [crate.i-slint-backend-selector]
 license_files = ["README.md"]
+remove_deps = ["i-slint-backend-testing"]
 
 [crate.ndk-sys]
 license_files = ["README.md"]
@@ -558,6 +587,7 @@ license_files = ["README.md"]
 
 [crate.i-slint-core]
 license_files = ["README.md"]
+remove_deps = ["image", "parley", "resvg"]
 
 [crate.objc2-core-location]
 license_files = ["README.md"]
@@ -621,4 +651,10 @@ license_files = ["README.md"]
 
 [crate.roxmltree]
 license_files = ["README.md"]
+
+[crate.heapless]
+# stable_deref_trait is a target-conditioned dep (any arm/32-bit/64-bit
+# pointer width) that cargo enables on riscv32; keep it by moving it into the
+# unconditional dep group.
+keep_target_deps = ["stable_deref_trait"]
 

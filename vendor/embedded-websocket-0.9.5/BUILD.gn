@@ -23,15 +23,18 @@ cargo_crate("embedded_websocket") {
   sources = [ "//external/vendor/embedded-websocket-0.9.5/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/base64-0.13.1:base64",
     "//external/vendor/byteorder-1.5.0:byteorder",
-    "//external/vendor/futures-0.3.34:futures",
+    "//external/vendor/futures-0.3.32:futures",
     "//external/vendor/heapless-0.7.17:heapless",
     "//external/vendor/httparse-1.10.1:httparse",
     "//external/vendor/rand_core-0.6.4:rand_core",
     "//external/vendor/sha1-0.10.7:sha1",
   ]
+
+  features = [ "std" ]
 
   cargo_pkg_name = "embedded-websocket"
   cargo_pkg_version = "0.9.5"

@@ -23,6 +23,7 @@ cargo_crate("ghash") {
   sources = [ "//external/vendor/ghash-0.5.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/opaque-debug-0.3.1:opaque_debug",
     "//external/vendor/polyval-0.6.2:polyval",

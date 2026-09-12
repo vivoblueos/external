@@ -229,10 +229,16 @@ pub fn build_rule_from_dep(
         let use_name = NormalizedName::from_crate_name(&dep.package_name).to_string();
         let epoch = match name_lib_style {
             // TODO(danakj): Separate this choice to another parameter option.
+            #[cfg(not(feature = "blueos"))]
             NameLibStyle::LibLiteral => Some(format!(
                 "{}.{}.{}",
                 &dep.version.major, &dep.version.minor, &dep.version.patch
             )),
+            // Blueos vendor dirs are named with the full version string (e.g.
+            // `serde_yaml-0.9.34+deprecated`); dropping build metadata here
+            // produces a dep path that GN cannot load.
+            #[cfg(feature = "blueos")]
+            NameLibStyle::LibLiteral => Some(dep.version.to_string()),
             NameLibStyle::PackageName => None,
         };
         PackageId {
@@ -295,11 +301,9 @@ pub fn build_rule_from_dep(
                 // TODO(danakj): Separate this choice to another parameter option.
                 #[cfg(not(feature = "blueos"))]
                 NameLibStyle::LibLiteral => Some(Epoch::from_version(&d.version).to_string()),
+                // Blueos vendor dirs use the full version string (see above).
                 #[cfg(feature = "blueos")]
-                NameLibStyle::LibLiteral => Some(format!(
-                    "{}.{}.{}",
-                    &d.version.major, &d.version.minor, &d.version.patch
-                )),
+                NameLibStyle::LibLiteral => Some(d.version.to_string()),
                 NameLibStyle::PackageName => None,
             },
         }
@@ -322,10 +326,7 @@ pub fn build_rule_from_dep(
                     #[cfg(not(feature = "blueos"))]
                     NameLibStyle::LibLiteral => Some(Epoch::from_version(&d.version).to_string()),
                     #[cfg(feature = "blueos")]
-                    NameLibStyle::LibLiteral => Some(format!(
-                        "{}.{}.{}",
-                        &d.version.major, &d.version.minor, &d.version.patch
-                    )),
+                    NameLibStyle::LibLiteral => Some(d.version.to_string()),
                     NameLibStyle::PackageName => None,
                 },
             }
@@ -340,14 +341,47 @@ pub fn build_rule_from_dep(
             #[cfg(not(feature = "blueos"))]
             NameLibStyle::LibLiteral => Some(Epoch::from_version(&d.version).to_string()),
             #[cfg(feature = "blueos")]
-            NameLibStyle::LibLiteral => Some(format!(
-                "{}.{}.{}",
-                &d.version.major, &d.version.minor, &d.version.patch
-            )),
+            NameLibStyle::LibLiteral => Some(d.version.to_string()),
             NameLibStyle::PackageName => None,
         },
     });
     detail_template.aliased_deps = aliased_normal_deps;
+
+    // Blueos's cargo_crate template drops target-conditioned dep groups (GN
+    // conditions are chromium-oriented and unrepresentable in blueos). Crates
+    // whose conditioned deps are actually required on the embedded target opt
+    // into keeping them here: move the listed packages into the unconditional
+    // group.
+    #[cfg(feature = "blueos")]
+    {
+        let keep = extra_config.get_combined_set(&*dep.package_name, |c| &c.keep_target_deps);
+        if !keep.is_empty() {
+            for groups in [
+                &mut detail_template.deps,
+                &mut detail_template.build_deps,
+                &mut detail_template.proc_macro_deps,
+            ] {
+                let mut moved: Vec<PackageId> = Vec::new();
+                for group in groups.iter_mut() {
+                    if group.cond.is_none() {
+                        continue;
+                    }
+                    group.packages.retain(|p| {
+                        if keep.contains(p.name.as_str()) {
+                            moved.push(p.clone());
+                            false
+                        } else {
+                            true
+                        }
+                    });
+                }
+                if let Some(unc) = groups.iter_mut().find(|g| g.cond.is_none()) {
+                    unc.packages.extend(moved);
+                    unc.packages.sort_unstable();
+                }
+            }
+        }
+    }
 
     detail_template.sources = details
         .sources
@@ -502,6 +536,14 @@ pub fn build_rule_from_dep(
         // order instead of the hashmap iteration order.
         for dep_kind in [Normal, Build] {
             if dep.dependency_kinds.get(&dep_kind).is_none() {
+                continue;
+            }
+            // Blueos's template names rules by crate name, so a package that
+            // is both a normal and a build dependency would emit two
+            // identically-named cargo_crate blocks; keep only the Normal rule
+            // in that case. Build-only packages still get their rule here.
+            #[cfg(feature = "blueos")]
+            if dep_kind == Build && dep.dependency_kinds.contains_key(&Normal) {
                 continue;
             }
 

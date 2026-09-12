@@ -23,9 +23,15 @@ cargo_crate("io_lifetimes") {
   sources = [ "//external/vendor/io-lifetimes-1.0.11/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  deps = []
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
-  deps = [ "//external/vendor/windows-sys-0.48.0:windows_sys" ]
+
+  # target-conditioned deps omitted (!(is_win)):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-sys-0.48.0:windows_sys
+  #
+
   features = [
     "close",
     "hermit-abi",

@@ -23,6 +23,7 @@ cargo_crate("darling_core") {
   sources = [ "//external/vendor/darling_core-0.21.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/fnv-1.0.7:fnv",
     "//external/vendor/ident_case-1.0.1:ident_case",

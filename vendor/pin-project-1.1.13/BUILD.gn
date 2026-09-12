@@ -23,6 +23,7 @@ cargo_crate("pin_project") {
   sources = [ "//external/vendor/pin-project-1.1.13/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps =
       [ "//external/vendor/pin-project-internal-1.1.13:pin_project_internal" ]
 

@@ -23,22 +23,25 @@ cargo_crate("async_signal") {
   sources = [ "//external/vendor/async-signal-0.2.14/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/futures-core-0.3.32:futures_core",
+    "//external/vendor/futures-core-0.3.34:futures_core",
   ]
-  deps = [
-    "//external/vendor/async-io-2.6.0:async_io",
-    "//external/vendor/futures-io-0.3.32:futures_io",
-    "//external/vendor/rustix-1.1.4:rustix",
-    "//external/vendor/signal-hook-registry-1.4.8:signal_hook_registry",
-  ]
-  deps = [
-    "//external/vendor/async-lock-3.4.2:async_lock",
-    "//external/vendor/atomic-waker-1.1.2:atomic_waker",
-    "//external/vendor/slab-0.4.12:slab",
-    "//external/vendor/windows-sys-0.61.2:windows_sys",
-  ]
+
+  # target-conditioned deps omitted (!is_win):
+  # //external/vendor/async-io-2.6.0:async_io
+  # //external/vendor/futures-io-0.3.34:futures_io
+  # //external/vendor/rustix-1.1.4:rustix
+  # //external/vendor/signal-hook-registry-1.4.8:signal_hook_registry
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/async-lock-3.4.2:async_lock
+  # //external/vendor/atomic-waker-1.1.2:atomic_waker
+  # //external/vendor/slab-0.4.12:slab
+  # //external/vendor/windows-sys-0.61.2:windows_sys
+  #
 
   cargo_pkg_name = "async-signal"
   cargo_pkg_version = "0.2.14"

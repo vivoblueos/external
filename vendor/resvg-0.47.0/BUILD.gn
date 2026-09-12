@@ -23,6 +23,7 @@ cargo_crate("resvg") {
   sources = [ "//external/vendor/resvg-0.47.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/gif-0.14.2:gif",
     "//external/vendor/image-webp-0.2.4:image_webp",
@@ -34,6 +35,7 @@ cargo_crate("resvg") {
     "//external/vendor/usvg-0.47.0:usvg",
     "//external/vendor/zune-jpeg-0.5.15:zune_jpeg",
   ]
+
   features = [
     "gif",
     "image-webp",

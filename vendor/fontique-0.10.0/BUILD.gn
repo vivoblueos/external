@@ -23,32 +23,36 @@ cargo_crate("fontique") {
   sources = [ "//external/vendor/fontique-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/hashbrown-0.17.1:hashbrown",
     "//external/vendor/linebender_resource_handle-0.1.1:linebender_resource_handle",
-
-    # "//external/vendor/memmap2-0.9.11:memmap2",
+    "//external/vendor/memmap2-0.9.11:memmap2",
     "//external/vendor/parlance-0.1.0:parlance",
     "//external/vendor/read-fonts-0.39.2:read_fonts",
     "//external/vendor/smallvec-1.15.1:smallvec",
   ]
-  deps += [ "//external/vendor/roxmltree-0.21.1:roxmltree" ]
 
-  # deps += [
-  # "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys",
-  # ]
-  # deps = [
-  #   "//external/vendor/windows-0.62.2:windows",
-  #   "//external/vendor/windows-core-0.62.2:windows_core",
-  # ]
+  # target-conditioned deps omitted (is_android):
+  # //external/vendor/roxmltree-0.21.1:roxmltree
+  #
+
+  # target-conditioned deps omitted (is_linux || is_chromeos):
+  # //external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-0.62.2:windows
+  # //external/vendor/windows-core-0.62.2:windows_core
+  #
+
   features = [
     "std",
     "system",
   ]
-
-  # aliased_deps = {
-  # fontconfig_sys = "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys"
-  # }
+  aliased_deps = {
+    fontconfig_sys = "//external/vendor/yeslogic-fontconfig-sys-6.0.1:yeslogic_fontconfig_sys"
+  }
 
   cargo_pkg_name = "fontique"
   cargo_pkg_version = "0.10.0"

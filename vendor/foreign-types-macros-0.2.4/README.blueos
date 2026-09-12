@@ -1,0 +1,10 @@
+Name: foreign-types-macros
+URL: https://crates.io/crates/foreign-types-macros
+Version: 0.2.4
+Revision: 2d5077646c441fb089662e9ac439bec45c0d84b5
+License: Apache-2.0
+License File: //external/vendor/foreign-types-macros-0.2.4/LICENSE-APACHE
+Shipped: yes
+Security Critical: yes
+
+Description: An internal crate used by foreign-types

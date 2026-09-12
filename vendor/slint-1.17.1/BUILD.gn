@@ -30,8 +30,9 @@ cargo_crate("slint") {
     "//external/vendor/slint-1.17.1/type-mappings.md",
   ]
   edition = "2021"
+
   deps = [
-    "//external/vendor/const-field-offset-0.2.0:const_field_offset",
+    "//external/vendor/const-field-offset-0.2.1:const_field_offset",
     "//external/vendor/i-slint-backend-selector-1.17.1:i_slint_backend_selector",
     "//external/vendor/i-slint-common-1.17.1:i_slint_common",
     "//external/vendor/i-slint-core-1.17.1:i_slint_core",
@@ -42,10 +43,10 @@ cargo_crate("slint") {
     "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
     "//external/vendor/vtable-0.4.0:vtable",
   ]
-  proc_macro_deps = [
-    "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros",
-    # "//external/vendor/slint-macros-1.17.1:slint_macros",
-  ]
+
+  proc_macro_deps =
+      [ "//external/vendor/i-slint-core-macros-1.17.1:i_slint_core_macros" ]
+
   features = [
     "compat-1-2",
     "libm",

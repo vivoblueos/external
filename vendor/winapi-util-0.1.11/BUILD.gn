@@ -23,8 +23,10 @@ cargo_crate("winapi_util") {
   sources = [ "//external/vendor/winapi-util-0.1.11/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = []
-  deps = [ "//external/vendor/windows-sys-0.61.2:windows_sys" ]
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-sys-0.61.2:windows_sys
+  #
 
   cargo_pkg_name = "winapi-util"
   cargo_pkg_version = "0.1.11"

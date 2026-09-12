@@ -23,8 +23,10 @@ cargo_crate("same_file") {
   sources = [ "//external/vendor/same-file-1.0.6/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  deps = []
-  deps = [ "//external/vendor/winapi-util-0.1.11:winapi_util" ]
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/winapi-util-0.1.11:winapi_util
+  #
 
   cargo_pkg_name = "same-file"
   cargo_pkg_version = "1.0.6"

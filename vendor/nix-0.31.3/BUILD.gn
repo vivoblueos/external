@@ -23,12 +23,15 @@ cargo_crate("nix") {
   sources = [ "//external/vendor/nix-0.31.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/libc-0.2.186:libc",
   ]
-  build_deps = [ "//external/vendor/cfg_aliases-0.2.1:cfg_aliases" ]
+
+  build_deps = [ "//external/vendor/cfg_aliases-0.2.2:cfg_aliases" ]
+
   features = [
     "fs",
     "ioctl",

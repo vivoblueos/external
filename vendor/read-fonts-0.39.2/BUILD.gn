@@ -23,11 +23,13 @@ cargo_crate("read_fonts") {
   sources = [ "//external/vendor/read-fonts-0.39.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bytemuck-1.25.0:bytemuck",
     "//external/vendor/core_maths-0.1.1:core_maths",
     "//external/vendor/font-types-0.11.3:font_types",
   ]
+
   features = [
     "libm",
     "std",

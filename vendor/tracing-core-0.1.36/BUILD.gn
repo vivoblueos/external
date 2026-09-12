@@ -23,7 +23,9 @@ cargo_crate("tracing_core") {
   sources = [ "//external/vendor/tracing-core-0.1.36/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [ "//external/vendor/once_cell-1.21.4:once_cell" ]
+
   features = [
     "once_cell",
     "std",

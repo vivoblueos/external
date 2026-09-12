@@ -23,18 +23,20 @@ cargo_crate("ndk") {
   sources = [ "//external/vendor/ndk-0.9.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/jni-sys-0.3.1:jni_sys",
     "//external/vendor/log-0.4.28:log",
-    "//external/vendor/ndk-sys-0.6.0:ndk_sys",
+    "//external/vendor/ndk-sys-0.6.0+11769913:ndk_sys",
     "//external/vendor/num_enum-0.7.6:num_enum",
     "//external/vendor/raw-window-handle-0.6.2:raw_window_handle",
     "//external/vendor/thiserror-1.0.69:thiserror",
   ]
+
   features = [ "rwh_06" ]
   aliased_deps = {
-    ffi = "//external/vendor/ndk-sys-0.6.0:ndk_sys"
+    ffi = "//external/vendor/ndk-sys-0.6.0+11769913:ndk_sys"
     rwh_06 = "//external/vendor/raw-window-handle-0.6.2:raw_window_handle"
   }
 

@@ -1,0 +1,9 @@
+Name: ring
+URL: https://crates.io/crates/ring
+Version: 0.16.20
+License: ISC
+License File: //external/vendor/ring-0.16.20/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Safe, fast, small crypto using Rust.

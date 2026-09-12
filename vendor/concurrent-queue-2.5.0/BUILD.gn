@@ -23,7 +23,9 @@ cargo_crate("concurrent_queue") {
   sources = [ "//external/vendor/concurrent-queue-2.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [ "//external/vendor/crossbeam-utils-0.8.22:crossbeam_utils" ]
+
+  deps = [ "//external/vendor/crossbeam-utils-0.8.23:crossbeam_utils" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "concurrent-queue"

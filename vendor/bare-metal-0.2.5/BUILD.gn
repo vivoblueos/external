@@ -23,7 +23,9 @@ cargo_crate("bare_metal") {
   sources = [ "//external/vendor/bare-metal-0.2.5/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   build_deps = [ "//external/vendor/rustc_version-0.2.3:rustc_version" ]
+
   features = [ "const-fn" ]
 
   cargo_pkg_name = "bare-metal"

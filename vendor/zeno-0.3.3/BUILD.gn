@@ -23,7 +23,9 @@ cargo_crate("zeno") {
   sources = [ "//external/vendor/zeno-0.3.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/libm-0.2.16:libm" ]
+
   features = [
     "eval",
     "libm",

@@ -23,7 +23,9 @@ cargo_crate("getopts") {
   sources = [ "//external/vendor/getopts-0.2.24/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/unicode-width-0.2.2:unicode_width" ]
+
   features = [ "unicode" ]
 
   cargo_pkg_name = "getopts"

@@ -23,6 +23,7 @@ cargo_crate("ft6336u_driver") {
   sources = [ "//external/vendor/ft6336u-driver-1.0.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/embedded-hal-1.0.0:embedded_hal" ]
 
   cargo_pkg_name = "ft6336u-driver"

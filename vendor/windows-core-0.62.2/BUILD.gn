@@ -23,15 +23,18 @@ cargo_crate("windows_core") {
   sources = [ "//external/vendor/windows-core-0.62.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/windows-link-0.2.1:windows_link",
     "//external/vendor/windows-result-0.4.1:windows_result",
     "//external/vendor/windows-strings-0.5.1:windows_strings",
   ]
+
   proc_macro_deps = [
     "//external/vendor/windows-implement-0.60.2:windows_implement",
     "//external/vendor/windows-interface-0.59.3:windows_interface",
   ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "windows-core"

@@ -23,22 +23,28 @@ cargo_crate("async_process") {
   sources = [ "//external/vendor/async-process-2.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/async-io-2.6.0:async_io",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
-    "//external/vendor/event-listener-5.4.1:event_listener",
+    "//external/vendor/event-listener-5.4.2:event_listener",
     "//external/vendor/futures-lite-2.6.1:futures_lite",
   ]
-  deps = [
-    "//external/vendor/async-lock-3.4.2:async_lock",
-    "//external/vendor/async-signal-0.2.14:async_signal",
-    "//external/vendor/rustix-1.1.4:rustix",
-  ]
-  deps = [
-    "//external/vendor/async-channel-2.5.0:async_channel",
-    "//external/vendor/async-task-4.7.1:async_task",
-  ]
-  deps = [ "//external/vendor/blocking-1.6.2:blocking" ]
+
+  # target-conditioned deps omitted (!is_win):
+  # //external/vendor/async-lock-3.4.2:async_lock
+  # //external/vendor/async-signal-0.2.14:async_signal
+  # //external/vendor/rustix-1.1.4:rustix
+  #
+
+  # target-conditioned deps omitted ((is_linux || is_chromeos) || (is_win)):
+  # //external/vendor/async-channel-2.5.0:async_channel
+  # //external/vendor/async-task-4.7.1:async_task
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/blocking-1.6.2:blocking
+  #
 
   cargo_pkg_name = "async-process"
   cargo_pkg_version = "2.5.0"

@@ -23,6 +23,7 @@ cargo_crate("universal_hash") {
   sources = [ "//external/vendor/universal-hash-0.5.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/crypto-common-0.1.7:crypto_common",
     "//external/vendor/subtle-2.6.1:subtle",

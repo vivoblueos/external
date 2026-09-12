@@ -23,6 +23,7 @@ cargo_crate("drm") {
   sources = [ "//external/vendor/drm-0.14.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/bytemuck-1.25.0:bytemuck",

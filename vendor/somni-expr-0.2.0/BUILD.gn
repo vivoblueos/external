@@ -23,6 +23,7 @@ cargo_crate("somni_expr") {
   sources = [ "//external/vendor/somni-expr-0.2.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/somni-parser-0.2.2:somni_parser" ]
 
   cargo_pkg_name = "somni-expr"

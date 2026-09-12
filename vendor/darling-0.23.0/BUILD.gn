@@ -23,8 +23,11 @@ cargo_crate("darling") {
   sources = [ "//external/vendor/darling-0.23.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/darling_core-0.23.0:darling_core" ]
+
   proc_macro_deps = [ "//external/vendor/darling_macro-0.23.0:darling_macro" ]
+
   features = [ "suggestions" ]
 
   cargo_pkg_name = "darling"

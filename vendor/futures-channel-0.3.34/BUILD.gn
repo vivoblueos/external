@@ -23,13 +23,17 @@ cargo_crate("futures_channel") {
   sources = [ "//external/vendor/futures-channel-0.3.34/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/futures-core-0.3.34:futures_core",
     "//external/vendor/futures-sink-0.3.34:futures_sink",
   ]
+
   features = [
+    "alloc",
     "futures-sink",
     "sink",
+    "std",
   ]
 
   cargo_pkg_name = "futures-channel"

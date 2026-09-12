@@ -23,6 +23,7 @@ cargo_crate("embedded_tls") {
   sources = [ "//external/vendor/embedded-tls-0.16.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/aes-gcm-0.10.3:aes_gcm",
     "//external/vendor/atomic-polyfill-1.0.3:atomic_polyfill",
@@ -41,6 +42,7 @@ cargo_crate("embedded_tls") {
     "//external/vendor/sha2-0.10.9:sha2",
     "//external/vendor/typenum-1.20.1:typenum",
   ]
+
   features = [
     "async",
     "embedded-io-adapters",
@@ -49,7 +51,6 @@ cargo_crate("embedded_tls") {
     "std",
     "tokio",
   ]
-  cfgs = [ "log_level_trace" ]
   aliased_deps = {
     heapless_typenum = "//external/vendor/heapless-0.6.1:heapless"
   }

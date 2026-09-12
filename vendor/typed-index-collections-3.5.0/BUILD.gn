@@ -23,10 +23,12 @@ cargo_crate("typed_index_collections") {
   sources = [ "//external/vendor/typed-index-collections-3.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bincode-2.0.1:bincode",
     "//external/vendor/serde-1.0.228:serde",
   ]
+
   features = [
     "alloc",
     "std",

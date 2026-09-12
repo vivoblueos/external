@@ -23,7 +23,9 @@ cargo_crate("jni_sys") {
   sources = [ "//external/vendor/jni-sys-0.3.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/jni-sys-0.4.1:jni_sys" ]
+
   aliased_deps = {
     jni_sys_04 = "//external/vendor/jni-sys-0.4.1:jni_sys"
   }

@@ -48,6 +48,7 @@ cargo_crate("winit") {
     "//external/vendor/winit-0.30.13/src/changelog/v0.9.md",
   ]
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/cursor-icon-1.2.0:cursor_icon",
@@ -56,28 +57,34 @@ cargo_crate("winit") {
     "//external/vendor/smol_str-0.2.2:smol_str",
     "//external/vendor/tracing-0.1.44:tracing",
   ]
-  deps = [
-    "//external/vendor/calloop-0.13.0:calloop",
-    "//external/vendor/libc-0.2.186:libc",
-    "//external/vendor/rustix-0.38.44:rustix",
-    "//external/vendor/xkbcommon-dl-0.4.2:xkbcommon_dl",
-  ]
-  deps = [
-    "//external/vendor/android-activity-0.6.1:android_activity",
-    "//external/vendor/ndk-0.9.0:ndk",
-  ]
-  deps = [
-    "//external/vendor/block2-0.5.1:block2",
-    "//external/vendor/core-foundation-0.9.4:core_foundation",
-    "//external/vendor/objc2-0.5.2:objc2",
-    "//external/vendor/objc2-foundation-0.2.2:objc2_foundation",
-    "//external/vendor/objc2-ui-kit-0.2.2:objc2_ui_kit",
-  ]
-  deps = [
-    "//external/vendor/unicode-segmentation-1.13.3:unicode_segmentation",
-    "//external/vendor/windows-sys-0.52.0:windows_sys",
-  ]
-  build_deps = [ "//external/vendor/cfg_aliases-0.2.1:cfg_aliases" ]
+
+  # target-conditioned deps omitted ((!((is_android) || (is_ios))) && (!is_win)):
+  # //external/vendor/calloop-0.13.0:calloop
+  # //external/vendor/libc-0.2.186:libc
+  # //external/vendor/rustix-0.38.44:rustix
+  # //external/vendor/xkbcommon-dl-0.4.2:xkbcommon_dl
+  #
+
+  # target-conditioned deps omitted (is_android):
+  # //external/vendor/android-activity-0.6.1:android_activity
+  # //external/vendor/ndk-0.9.0:ndk
+  #
+
+  # target-conditioned deps omitted (is_ios):
+  # //external/vendor/block2-0.5.1:block2
+  # //external/vendor/core-foundation-0.9.4:core_foundation
+  # //external/vendor/objc2-0.5.2:objc2
+  # //external/vendor/objc2-foundation-0.2.2:objc2_foundation
+  # //external/vendor/objc2-ui-kit-0.2.2:objc2_ui_kit
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/unicode-segmentation-1.13.3:unicode_segmentation
+  # //external/vendor/windows-sys-0.52.0:windows_sys
+  #
+
+  build_deps = [ "//external/vendor/cfg_aliases-0.2.2:cfg_aliases" ]
+
   features = [ "rwh_06" ]
   aliased_deps = {
     rwh_06 = "//external/vendor/raw-window-handle-0.6.2:raw_window_handle"

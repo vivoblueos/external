@@ -23,6 +23,7 @@ cargo_crate("esp_alloc") {
   sources = [ "//external/vendor/esp-alloc-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/allocator-api2-0.3.1:allocator_api2",
     "//external/vendor/cfg-if-1.0.4:cfg_if",
@@ -31,7 +32,9 @@ cargo_crate("esp_alloc") {
     "//external/vendor/linked_list_allocator-0.10.6:linked_list_allocator",
     "//external/vendor/rlsf-0.2.2:rlsf",
   ]
+
   build_deps = [ "//external/vendor/esp-config-0.7.0:esp_config" ]
+
   proc_macro_deps =
       [ "//external/vendor/document-features-0.2.12:document_features" ]
 

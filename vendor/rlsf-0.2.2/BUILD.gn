@@ -23,15 +23,21 @@ cargo_crate("rlsf") {
   sources = [ "//external/vendor/rlsf-0.2.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/cfg-if-1.0.4:cfg_if",
     "//external/vendor/const-default-1.0.0:const_default",
   ]
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
+
+  # target-conditioned deps omitted (!is_win):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
   proc_macro_deps = [
     "//external/vendor/rustversion-1.0.22:rustversion",
     "//external/vendor/svgbobdoc-0.3.0:svgbobdoc",
   ]
+
   features = [ "unstable" ]
   aliased_deps = {
     const_default1 = "//external/vendor/const-default-1.0.0:const_default"

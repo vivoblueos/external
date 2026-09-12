@@ -23,7 +23,9 @@ cargo_crate("lock_api") {
   sources = [ "//external/vendor/lock_api-0.4.14/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/scopeguard-1.2.0:scopeguard" ]
+
   features = [ "atomic_usize" ]
 
   cargo_pkg_name = "lock_api"

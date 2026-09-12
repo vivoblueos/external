@@ -23,7 +23,9 @@ cargo_crate("polycool") {
   sources = [ "//external/vendor/polycool-0.4.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/arrayvec-0.7.8:arrayvec" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "polycool"

@@ -23,8 +23,11 @@ cargo_crate("clipboard_win") {
   sources = [ "//external/vendor/clipboard-win-5.4.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
-  deps = []
-  deps = [ "//external/vendor/error-code-3.3.2:error_code" ]
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/error-code-3.3.2:error_code
+  #
+
   features = [ "std" ]
 
   cargo_pkg_name = "clipboard-win"

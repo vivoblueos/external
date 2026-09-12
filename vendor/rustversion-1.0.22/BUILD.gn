@@ -28,7 +28,6 @@ cargo_crate("rustversion") {
   cargo_pkg_version = "1.0.22"
   build_root = "//external/vendor/rustversion-1.0.22/build/build.rs"
   build_sources = [ "//external/vendor/rustversion-1.0.22/build/build.rs" ]
-  build_script_outputs = [ "version.expr" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

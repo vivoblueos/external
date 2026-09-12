@@ -1,0 +1,10 @@
+Name: zvariant
+URL: https://crates.io/crates/zvariant
+Version: 5.15.0
+Revision: 0f4db6980bc1566278618a46c9ffa7f5f025c18a
+License: MIT
+License File: //external/vendor/zvariant-5.15.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: D-Bus & GVariant encoding & decoding

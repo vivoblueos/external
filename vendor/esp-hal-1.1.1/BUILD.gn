@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# @generated from external/BLUE_BUILD.gn.hbs by gnrt
+# Do not edit!
+
 import("//build/templates/cargo_crate.gni")
 
 cargo_crate("esp_hal") {
@@ -20,6 +23,7 @@ cargo_crate("esp_hal") {
   sources = [ "//external/vendor/esp-hal-1.1.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitfield-0.19.4:bitfield",
     "//external/vendor/bitflags-2.10.0:bitflags",
@@ -36,21 +40,14 @@ cargo_crate("esp_hal") {
     "//external/vendor/esp-sync-0.2.1:esp_sync",
     "//external/vendor/fugit-0.3.9:fugit",
     "//external/vendor/portable-atomic-1.13.1:portable_atomic",
-    "//external/vendor/riscv-0.15.0:riscv",
     "//external/vendor/strum-0.27.2:strum",
   ]
 
-  if (board == "esp32c6_devkitc_1") {
-    deps += [ "//external/vendor/esp32c6-0.23.0:esp32c6" ]
-    features = [ "esp32c6" ]
-  } else {
-    deps += [ "//external/vendor/esp32c3-0.32.2:esp32c3" ]
-    features = [ "esp32c3" ]
-  }
   build_deps = [
     "//external/vendor/esp-config-0.7.0:esp_config",
     "//external/vendor/esp-metadata-generated-0.4.0:esp_metadata_generated",
   ]
+
   proc_macro_deps = [
     "//external/vendor/delegate-0.13.4:delegate",
     "//external/vendor/document-features-0.2.12:document_features",
@@ -58,6 +55,7 @@ cargo_crate("esp_hal") {
     "//external/vendor/instability-0.3.12:instability",
     "//external/vendor/paste-1.0.15:paste",
   ]
+
   aliased_deps = {
     procmacros = "//external/vendor/esp-hal-procmacros-0.22.0:esp_hal_procmacros(//build/toolchain:host)"
   }
@@ -66,9 +64,6 @@ cargo_crate("esp_hal") {
   cargo_pkg_version = "1.1.1"
   build_root = "//external/vendor/esp-hal-1.1.1/build.rs"
   build_sources = [ "//external/vendor/esp-hal-1.1.1/build.rs" ]
-  build_script_outputs = [ "esp_hal_config_table.md" ]
-
-  rustenv = [ "ESP_HAL_CONFIG_MIN_CHIP_REVISION=0" ]
 
   rustflags = [
     "--cap-lints=allow",  # Suppress all warnings in crates.io crates

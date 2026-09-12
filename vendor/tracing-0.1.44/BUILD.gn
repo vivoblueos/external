@@ -23,13 +23,16 @@ cargo_crate("tracing") {
   sources = [ "//external/vendor/tracing-0.1.44/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/log-0.4.28:log",
     "//external/vendor/pin-project-lite-0.2.17:pin_project_lite",
     "//external/vendor/tracing-core-0.1.36:tracing_core",
   ]
+
   proc_macro_deps =
       [ "//external/vendor/tracing-attributes-0.1.31:tracing_attributes" ]
+
   features = [
     "attributes",
     "log",

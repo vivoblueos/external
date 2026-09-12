@@ -23,9 +23,17 @@ cargo_crate("getrandom") {
   sources = [ "//external/vendor/getrandom-0.4.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/cfg-if-1.0.4:cfg_if" ]
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
+
+  # target-conditioned deps omitted ((is_android) || (is_linux || is_chromeos)):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
+  # target-conditioned deps omitted (is_ios):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
   features = [ "std" ]
 
   cargo_pkg_name = "getrandom"

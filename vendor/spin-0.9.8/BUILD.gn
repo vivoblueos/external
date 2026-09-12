@@ -23,7 +23,9 @@ cargo_crate("spin") {
   sources = [ "//external/vendor/spin-0.9.8/src/lib.rs" ]
   inputs = []
   edition = "2015"
+
   deps = [ "//external/vendor/lock_api-0.4.14:lock_api" ]
+
   features = [
     "barrier",
     "lazy",

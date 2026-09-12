@@ -23,6 +23,7 @@ cargo_crate("objc2_quartz_core") {
   sources = [ "//external/vendor/objc2-quartz-core-0.3.2/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/objc2-0.6.4:objc2",
@@ -30,6 +31,7 @@ cargo_crate("objc2_quartz_core") {
     "//external/vendor/objc2-foundation-0.3.2:objc2_foundation",
     "//external/vendor/objc2-metal-0.3.2:objc2_metal",
   ]
+
   features = [
     "CADisplayLink",
     "CAFrameRateRange",

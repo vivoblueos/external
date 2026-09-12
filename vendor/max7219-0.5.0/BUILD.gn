@@ -23,6 +23,7 @@ cargo_crate("max7219") {
   sources = [ "//external/vendor/max7219-0.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/embedded-hal-1.0.0:embedded_hal" ]
 
   cargo_pkg_name = "max7219"

@@ -23,6 +23,7 @@ cargo_crate("image_webp") {
   sources = [ "//external/vendor/image-webp-0.2.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/byteorder-lite-0.1.0:byteorder_lite",
     "//external/vendor/quick-error-2.0.1:quick_error",

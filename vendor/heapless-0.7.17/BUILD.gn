@@ -23,11 +23,16 @@ cargo_crate("heapless") {
   sources = [ "//external/vendor/heapless-0.7.17/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/hash32-0.2.1:hash32",
-    "//external/vendor/spin-0.9.8:spin",
     "//external/vendor/stable_deref_trait-1.2.1:stable_deref_trait",
   ]
+
+  # target-conditioned deps omitted (current_cpu == "x64"):
+  # //external/vendor/spin-0.9.8:spin
+  #
+
   build_deps = [ "//external/vendor/rustc_version-0.4.1:rustc_version" ]
 
   cargo_pkg_name = "heapless"

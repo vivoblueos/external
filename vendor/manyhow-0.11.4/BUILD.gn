@@ -23,13 +23,16 @@ cargo_crate("manyhow") {
   sources = [ "//external/vendor/manyhow-0.11.4/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
     "//external/vendor/quote-1.0.46:quote",
     "//external/vendor/syn-1.0.109:syn",
     "//external/vendor/syn-2.0.108:syn",
   ]
+
   proc_macro_deps = [ "//external/vendor/manyhow-macros-0.11.4:manyhow_macros" ]
+
   features = [
     "macros",
     "syn",

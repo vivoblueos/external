@@ -202,32 +202,64 @@ pub fn run_cargo_metadata(
     mut extra_options: Vec<String>,
     extra_env: HashMap<std::ffi::OsString, std::ffi::OsString>,
 ) -> Result<cargo_metadata::Metadata> {
-    // fixme: kernel toolchain not supported edition22024 yet
-    // First, try to fix any edition2024 issues in the cargo cache
-    let _ = fix_edition_in_cargo_cache();
+    // fixme: kernel toolchain not supported edition2024 yet
+    let offline = extra_options.iter().any(|o| o == "--offline");
 
     let mut command = cargo_metadata::MetadataCommand::new();
-    command.current_dir(workspace_path);
-
+    command.current_dir(workspace_path.clone());
     // Allow the binary dependency on cxxbridge-cmd.
     extra_options.push("-Zbindeps".to_string());
-    command.other_options(extra_options);
-    for (k, v) in extra_env.into_iter() {
+    command.other_options(extra_options.clone());
+    for (k, v) in extra_env.clone().into_iter() {
         command.env(k, v);
     }
 
     log::debug!("invoking cargo with:\n`{:?}`", command.cargo_command());
 
-    // Try to run cargo metadata, and if it fails with edition2024 error, retry after fixing
-    let max_retries = 5;
+    // `cargo fetch` and `cargo metadata` both download crates lazily while
+    // parsing manifests, which races the edition rewrite: each attempt
+    // re-fails on a newly arrived 2024 manifest. Retry the fix+fetch+metadata
+    // cycle until every lock-file crate is downloaded and rewritten; cargo
+    // fetch resumes from the crates it already downloaded, so the loop
+    // converges after roughly one iteration per edition-2024 crate.
+    let max_retries = 30;
     for attempt in 0..max_retries {
+        let _ = fix_edition_in_cargo_cache();
+
+        if !offline {
+            let mut fetch = std::process::Command::new("cargo");
+            fetch.current_dir(&workspace_path);
+            fetch.arg("fetch");
+            fetch.args(&extra_options);
+            for (k, v) in &extra_env {
+                fetch.env(k, v);
+            }
+            let output = fetch
+                .output()
+                .with_context(|| "running cargo fetch to pre-download dependencies")?;
+            if !output.status.success() {
+                let stderr = String::from_utf8_lossy(&output.stderr);
+                if stderr.contains("edition2024") || stderr.contains("edition `2024`") {
+                    log::warn!(
+                        "Detected edition2024 error in cargo fetch (attempt {}/{}), fixing cargo cache and retrying...",
+                        attempt + 1,
+                        max_retries
+                    );
+                    continue;
+                }
+                return Err(format_err!(
+                    "cargo fetch exited with status {}: {stderr}",
+                    output.status
+                ));
+            }
+        }
+
         match command.exec() {
             Ok(metadata) => return Ok(metadata),
             Err(e) => {
                 let error_msg = e.to_string();
                 if error_msg.contains("edition2024") || error_msg.contains("edition `2024`") {
                     log::warn!("Detected edition2024 error (attempt {}/{}), fixing cargo cache and retrying...", attempt + 1, max_retries);
-                    fix_edition_in_cargo_cache().context("fixing cargo cache")?;
                     // Continue to retry
                 } else {
                     return Err(e).context("running cargo metadata");

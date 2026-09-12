@@ -23,18 +23,20 @@ cargo_crate("parley") {
   sources = [ "//external/vendor/parley-0.10.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/fontique-0.10.0:fontique",
     "//external/vendor/harfrust-0.8.4:harfrust",
     "//external/vendor/hashbrown-0.17.1:hashbrown",
-    "//external/vendor/icu_normalizer-2.2.0:icu_normalizer",
-    "//external/vendor/icu_properties-2.2.0:icu_properties",
-    "//external/vendor/icu_segmenter-2.2.0:icu_segmenter",
+    "//external/vendor/icu_normalizer-2.3.0:icu_normalizer",
+    "//external/vendor/icu_properties-2.3.0:icu_properties",
+    "//external/vendor/icu_segmenter-2.3.0:icu_segmenter",
     "//external/vendor/linebender_resource_handle-0.1.1:linebender_resource_handle",
     "//external/vendor/parlance-0.1.0:parlance",
     "//external/vendor/parley_data-0.10.0:parley_data",
     "//external/vendor/skrifa-0.42.1:skrifa",
   ]
+
   features = [
     "complex-scripts",
     "std",

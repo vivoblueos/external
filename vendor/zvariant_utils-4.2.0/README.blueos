@@ -1,0 +1,10 @@
+Name: zvariant_utils
+URL: https://crates.io/crates/zvariant_utils
+Version: 4.2.0
+Revision: 0f4db6980bc1566278618a46c9ffa7f5f025c18a
+License: MIT
+License File: //external/vendor/zvariant_utils-4.2.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Various utilities used internally by the zvariant crate.

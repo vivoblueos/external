@@ -1,7 +1,6 @@
 Name: color_quant
 URL: https://crates.io/crates/color_quant
 Version: 1.1.0
-Revision: 6c302d2d1540496584476d513dd75b815f14e7a1
 License: MIT
 License File: //external/vendor/color_quant-1.1.0/README.md
 Shipped: yes

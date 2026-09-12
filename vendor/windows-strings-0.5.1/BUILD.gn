@@ -23,7 +23,9 @@ cargo_crate("windows_strings") {
   sources = [ "//external/vendor/windows-strings-0.5.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [ "//external/vendor/windows-link-0.2.1:windows_link" ]
+
   features = [ "std" ]
 
   cargo_pkg_name = "windows-strings"

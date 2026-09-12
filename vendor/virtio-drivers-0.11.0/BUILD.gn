@@ -23,6 +23,7 @@ cargo_crate("virtio_drivers") {
   sources = [ "//external/vendor/virtio-drivers-0.11.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/bitflags-2.10.0:bitflags",
     "//external/vendor/embedded-io-0.6.1:embedded_io",
@@ -31,7 +32,9 @@ cargo_crate("virtio_drivers") {
     "//external/vendor/thiserror-2.0.17:thiserror",
     "//external/vendor/zerocopy-0.8.27:zerocopy",
   ]
+
   proc_macro_deps = [ "//external/vendor/enumn-0.1.14:enumn" ]
+
   features = [
     "alloc",
     "embedded-io",

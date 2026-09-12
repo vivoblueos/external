@@ -23,6 +23,7 @@ cargo_crate("derive_more_impl") {
   sources = [ "//external/vendor/derive_more-impl-2.1.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/convert_case-0.10.0:convert_case",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",
@@ -30,7 +31,9 @@ cargo_crate("derive_more_impl") {
     "//external/vendor/syn-2.0.108:syn",
     "//external/vendor/unicode-xid-0.2.6:unicode_xid",
   ]
+
   build_deps = [ "//external/vendor/rustc_version-0.4.1:rustc_version" ]
+
   features = [
     "add",
     "add_assign",

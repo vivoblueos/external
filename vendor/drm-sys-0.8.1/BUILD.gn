@@ -23,9 +23,14 @@ cargo_crate("drm_sys") {
   sources = [ "//external/vendor/drm-sys-0.8.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = []
-  deps = [ "//external/vendor/libc-0.2.186:libc" ]
-  deps = [ "//external/vendor/linux-raw-sys-0.9.4:linux_raw_sys" ]
+
+  # target-conditioned deps omitted (!((is_android) || (is_linux || is_chromeos))):
+  # //external/vendor/libc-0.2.186:libc
+  #
+
+  # target-conditioned deps omitted ((is_android) || (is_linux || is_chromeos)):
+  # //external/vendor/linux-raw-sys-0.9.4:linux_raw_sys
+  #
 
   cargo_pkg_name = "drm-sys"
   cargo_pkg_version = "0.8.1"

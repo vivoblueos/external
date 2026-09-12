@@ -23,6 +23,7 @@ cargo_crate("sec1") {
   sources = [ "//external/vendor/sec1-0.7.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/base16ct-0.2.0:base16ct",
     "//external/vendor/der-0.7.10:der",
@@ -30,6 +31,7 @@ cargo_crate("sec1") {
     "//external/vendor/subtle-2.6.1:subtle",
     "//external/vendor/zeroize-1.9.0:zeroize",
   ]
+
   features = [
     "der",
     "point",

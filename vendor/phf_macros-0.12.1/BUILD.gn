@@ -23,6 +23,7 @@ cargo_crate("phf_macros") {
   sources = [ "//external/vendor/phf_macros-0.12.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/phf_generator-0.12.1:phf_generator",
     "//external/vendor/phf_shared-0.12.1:phf_shared",

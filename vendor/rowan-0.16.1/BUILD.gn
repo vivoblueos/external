@@ -23,6 +23,7 @@ cargo_crate("rowan") {
   sources = [ "//external/vendor/rowan-0.16.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   deps = [
     "//external/vendor/countme-3.0.1:countme",
     "//external/vendor/hashbrown-0.14.5:hashbrown",

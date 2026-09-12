@@ -23,6 +23,7 @@ cargo_crate("docsplay") {
   sources = [ "//external/vendor/docsplay-0.1.3/src/lib.rs" ]
   inputs = []
   edition = "2021"
+
   proc_macro_deps =
       [ "//external/vendor/docsplay-macros-0.1.2:docsplay_macros" ]
 

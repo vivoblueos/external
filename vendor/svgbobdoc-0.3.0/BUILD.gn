@@ -23,6 +23,7 @@ cargo_crate("svgbobdoc") {
   sources = [ "//external/vendor/svgbobdoc-0.3.0/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/base64-0.13.1:base64",
     "//external/vendor/proc-macro2-1.0.103:proc_macro2",

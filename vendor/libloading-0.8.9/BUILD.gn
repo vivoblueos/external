@@ -23,9 +23,14 @@ cargo_crate("libloading") {
   sources = [ "//external/vendor/libloading-0.8.9/src/lib.rs" ]
   inputs = []
   edition = "2015"
-  deps = [ "//external/vendor/cfg-if-1.0.4:cfg_if" ]
 
-  # deps = [ "//external/vendor/windows-link-0.2.1:windows_link" ]
+  # target-conditioned deps omitted (!is_win):
+  # //external/vendor/cfg-if-1.0.4:cfg_if
+  #
+
+  # target-conditioned deps omitted (is_win):
+  # //external/vendor/windows-link-0.2.1:windows_link
+  #
 
   cargo_pkg_name = "libloading"
   cargo_pkg_version = "0.8.9"

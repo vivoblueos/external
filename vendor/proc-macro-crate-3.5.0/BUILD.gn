@@ -23,7 +23,8 @@ cargo_crate("proc_macro_crate") {
   sources = [ "//external/vendor/proc-macro-crate-3.5.0/src/lib.rs" ]
   inputs = []
   edition = "2021"
-  deps = [ "//external/vendor/toml_edit-0.25.11:toml_edit" ]
+
+  deps = [ "//external/vendor/toml_edit-0.25.11+spec-1.1.0:toml_edit" ]
 
   cargo_pkg_name = "proc-macro-crate"
   cargo_pkg_version = "3.5.0"

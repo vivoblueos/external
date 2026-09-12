@@ -23,6 +23,7 @@ cargo_crate("heapless") {
   sources = [ "//external/vendor/heapless-0.6.1/src/lib.rs" ]
   inputs = []
   edition = "2018"
+
   deps = [
     "//external/vendor/as-slice-0.1.5:as_slice",
     "//external/vendor/generic-array-0.14.7:generic_array",
