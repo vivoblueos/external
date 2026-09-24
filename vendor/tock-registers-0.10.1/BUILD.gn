@@ -23,6 +23,7 @@ cargo_crate("tock_registers") {
   sources = [ "//external/vendor/tock-registers-0.10.1/src/lib.rs" ]
   inputs = []
   edition = "2021"
+  features = [ "register_types" ]
 
   cargo_pkg_name = "tock-registers"
   cargo_pkg_version = "0.10.1"
